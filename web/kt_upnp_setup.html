@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>mac filter</title>
+	<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+	<script language="javascript" src="lib/js/jquery.js"></script>
+	<script language="javascript" src="lib/js/util.js"></script>
+	<script language="javascript" src="lib/js/common.js"></script>
+	<script language="javascript" src="lib/js/kt_upnp_setup.js"></script>
+</head>
+<body>
+	<img class="load" id="loadPic" src="pic/loading.gif">
+	<div class="main">
+		<div class="mainLeft"></div>
+		<div class="mainShadow"></div>
+		<div class="mainBody">
+			<div class="UPNP">
+				<li id="MainLeftStatus"></li>
+				<form>
+					<table width="100%" border="0" cellspacing="3" cellpadding="0">
+					    <tr height="27px">
+						    <td id="UPNP_SrvTip" class="hdNobac" width="220px" ></td>
+						    <td width="150PX">
+						      	<input type="radio" name="UPNP_RADIO_Mode" id="UPNP_RADIO_Enable"><Label for="UPNP_RADIO_Enable" id="UPNP_LB_Enable"></Label>
+						    </td>
+						    <td>
+						      	<input type="radio" name="UPNP_RADIO_Mode" id="UPNP_RADIO_Disable"><Label for="UPNP_RADIO_Disable" id="UPNP_LB_Disable"></Label>
+						    </td>
+					    </tr>
+				  	</table>
+				  	<div id="UPNP_DIV_Input" style="display:none">
+					    <table width="100%" border="0" cellspacing="3" cellpadding="0">
+						    <tr>
+						        <td id="UPNP_IpStartTip" width="220px" class="hdNobac"></td>
+						        <td><input type="text" id="UPNP_TEXT_StartIp" class="UPNP_CLS_Check" style="width:240px"/></td>
+						    </tr>
+						    <tr>
+						        <td id="UPNP_IpEndTip" class="hdNobac"></td>
+						        <td><input type="text" id="UPNP_TEXT_EndIp" class="UPNP_CLS_Check" style="width:240px"/></td>
+						    </tr>
+					    </table>
+				    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				     	<tr>
+				        	<td  align="right"><input class="buttonX" id="BTN_Add" type="button"></td>
+				      	</tr>
+				      	<tr>
+				        	<td height="27"><hr color="#B5B5E6" size="1"></td>
+				      	</tr>
+				    </table>
+				    <div id="UPNP_DIV_Rules">
+				      	<table width="100%" border="1" cellpadding="3" cellspacing="0">
+				      	  	<thead>
+				      	  	  	<tr align="center">
+				      	  	  	  	<td id="UPNP_RulesTip" class="hd" colspan="3" ></td>
+				      	  	  	</tr>
+				      	  	</thead>
+				      	  	<tr align="center">
+				      	  	  	<td id="UPNP_StartIpTip" class="hd"></td>
+				      	  	  	<td id="UPNP_EndIpTip" class="hd"></td>
+				      	  	  	<td id="UPNP_DelRuleTip" class="hd"></td>
+				      	  	</tr>
+				      	  	<tbody id="UPNP_RulesBody">
+				      	  	</tbody>
+				      	</table>
+				      	<br>
+				      	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				      	  	<tr>
+					        	<td  align="right"><input class="buttonX" id="BTN_Del" type="button"></td>
+					      	</tr>
+				      	</table>
+
+				  	</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

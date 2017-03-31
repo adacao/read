@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tr69Cert</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/kt_tr69_cert.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="mainLeft" style="height:100%;overflow: scroll;"></div>
+    <div class="mainShadow"></div>
+    <div class="mainBody" style="height:100%;overflow: hidden;">
+        <div class="NETCON" id="NETCON">
+           <li id="MENU_STS_NET_CON"></li>
+					 <img class="load" id="loadPic" src="pic/loading.gif">
+					 <div id='TR69_DIV_CertDesc' style=" padding:40px 50px 30px 20px;float: left;">
+							<h3 class="titleCtx" id="TR69_CertTitle"></h3>
+							<br>
+							<p id="TR69_CertDesc"></p>
+							<p id="TR69_CertMax"></p>
+						</div>
+						<div style="clear: both;"></div>
+					 	<from>
+						
+							<form id='TR69_FORM_CertView'>
+							<br>
+							<center>
+								<table border='1' cellpadding='4' cellspacing='0'>
+									<tr align='center'>
+											<td id="TR69_TD_CertName" class='hd'></td>
+											<td id="TR69_TD_CertType" class='hd'></td>
+											<td id="TR69_TD_CertSub" class='hd'></td>
+											<td id="TR69_TD_CertFun" colspan='2' class='hd'></td>
+									</tr>
+									<tbody id="TR69_CertCfg"></tbody>
+								</table>
+								<br>
+								<input class="buttonX" type='button' id='TR69_BTN_CertImport'>
+								</center>
+								<br>
+								<br>
+								<br>
+							</form>
+							<div style="width: 638px;padding:0px 50px 30px 20px;float: right;margin-right: -30px;">
+								<div id ='TR69_DIV_CertImport' style="display:none">
+									<h3 class="titleCtx" id="TR69_CertImportTitle"></h3>
+									<p id = 'TR69_CertImportShow'>
+								</div>
+								<form id="TR69_FORM_CertImport" style="display:none" method="post" >    
+									
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="180" id="TR69_TD_CertImportName"></td>
+											<td><input type='text' id='TR69_TEXT_CertImportName' disabled size='20' maxlength="63"></td>
+										</tr>
+										
+											<tr>
+												<td width="180" id="TR69_TD_Cert"></td>
+												<td>               
+													<TEXTAREA id= 'TR69_TEXTA_CertPublic' rows='20' cols='80'>
+													</TEXTAREA>
+												</td>
+											</tr>
+										</table>				
+									<br>
+									<br>
+									<br>								
+									<center>
+										<input class="buttonX" type='button'  id="BTN_Apply" >
+									</center>
+								</form>
+						</div>	
+					<div style="clear: both;"></div>
+					<div style="width: 638px;padding:0px 50px 30px 20px;float: right;margin-right: -30px;">
+							<div id= 'TR69_DIV_CertDeta' style="display:none">
+								<h3 class="titleCtx" id="TR69_CertDetailTitle"></h3>
+							</div>
+							
+							<form id= 'TR69_CertDetail' style="display:none">
+								<center>
+									<table border='1' cellpadding='4' cellspacing='0'>
+									<tr>
+									</tr>
+											<tbody id= 'TR69_CertDetailShow'></tbody>
+										</table>
+										<br>
+										<input class="buttonX" type='button'  id="BTN_BACK" >
+									</center>
+								</form>
+					</div>
+					<div style="clear: both;"></div>
+			</from>						
+		</div>
+	</div>
+</div>
+</body>
+</html>

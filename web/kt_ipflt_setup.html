@@ -1,0 +1,235 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IP FILTER</title>
+  <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+  <link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/kt_ipflt_setup.js"></script>
+</head>
+<body>
+    <img class="load" id="loadPic" src="pic/loading.gif">
+    <div class="main">
+        <div class="mainLeft"></div>
+        <div class="mainShadow"></div>
+        <div class="mainBody">
+            <div class="Ipf_setup">
+                <li id="IPF_MenuSecIpList"></li>
+
+                <div id="IPF_DIV_BasicCfg" style="display:none">
+                    <form>
+                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+                            <tr>
+                                <td width='220' height="27" class="hdNobac" id="IPF_Server"></td>
+                                <td width='150'>
+                                    <input type='radio' name='IPF_RADIO_switch' class="mayBeDisabled">
+                                    <span id="IPF_Enable"></span>
+                                </td>
+                                <td>
+                                    <input type='radio' name='IPF_RADIO_switch' class="mayBeDisabled" checked="checked">
+                                    <span id="IPF_Disable"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="IPF_ListType" class="hdNobac"></td>
+                                <td colspan="2">
+                                    <select id='IPF_SEL_Type' size="1"></select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                  <hr color="#B5B5E6">
+                </div>
+                <div id="IPF_DIV_BlackListView" style="display:none">
+                  <h3 class="titleCtx" id="IPF_BLVTitle"></h3>
+                  <p id="IPF_BLVComment1"></p>
+                  <p id="IPF_BLVComment2"></p>
+                  <form>
+                    <br>
+                    <center>
+                      <table width="100%" border='1' cellpadding='4' cellspacing='0'>
+                        <tr align="center">
+                          <td id="IPF_FlterName" class='hd' nowrap></td>
+                          <td id="IPF_IpVersion" class='hd' nowrap></td>
+                          <td id="IPF_Protocol" class='hd' nowrap></td>
+                          <td id="IPF_SourceIpAndMask" class='hd' nowrap></td>
+                          <td id="IPF_SourcePort" class='hd' nowrap></td>
+                          <td id="IPF_DestIpAndMask" class='hd' nowrap></td>
+                          <td id="IPF_DestPort" class='hd' nowrap></td>
+                          <td id="IPF_Del" class='hd' nowrap></td>
+                        </tr>
+                        <tbody id="IPF_BlackListNeedAppend" align="center">
+                        </tbody>
+                      </table>
+                      <br>
+                      <br>
+                      <input class="buttonX" type='button' id='BTN_Add'>
+                      <input class="buttonX" type='button' id='BTN_Remove'>
+                    </center>
+                  </form>
+                </div>
+                <div id="IPF_DIV_BlackListAdd" style="display:none">
+                  <h3 class="titleCtx" id="IPF_BLATitle"></h3>
+                  <p id="IPF_BLAComment"></p>
+                  <form>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td id="IPF_FilterName2" width="220"></td>
+                        <td><input type='text' size="22" maxlength="15" id="IPF_TEXT_FltName2" class="bListInputText"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">&nbsp;</td>
+                      </tr>
+                      <tr id="IPF_SelectNeedAppend"></tr>
+                      <tr>
+                        <td id="IPF_Protocol2"></td>
+                        <td><select id='IPF_SEL_protocol2'  style="width:160px" size="1">
+                        </select></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_SourceIp"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_StartSrcAddr2" class="bListInputText">
+                          -
+                          <input type='text' size="22" id="IPF_TEXT_EndSrcAddr2" class="bListInputText"></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_SourceMask"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_SrcMask2" class="bListInputText"></td>
+                      </tr>
+                      <tr id="IPF_SrcPort">
+                        <td id="IPF_SourcePort2"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_SrcPort2" class="bListInputText"></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_DestIp"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_StartDstAddr2" class="bListInputText">
+                          -
+                          <input type='text' size="22" id="IPF_TEXT_EndDstAddr2" class="bListInputText"></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_DestMask"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_DstMask2" class="bListInputText"></td>
+                      </tr>
+                      <tr id="IPF_DstPort">
+                        <td id="IPF_DestPort2"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_DstPort2" class="bListInputText"></td>
+                      </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <center>
+                      <input class="buttonX" type='button' id="BTN_Apply2">
+                    </center>
+                  </form>
+                </div>
+                <div id="IPF_DIV_WhiteListView" style="display:none">
+                  <h3 class="titleCtx" id="IPF_WLVTitle"></h3>
+                  <p id="IPF_WLVComment1"></p>
+                  <p id="IPF_WLVComment2"></p>
+                  <form>
+                    <br>
+                    <center>
+                      <table width="100%" border='1' cellpadding='4' cellspacing='0'>
+                        <tr align="center">
+                          <td id="IPF_FilterName3" class='hd' nowrap></td>
+                          <td id="IPF_Interface3" class='hd' nowrap></td>
+                          <td id="IPF_IpVersion3" class='hd'nowrap></td>
+                          <td id="IPF_Protocol3" class='hd' nowrap></td>
+                          <td id="IPF_SourceIpAndMask3" class='hd' nowrap></td>
+                          <td id="IPF_SourcePort3" class='hd' nowrap></td>
+                          <td id="IPF_DestIpAndMask3" class='hd' nowrap></td>
+                          <td id="IPF_DestPort3" class='hd' nowrap></td>
+                          <td id="IPF_Del3" class='hd' nowrap></td>
+                          <tbody id="IPF_WhiteListNeedAppend" align="center">
+                          </tbody>
+                        </tr>
+
+                      </table>
+                      <br>
+                      <br>
+                      <input class="buttonX" type='button' id='BTN_Add3'>
+                      <input class="buttonX" type='button' id="BTN_Remove3">
+                    </center>
+                  </form>
+                </div>
+                <div id="IPF_DIV_WhiteListAdd" style="display:none">
+                  <h3 class="titleCtx" id="IPF_WLATitle"></h3>
+                  <p id="IPF_WLAComment"></p>
+                  <form>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td id="IPF_FilterName4" width="220"></td>
+                        <td><input type='text' size="22" maxlength="15" id="IPF_TEXT_FltName4" class="wListInputText"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">&nbsp;</td>
+                      </tr>
+                      <tr id="IPF_SelectNeedAppend2"></tr>
+                      <tr>
+                        <td id="IPF_Protocol4"></td>
+                        <td><select id='IPF_SEL_Protocol4'  style="width:160px"  size="1">
+                        </select></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_SourceIp4"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_StartSrcAddr4" class="wListInputText">
+                          -
+                          <input type='text' size="22" id="IPF_TEXT_EndSrcAddr4" class="wListInputText"></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_SourceMask4"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_SrcMask4" class="wListInputText"></td>
+                      </tr>
+                      <tr id="IPF_SrcPort2">
+                        <td id="IPF_SourcePort4"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_SrcPort4" class="wListInputText"></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_DestIp4"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_StartDstAddr4" class="wListInputText">
+                          -
+                          <input type='text' size="22" id="IPF_TEXT_EndDstAddr4" class="wListInputText"></td>
+                      </tr>
+                      <tr>
+                        <td id="IPF_DestMask4"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_DstMask4" class="wListInputText"></td>
+                      </tr>
+                      <tr id="IPF_DstPort2">
+                        <td id="IPF_DestPort4"></td>
+                        <td><input type='text' size="22" id="IPF_TEXT_DstPort4" class="wListInputText"></td>
+                      </tr>
+                    </table>
+                    <br>
+                    <table>
+                      <tr>
+                        <td colspan="2" id="IPF_WLATitle2"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" id="IPF_WLAComment2"></td>
+                      </tr>
+                      <tr>
+                        <td><input type='checkbox' id='BTN_ChkAll' checked class="checkboxs"></td>
+                        <td id="IPF_SelectAll"></td>
+                      </tr>
+                      <tbody id="IPF_IfListNeedAppend">
+                      </tbody>
+                    </table>
+                    <br>
+                    <br>
+                    <center>
+                      <input class="buttonX" type='button' id="BTN_Apply4">
+                    </center>
+                  </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

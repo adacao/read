@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>UrlFilter</title>
+    <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+    <link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" src="lib/js/jquery.js"></script>
+    <script language="javascript" src="lib/js/util.js"></script>
+    <script language="javascript" src="lib/js/common.js"></script>
+    <script language="javascript" src="lib/js/kt_urlf_setup.js"></script>
+</head>
+<body>
+	<img class="load" id="loadPic" src="pic/loading.gif">
+    <div class="main">
+        <div class="mainLeft"></div>
+        <div class="mainShadow"></div>
+        <div class="mainBody">
+            <div class="Urlf_setup">
+                <li id="URLF_MenuSecUrlList"></li>
+                <form id = "URLF_FORM_Setup">
+                    <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td class='hdNobac' width="220px" id = 'URLF_EnableCtx'></td>
+                            <td><input type='checkbox' id="URLF_CHX_EnableId">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id='URLF_DIV_Config'>
+                        <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                            <tr height="35">
+                                <td id='URLF_TypeCtx' width="220px" class="hdNobac"></td>
+                                <td width="150px"><input type='radio' name='URLF_RADIO_Type' id="URLF_RADIO_TypeBlack">
+                                    <label id='URLF_LB_Blacklist' for="URLF_RADIO_TypeBlack" class="hdNobac"></label></td>
+                                <td ><input type='radio' name='URLF_RADIO_Type' id="URLF_RADIO_TypeWhite">
+                                    <label id='URLF_LB_Whitelist' for="URLF_RADIO_TypeWhite" class="hdNobac"></label></td>
+                            </tr>
+                        </table>
+
+                        <table width="100%" border="1" cellpadding="3" cellspacing="0">
+                            <tr align="center" >
+                                <td width="33.33%" class='hd' id='URLF_Urladdr'></td>
+                                <td width="33.33%" class='hd' id='URLF_Port'></td>
+                                <td width="33.33%" class='hd' id='URLF_Del'></td>
+                            </tr>
+                            <tbody id="URLF_RuleEntryTbody"></tbody>
+                        </table>
+
+                        <BR>
+                        <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td align="right" >
+                                    <input class="buttonX" id="BTN_Add" type='button'>
+                                    <input class="buttonX" id="BTN_Del" type='button'>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+
+                <div id= "URLF_DIV_AddEntryTitle">
+                    <h3 class="titleCtx" id="URLF_AddEntryTitle"></h3>
+                    <p id="URLF_AddEntryDesc"></p>
+                </div>
+
+                <form id="URLF_FORM_AddEntry">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td id="URLF_AddEntryAddr" width="90"></td>
+                            <td ><input type="text" id='URLF_TEXT_AddEntryAddr'></td>
+                        </tr>
+                        <tr>
+                            <td id="URLF_AddEntryPort" width="90"></td>
+                            <td ><input type="text" id='URLF_TEXT_AddEntryPort'>
+                                <span id="URLF_AddEntryDefPort"></span></td>
+                        </tr>
+                    </table>
+                    <BR>
+                    <BR>
+                </form>
+
+                <div id="URLF_DIV_Button">
+                    <input class="buttonX" id="BTN_Apply" type="button" />
+                    <input class="buttonX" id="BTN_Cancel" type="button" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

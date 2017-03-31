@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ALG Config</title>
+	<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+	<script language="javascript" src="lib/js/jquery.js"></script>
+	<script language="javascript" src="lib/js/common.js"></script>
+	<script language="javascript" src="lib/js/util.js"></script>
+	<script language="javascript" src="lib/js/kt_alg_setup.js"></script>	
+	</style>
+</head>
+<body>
+	<img class="load" id="loadPic" src="pic/loading.gif">
+	<div class="main">
+		<div class="mainLeft"></div>
+		<div class="mainShadow"></div>
+		<div class="mainBody">
+			<div class="NETCON">
+				<li id="MENU_STS_NET_CON"></li>
+				<form>
+					<div class="contentbox">
+						<label for="ALG_CHX_H323Enable" id="ALG_LB_H323Enable" style="float:left;"></label>
+						<input type="checkbox" id="ALG_CHX_H323Enable" style="float: right;" />
+					</div>
+					<div class="contentbox">
+						<label for="ALG_CHX_RtspEnable" id="ALG_LB_RtspEnable" style="float:left;"></label>
+						<input type="checkbox" id="ALG_CHX_RtspEnable"  style="float: right;" />
+					</div>
+					<div class="contentbox">
+						<label for="ALG_CHX_IpsecEnable" id="ALG_LB_IpsecEnable"style="float:left;"></label>
+						<input type="checkbox" id="ALG_CHX_IpsecEnable"  style="float: right;" />
+					</div>
+					<div class="contentbox">
+						<label for="ALG_CHX_L2tpEnable" id="ALG_LB_L2tpEnable" style="float:left;"></label>
+						<input type="checkbox" id="ALG_CHX_L2tpEnable"  style="float: right;" />
+					</div>
+					<div class="contentbox">
+						<label for="ALG_CHX_FtpEnable" id="ALG_LB_FtpEnable" style="float:left;"></label>
+						<input type="checkbox" id="ALG_CHX_FtpEnable"  style="float: right;" />
+					</div>
+				</form>
+			</div>
+			<div class="NET6CO">
+				<li id="MENU_STS_NET6_CO"></li>
+				<form>
+					<div class="contentbox">
+						<label for="DMZ_CHX_Enable" id="DMZ_TEXT_Enable" style="float:left;"></label>
+						<input type="checkbox" id="DMZ_CHX_Enable"  style="float: right;"/>
+					</div>
+
+					<div id="DMZ_Config">
+				        <p id="DMZ_AddTip"></p>
+						<p id="DMZ_ClearTip"></p>
+				   	 	<br/>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td id="DMZ_InputTip" width="220"></td>
+								<td><input type="text" size="40" maxlength="39" id="DMZ_TEXT_Host" style="width:200"></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+			</div>
+			<div>
+				<input class="buttonX" type='button' id="BTN_Apply" style="margin-left:418px">
+				<input class="buttonX" type='button' id="BTN_cancle">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

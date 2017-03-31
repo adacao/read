@@ -1,0 +1,460 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAN CONFIGURATION</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/kt_wan_setup.js"></script>
+<style>
+		.table{	
+			width:100%;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+    <img class="load" id="loadPic" src="pic/loading.gif">
+    <div class="main">
+        <div class="mainLeft"></div>
+        <div class="mainShadow"></div>
+        <div class="mainBody">
+            <div class="NETCON">
+                <li id="MENU_STS_NET_CON"></li>
+                <form>
+                    <table id="NETCON_Table" width="100%" border="1" cellpadding="3" cellspacing="0">
+                        <tr align="center">
+         	                  <td class="hd" id="NETCON_Netname"></td>
+    				                <td class="hd" id="NETCON_Portmapping"></td>
+    				                <td class="hd" id="NETCON_Opration"></td>
+                        </tr>
+                        <tbody id="NETCON_NetListTbody" align="center"></tbody>
+                    </table>
+                    <div id="NETCON_DIV_Add">
+                        <input type="button" class="buttonX" id="add">
+                    </div>
+                    <div id="NETCON_DIV_Button">
+                        <input class="buttonX" id="Apply" type="button" style="margin-left: 243px;">
+                        <input class="buttonX" id="BTN_cancle" type="button">
+                    </div>
+                    <!--bianji-->
+                    <div id="editor" style="display: none;">
+                        <table width="445">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanUsMode"></td>
+                            <td><select size="1" id ="WAN_SEL_UpStreamMode">
+                                </select></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_Vdsl">
+                        </table>
+                        <table width="445" id="WAN_TB_Lan">
+                        </table>
+                        <table width="445">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanLinkName"></td>
+                            <td><select size="1" id="WAN_SEL_WanLinkName">
+                                </select>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="445">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanConnMode"></td>
+                            <td><select size="1" id="WAN_SEL_WanConnMode">
+                                <option value="bridge">Bridge</option>
+                            <option value="route">Route</option>
+                                </select>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="445">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanIpMode"></td>
+                            <td><select size="1" id="WAN_SEL_WanIpMode"></select></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_IpMode">
+                          <tr>
+                            <td width="110" height="31"><input type="radio" value="dhcp" name="WAN_RADIO_WanIpModeSel">
+                              DHCP</td>
+                            <td id="WAN_TD_WanDhcpNotice"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31"><input type="radio" value="static" name="WAN_RADIO_WanIpModeSel">
+                              Static</td>
+                            <td id="WAN_TD_WanStaticNotice"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31"><input type="radio" value="pppoe" name="WAN_RADIO_WanIpModeSel">
+                              PPPoE</td>
+                            <td id="WAN_TD_WanPppoeNotice"></td>
+                          </tr>
+                        </table>
+                        <table width="600" id="WAN_TB_PppoeProxy" style="display:none">
+                          <tr>
+                            <td width="110" height="31">&nbsp;&nbsp;&nbsp;
+                              <input type="checkbox" id="WAN_CHX_NoPppoeProxy" onClick="disablePppoeProxy()"></td>
+                            <td colspan="2" id="WAN_TD_WanPppoeNoProxy"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31">&nbsp;&nbsp;&nbsp;
+                              <input type="checkbox" id="WAN_CHX_PppoeProxy" onClick="enablePppoeProxy()"></td>
+                            <td id="WAN_TD_WanPppoeProxy"></td>
+                            <td><font color="#990000" id="WAN_TD_WanPppoeProxyNotice"></font></td>
+                          </tr>
+                          <tr id="WAN_TR_PppoeProxyNumber">
+                            <td width="110" height="31">&nbsp;&nbsp;&nbsp; 
+                            <td colspan="2"><span id="WAN_TD_WanPppProxyNumCtx"></span><span id="WAN_TD_WanAvailPppProxyNum"></span>
+                              <input type="text" id="WAN_TEXT_PppoeProxyNumber" size="1" maxlength = "1"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31">&nbsp;&nbsp;&nbsp;
+                              <input type="checkbox" id="WAN_CHX_PppToBridge" onClick="enablePppToBridge(this)"></td>
+                            <td id="WAN_TD_WanPppoeMixCtx" colspan="2"></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_Mtu">
+                          <tr>
+                            <td width="110" height="31">MTU:</td>
+                            <td><input type="text" id="WAN_TEXT_Mtu" value="1492" size="4" maxsize='4'></td>
+                          </tr>
+                        </table>
+
+                        <DIV id=WAN_DIV_Adsl style="display:none">
+                          <table width="445" id="WAN_TB_Atmpvc">
+                            <tr>
+                              <td width="110" height="31">VPI:[0-255]</td>
+                              <td><input type="text" id="WAN_TEXT_Vpi" value="0" size="4" maxsize='4'></td>
+                            </tr>
+                            <tr>
+                              <td width="110" height="31">VCI:[32-65535]</td>
+                              <td><input type="text" id="WAN_TEXT_Vci" value="35" size="5" maxsize='5'></td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_ServCategor">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanServerType"></td>
+                              <td><select size="1" id="WAN_SEL_ServiceCat" onChange="checkServerKind(this.value)">
+                                  <option value="UBR">UBR Without PCR</option>
+                                  <option value="UBRWPCR">UBR With PCR</option>
+                                  <option value="CBR">CBR</option>
+                                  <option value="VBR-nrt">Non Realtime VBR</option>
+                                  <option value="VBR-rt">Realtime VBR</option>
+                                </select></td>
+                            </tr>
+                          </table>
+                          <table width="445" id ="WAN_TB_PeakCellhide">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanPeakCellRate"></td>
+                              <td><input type="text" id ="WAN_TEXT_PeakCellRate" value="" size="6" >
+                                cells/s</td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_OtherCellhide" style="display:none">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanSustainableCellRate"></td>
+                              <td><input type="text" id="WAN_TEXT_SustainableCellRate" value="" size="6">
+                                cells/s</td>
+                            </tr>
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanMaxBurstSize"></td>
+                              <td><input type="text" id="WAN_TEXT_MaxBurstSize" value="" size="6">
+                                cells</td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_EncapModel">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanPackageMethod"></td>
+                              <td><select size="1" id="WAN_SEL_EncSel">
+                                  <option value="0" >LLC/SNAP-BRIDGING</option>
+                                  <option value="1" >VC/MUX</option>
+                                  </select>
+                              </td>
+                            </tr>
+                          </table>
+                        </DIV>
+                      
+                        <table width="445" id="WAN_TB_Nat">
+                          <tr>
+                            <td width="110" height="31">NAT</td>
+                            <td><input type="checkbox" id="WAN_CHX_Nat"></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_FullConeNat">
+                          <tr>
+                            <td width="110" height="31">FullConeNAT</td>
+                            <td><input type="checkbox" id="WAN_CHX_FullConeNat"></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_Vlan">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanVlanEnableCtx"></td>
+                            <td><input type="checkbox" id="WAN_CHX_Vlan"></td>
+                          </tr>
+                          <tr id="WAN_TB_VlanId">
+                            <td width="110" height="31">Vlan ID</td>
+                            <td><input type="text" id="WAN_TEXT_VlanId" size="4"></td>
+                          </tr>
+                          <tr id="WAN_TB_D8021">
+                            <td width="110" height="31">802.1p</td>
+                            <td><select id= "WAN_SEL_D8021"size="1" >
+                                <option value=-1></option>
+                                <option value=0>0</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                                <option value=7>7</option>
+                              </select></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAB_TB_Dial" style="display:none">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanDialUser"></td>
+                            <td><input type="text" id="WAN_TEXT_UserName" size="30" maxlength="260"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanDialPasswd"></td>
+                            <td><input type="password" id="WAN_INPUT_UserPassword"size="30" maxlength="99"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanDialServName"></td>
+                            <td><input type="text" id="WAN_TEXT_ServerName"size="30" maxlength="99"></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanDialMethodCtx"></td>
+                            <td><select size="1" id="WAN_SEL_DialMode" onChange="checkdialMode(this.value)">
+                                <option	value="autoDial" selected id="WAN_SEL_WanAutoConn"></option>
+                                <option	value="adaptDial" id="WAN_SEL_WanOnDemand"></option>
+                              </select></td>
+                          </tr>
+                          <tr id="WAN_TR_OnDemand" style="display:none">
+                            <td width="110" height="31" id="WAN_TD_WanIdleTimeCtx"></td>
+                            <td><input type="text" id="WAN_TEXT_DisconnectTime" value="2" size="4">
+                              <span id="WAN_TD_IdleTimeUnit"></span></td>
+                          </tr>
+                          <tr id="WAN_TR_ManualConn" style="display:none">
+                            <td width="110" height="31"><input class="buttonX" type='button' id="BTN_ManualConn" ></td>
+                            <td><input class="buttonX" type='button' id="BTN_ManualDisconn" ></td>
+                          </tr>    
+                        </table>
+                        <table width="445" id="WAN_TB_IpAddr" style="display:none">
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanIpAddrCtx"></td>
+                            <td><input type="text" id="WAN_TEXT_IpAddr" class="WAN_CLS_IpAddr" size="15" maxszie='18'></td>
+                          </tr>
+                          <tr>
+                            <td width="110" height="31" id="WAN_TD_WanIpMaskCtx"></td>
+                            <td><input type="text" id="WAN_TEXT_NetMask" class="WAN_CLS_IpMask" size="15" maxszie='18'></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_WanDefGwCtx"></td>
+                            <td><input type='text' id="WAN_TEXT_DefGW" class="WAN_CLS_IpAddr" size='15' maxszie='18'></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_WanPriDnsCtx"></td>
+                            <td><input type='text' id="WAN_TEXT_FirstDns"class="WAN_CLS_IpAddr" size='15' maxszie='18'></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_WanSecDnsCtx"></td>
+                            <td><input type='text' id="WAN_TEXT_SecondDns" class="WAN_CLS_IpAddr" size='15' maxszie='18'></td>
+                          </tr>
+                        </table>
+                        <div id="WAN_DIV_Gw6" style="display:none">
+                          <table width="445" id="WAN_TB_Gw6">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanGw6IpAddrCtx"></td>
+                              <td><input type='text' id="WAN_TEXT_WanGateway6" size='40' maxszie='40'></td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_Unnumbered">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanGetIpv6AddrCtx"></td>
+                              <td><input type="checkbox" id="WAN_CHX_Enblunnumbered"></td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_PD">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanGetIpv6PrefixCtx"></td>
+                              <td><input type="checkbox" id="WAN_CHX_EnblPD"></td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_Static6">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanIpv6AddrCtx"></td>
+                              <td><input type='text' id="WAN_TEXT_WanAddress6" class="WAN_CLS_Ipv6Addr" size='40' maxszie='40'></td>
+                            </tr>
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanIpv6PrefixLenCtx"></td>
+                              <td><input type='text' id="WAN_TEXT_WanSubnetPrefixLen"></td>
+                            </tr>
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanIpv6FstDnsCtx"></td>
+                              <td><input type='text' id="WAN_TEXT_Dns6Primary" class="WAN_CLS_Ipv6Addr" size='40' maxszie='40'></td>
+                            </tr>
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanIpv6SecDnsCtx"></td>
+                              <td><input type='text' id="WAN_TEXT_Dns6Secondary" class="WAN_CLS_Ipv6Addr" size='40' maxszie='40'></td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_Dsliteauto">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanAutoDSLiteCtx"></td>
+                              <td><input type="checkbox" id="WAN_CHX_Dsliteauto"></td>
+                            </tr>
+                          </table>
+                          <table width="445" id="WAN_TB_Dslitemanu">
+                            <tr>
+                              <td width="110" height="31" id="WAN_TD_WanManuDSLiteCtx"></td>
+                              <td><input type="checkbox" id="WAN_CHX_Dslitemanu"></td>
+                            </tr>
+                            <tr id="WAN_TR_RemoteAddr6">
+                              <td width="110" height="31" id="WAN_TD_WanDSLiteRemoteAddrCtx"></td>
+                              <td><input type='text' id="WAN_TEXT_RemoteAddress6"size='40' maxszie='40'></td>
+                            </tr>
+                          </table>
+                        </div>
+                        <table width="600">
+                          <tr>
+                          <tr id='WAN_TR_ServiceModeBridge' >
+                            <td width="110" height="31" class="WAN_CLS_WanServModeCtx"></td>
+                            <td><select id='WAN_SEL_ServiceModeBridge'>
+                                <option value=6>INTERNET</option>
+                                <option value=7>OTHER</option>
+                              </select></td>
+                          </tr>
+                          <tr id='WAN_TR_ServiceModeRoute'>
+                            <td width="110" height="31" class="WAN_CLS_WanServModeCtx"></td>
+                            <td><select id='WAN_SEL_ServiceModeRoute'>
+                              </select></td>
+                          </tr>
+                        </table>
+                        <table width="445" id ="WAN_TB_PortBind" style="display:none">
+                          <tr>
+                            <td width="150" id="WAN_TD_WanBindPortCtx"></td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tbody id="WAN_PortBindTb">
+                          </tbody>      
+                          <!-- <tr>
+                            <td id="WAN_TD_PortBindLan1" width="110" height="31"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanPort1">
+                              <label for="WAN_CHX_LanPort1" class="WAN_CLS_WanLanPort1"></label></td>
+                            <td id="WAN_TD_PortBindLan2"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanPort2">
+                              <label for="WAN_CHX_LanPort2" class="WAN_CLS_WanLanPort2"></label></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_PortBindLan3" width="110" height="31"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanPort3">
+                              <label for="WAN_CHX_LanPort3" class="WAN_CLS_WanLanPort3"></label></td>
+                            <td id="WAN_TD_PortBindLan4"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanPort4">
+                              <label for="WAN_CHX_LanPort4" class="WAN_CLS_WanLanPort4"></label></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_ProtBindSSID1" width="110" height="31"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanWlanPort1">
+                              <label for="WAN_CHX_LanWlanPort1" id="WAN_LB_WanWLanPort1"></label></td>
+                            <td id="WAN_TD_ProtBindSSID2"><input type="checkbox" name="WAN_CHX_LanPort"  id="WAN_CHX_LanWlanPort2">
+                              <label for="WAN_CHX_LanWlanPort2" id="WAN_LB_WanWLanPort2"></label></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_ProtBindSSID3" width="110" height="31"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanWlanPort3">
+                              <label for="WAN_CHX_LanWlanPort3" id="WAN_LB_WanWLanPort3"></label></td>
+                            <td id="WAN_TD_ProtBindSSID4"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_LanWlanPort4">
+                              <label for="WAN_CHX_LanWlanPort4" id="WAN_LB_WanWLanPort4"></label></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_ProtBindSSID5" width="120" height="31"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_WanBindWlanPort5">
+                              <label for="WAN_CHX_WanBindWlanPort5" id="WAN_LB_WanWLanPort5"></label></td>
+                            <td id="WAN_TD_ProtBindSSID6"><input type="checkbox" name="WAN_CHX_LanPort"  id="WAN_CHX_WanBindWlanPort6">
+                              <label for="WAN_CHX_WanBindWlanPort6" id="WAN_LB_WanWLanPort6"></label></td>
+                          </tr>
+                          <tr>
+                            <td id="WAN_TD_ProtBindSSID7" width="120" height="31"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_WanBindWlanPort7">
+                              <label for="WAN_CHX_WanBindWlanPort7" id="WAN_LB_WanWLanPort7"></label></td>
+                            <td id="WAN_TD_ProtBindSSID8"><input type="checkbox" name="WAN_CHX_LanPort" id="WAN_CHX_WanBindWlanPort8">
+                              <label for="WAN_CHX_WanBindWlanPort8" id="WAN_LB_WanWLanPort8"></label></td>
+                          </tr> -->  
+                        </table>
+                        <table width="445" id="WAN_TB_PortBindTip" style="display:none">
+                          <tr>
+                            <td colspan="2" id="WAN_TD_WanPortBindNotice"></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_PortBindOtherTip" style="display:none">
+                          <tr>
+                            <td colspan="2"><font color="red" id="WAN_TD_WanPortBindWarn"></font></td>
+                          </tr>
+                        </table>
+                        <br>
+                        <table width="445" id ="WAN_TB_VlanBind" style="display:none">
+                          <tr>
+                            <td width="110" id="WAN_TD_WanBindDataCtx"></td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </table>
+                        <table border='1' cellpadding='0' cellspacing='0' id="WAN_TB_VlanBindOtherTip" style="display:none">
+                          <tr align='center'>
+                            <td class='hd' id="WAN_TD_WanVlanBindCtx"></td>
+                            <td class='hd'>&nbsp;vlan_1</td>
+                            <td class='hd'>&nbsp;vlan_2</td>
+                            <td class='hd'>&nbsp;vlan_3</td>
+                            <td class='hd'>&nbsp;vlan_4</td>
+                          </tr>
+                          <tr id="WAN_TR_VlanBindPort1">
+                            <td class='hd'><input type='checkbox' name='WAN_CHX_VlanBind' id ="WAN_CHX_WanVlanBindPort1" disabled >
+                              <label for="WAN_CHX_WanVlanBindPort1" class="WAN_CLS_WanLanPort1"></label></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan1" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan11" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan2" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan12" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan3" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan13" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan4" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan14" disabled value='x'></td>
+                          </tr>
+                          <tr id="WAN_TR_VlanBindPort2">
+                            <td class='hd'><input type='checkbox' name='WAN_CHX_VlanBind' id="WAN_CHX_WanVlanBindPort2"  disabled >
+                                <label for="WAN_CHX_WanVlanBindPort2" class="WAN_CLS_WanLanPort2"></label></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan1" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan21" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan2" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan22" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan3" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan23" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan4" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan24" disabled value='x'></td>
+                          </tr>
+                          <tr id = "WAN_TR_VlanBindPort3">
+                            <td class='hd'><input type='checkbox' name='WAN_CHX_VlanBind' id="WAN_CHX_WanVlanBindPort3"  disabled >
+                                <label for="WAN_CHX_WanVlanBindPort3" class="WAN_CLS_WanLanPort3"></label></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan1"  class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan31" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan2"  class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan32" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan3"  class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan33" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan4"  class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan34" disabled value='x'></td>
+                          </tr>
+                          <tr id = "WAN_TR_VlanBindPort4">
+                            <td class='hd'><input type='checkbox' name='WAN_CHX_VlanBind' id="WAN_CHX_WanVlanBindPort4"  disabled >
+                                <label for="WAN_CHX_WanVlanBindPort4" class="WAN_CLS_WanLanPort4"></label></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan1" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan41" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan2" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan42" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan3" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan43" disabled value='x'></td>
+                            <td><input type='text' size="6" name="WAN_TEXT_BindVlan4" class="WAN_CLS_BindVlan" id="WAN_TEXT_BindVlan44" disabled value='x'></td>
+                          </tr>
+                        </table>
+                        <table width="445" id="WAN_TB_VlanPortBindTip" style="display:none">
+                          <br>
+                          <tr>
+                            <td colspan="2" id="WAN_TD_WanVlanBindNotice"></td>
+                          </tr>
+                        </table>
+                        <br>
+                        <input class="buttonX" name="save" type="button" id="BTN_Apply" value="保存/应用">
+                        <!-- <input class="buttonX" type="button" name="delete" id="BTN_Del" value="删除"> -->
+                        <input class="buttonX" type="button" name="delete" id="BTN_Cancel" value="返回">
+                    </div>
+                  
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

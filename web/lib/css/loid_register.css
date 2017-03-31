@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    font-size: Arial, Verdana, Helvetica, sans-serif;
+}
+td.hdNobac {
+    font:700 12px/22px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+}
+#main{
+    width: 1008px;
+    margin: auto;
+}
+#main #mainTop {
+    width: 1008px;
+    height: 97px;
+}
+#main_div {
+    width: 100%;
+    height: 67px;
+}
+#main_div img {
+    float: left;
+}
+#main_div span {
+    margin: 45px 30px 0 600px;
+    float: left;
+    font: 700 12pt/21px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+}
+#logoutlink {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12pt;
+    float: left;
+    color: #3F7290;
+    margin-top: 45px;
+}
+#main_div:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#LinearSpace {
+    width: 100%;
+    height: 30px;
+    background-image: -moz-linear-gradient(top, #fff 0%, #FFD5A6 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff ), color-stop(100%,#FFD5A6));
+    background-image: linear-gradient(to bottom, #fff 0%,#FFD5A6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#FFD5A6');
+}
+#main #mainMenu {
+    height: 88px;
+    width: 100%;
+}
+#main #mainMenu #GuideSet {
+    background-color: #E78124;
+    float: left;
+    height: 88px;
+    width: 150px;
+    text-align: center;
+    font: 700 14pt/88px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+    color: #fff;
+}
+#main #mainMenu #navTop {
+    float: left;
+    width: 858px;
+    height: 88px;
+    background-color: #3F7290;
+}
+#navTop a{
+    font: 700 11pt/28px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+    text-decoration: none;
+    color: #fff;
+    padding-left:15px;
+}
+#navTop p{
+    height:28px;
+    margin-top:30px;
+    width:100px;
+}
+.MainLeft{
+    background-color:#E7E7E7;
+    border-right:#999;
+    float: left;
+    width: 150px;
+    height:525px;
+}
+.MainLeft li{
+    width: 140px;;
+    height:30px;
+    background-color: #E78124;
+    text-align: right;
+    font: 700 10pt/30px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+    position: relative;
+    top:10px;
+    list-style: none;
+    color: #fff;
+    padding-right:10px;
+    z-index: 99;
+}
+
+.OldMac{
+    display: none;
+}
+.MainRight {
+    width: 668px;
+    height: 475px;
+    float:left;
+    padding: 40px 10px 10px 30px;
+    z-index: 50;
+    box-shadow:0px 4px 5px 2px #999;
+    background-color: #fff;
+}
+#MenuProduct {
+    width: 100%;
+    height: 30px;
+    padding-left: 558px;
+    box-sizing: border-box;
+}
+#MenuProduct li {
+    float: left;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 0px;
+}
+#MenuProduct:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#mainGatewayName, #mainGatewayType, #mainProduct, #mainProductType {
+    font: 400 10pt/30px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+    color: #fff;
+}
+#MenuProduct li:last-child {
+    background-color: #E78124;
+}
+#mainBody {
+    width: 1008px;
+    height: 535px;
+    background-color: #E5E5E5;
+}
+#mainBody:after, #mainTitle:after, #RightNav:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#mainWhite {
+    height: 10px;
+    width: 100%;
+    background-color: #E5E5E5;
+}
+#mainTitle {
+    width: 100%;
+    height: 525px;
+    float: left;
+    background-color: #E5E5E5;
+}
+#main #mainBottom {
+    width: 100%;
+    height: 25px;
+}
+#main #mainFrameDiv {
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    width: 858px;
+    height: 525px;
+}
+#RightNav {
+    width: 150px;
+    height: 525px;
+    float: left;
+    background-color: #527FA1;
+}
+#mainRightOne {
+    width: 150px;
+    height: 25px;
+    float: left;
+    background-color: #E78124;
+}
+#mainRightTwo {
+    width: 708px;
+    height: 25px;
+    float: left;
+    background-color: #3F7290;
+}
+#mainRightThree {
+    width: 150px;
+    height: 25px;
+    float: left;
+    background-color: #527FA1;
+}

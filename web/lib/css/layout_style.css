@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main{
+    width:100%;
+    height:100%;
+    background-color:#e5e5e5;
+}
+.mainLeft{
+    width:708px;
+    height: 100%;
+    background-color: #fff;
+    float: right;
+}
+.mainShadow{
+    width:5px;
+    height: 100%;
+    background-image: linear-gradient(to right, #e5e5e5 20%, #b8b8b8 100%);
+    float:right;
+}
+.mainBody{
+    width:100%;
+    height:100%;
+    z-index: 99;
+    float: left;
+    position: absolute;
+}
+
+.QOS,.NETCON,.NET6CO,.ETHINFO,.EPONINFO,.USERWLAN,.USERETH,.TRCONN,.TROPER,.TRSEV,.Firewall,.Urlf_setup,.Macf_setup,.Ipf_setup,.DDNS_DIV,.UPNP,.IGMP_SNOOPING,.IGMP,.Daily_use,.Help_use,.Telnet_server,.Force_user,.Accout_Setup,.Usb_Apply_div,.Usb_BackUp,.Usb_Upload,.Dm_reboot,.Log_level,.Diag_ping,.Reporting,.NetworkMeet,.Change_language,.QOS_List,.QOS_BusinessName,.QOS_Kind,.QOS_Kind_Set,.QOS_CAR_Set{
+    width:100%;
+}
+li{
+    width: 144px;;
+    height:30px;
+    background-color: #E78124;
+    font: 700 10pt/30px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+    list-style: none;
+    color: #fff;
+    text-align: right;
+    padding-right:6px;
+    position: relative;
+    top:10px;
+    float: left;
+
+}
+.QOS>form,.NETCON>form,.ETHINFO>form,.EPONINFO>form,.USERWLAN>form,.TRCONN>form,.TROPER>form,.TRSEV>form,.Firewall>form,#URLF_FORM_Setup,#URLF_DIV_AddEntryTitle,#IPF_DIV_BasicCfg,#MACF_FORM_Config,#DDNS_FORM_Mngr,#MACF_FROM_ModeChange,#DDNS_DIV_AddTitle,.UPNP>form,.IGMP>form,.IGMP_SNOOPING>form,.Daily_use>form,.Help_use>div,.Telnet_server>form,.Force_user>form,.Accout_Setup>form,.Usb_Apply_div>div,.Usb_BackUp>div,.Usb_Upload>div,.Dm_reboot>form,.Log_level>form,.Diag_ping>form,.Reporting>div,.NetworkMeet>form,.Change_language>div,.QOS_BusinessName>form,.QOS_List>form,.QOS_Kind_Set>form,.QOS_CAR_Set>form{
+    width: 638px;
+    padding:40px 50px 30px 20px;
+    float: right;
+}
+.QOS_Kind>form{
+    width: 638px;
+    padding:40px 50px 0px 20px;
+    float: right;
+}
+#URLF_DIV_Config,#MACF_DIV_Config,#DDNS_DIV_Button,#DMZ_Config,#UPNP_DIV_Rules,#DIAG_TEXT_PingIpaddr{
+    margin-top: 10px;
+}
+#loadPic{
+    position: fixed;
+    z-index: 9999;
+    top:0;
+    right: 0;
+}
+.Cls{
+    width:30px;
+}
+#add{
+    margin-left:281px;
+}
+#BTN_Apply{
+    margin-left:243px;
+}
+.Wanone{
+    display: inline-block;
+    width:21px;
+    height:21px;
+    background: url('../../pic/wan_setup_exit.png') no-repeat 3px 1px;
+    background-size: 100%;
+    cursor: pointer;
+    border:0px ;
+}
+.Wantwo{
+    display: inline-block;
+    margin-left: 15px;
+    width:21px;
+    height:21px;
+    background: url('../../pic/wan_setup_del.png') no-repeat 0 2px;
+    background-size: 100%;
+    cursor: pointer;
+    border:0px ;
+}
+.Help_use p a{
+    font: 700 11pt/30px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+    text-decoration: none;
+    color:#000;
+}
+.Help_use p a:hover{
+    color:#3F7290;
+}
+.contentbox{
+    width:230px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    color:#000;
+    font:700 12px "Arial, Verdana, Geneva, Helvetica, sans-serif";
+}
+.USERWLAN>div,#URLF_DIV_Button,#MACF_DIV_Button,#URLF_FORM_AddEntry,.Ipf_setup>div,#IPTV_DIV_BTN{
+    width: 638px;
+    padding:0px 50px 0px 20px;
+    float: right;
+
+}
+.USERETH>div,#DDNS_FORM_ADD,#IPTV_DIV_PubVlan,.Accout_Setup>div{
+    width:638px;
+    padding:0px 50px 40px 20px;
+    float: right;
+
+}
+.NET6CO>form:nth-of-type(1),.USERETH>form:nth-of-type(1){
+    width:638px;
+    padding:40px 50px 30px 20px;
+    float: right;
+
+}
+.NET6CO>form:nth-of-type(2),.USERETH>form:nth-of-type(2){
+    width:638px;
+    padding:0px 50px 30px 20px;
+    float: right;
+
+}
+.main:after,.QOS:after,.NET6CO:after,.ETHINFO:after,.EPONINFO:after,.USERWLAN:after,.USERETH:after,.NETCON:after,.TRCONN:after,.TROPER:after,.TRSEV:after,.Firewall:after,.DDNS_DIV:after,.NETCON:after,.UPNP:after,.Ipf_setup:after,.IGMP_SNOOPING:after,.IGMP:after,.Daily_use:after,.Help_use:after,.Telnet_server:after,.Force_user:after,.Accout_Setup:after,.Usb_Apply_div:after,.Usb_BackUp:after,.Usb_Upload:after,.Dm_reboot:after,.Log_level:after,.Diag_ping:after,.Reporting:after,.NetworkMeet:after,.Change_language:after,.QOS_List:after,.QOS_BusinessName:after,.QOS_Kind:after,.QOS_Kind_Set:after,.QOS_CAR_Set:after{
+    content: '';
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tr69</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/kt_tr69_setup.js"></script>
+<style>
+		.table{	
+			width:100%;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+  <div class="main">
+    <div class="mainLeft"></div>
+    <div class="mainShadow"></div>
+    <div class="mainBody">
+        <div class="NETCON" id="NETCON">
+           <li id="MENU_STS_NET_CON"></li>
+           <img class="load" id="loadPic" src="pic/loading.gif">
+           <form>
+             <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="200" id='TR69_TD_Inform'></td>
+                <td><input type="checkbox" id="checkbox" name='TR69_CHX_Inform'/></td>
+                <!--<td><input type='radio' name='TR69_RADIO_Inform'>
+                  <span id = 'TR69_Disable'></span><a href="lib/js/tr69_setup.js"></a></td>
+                <td><input type='radio' name='TR69_RADIO_Inform'>
+                  <span id = 'TR69_Enable'></span></td>-->
+              </tr>
+              <tr>
+                <td id='TR69_TD_AcsUrl'></td>
+                <td><input type='text' id='TR69_TEXT_AcsUrl' size="20" maxlength="256"></td>
+              </tr>
+              <tr>
+                <td id= 'TR69_TD_AcsUserName'></td>
+                <td><input type='text' id='TR69_TEXT_AcsUser' size="20" maxlength="256"></td>
+              </tr>
+              <tr>
+                <td id= 'TR69_TD_AcsPwd'></td>
+                <td><input type='password' id='TR69_PWD_AcsPwd' size="20" maxlength="256"></td>
+              </tr>
+              <tr>
+                <td width="200" id='TR69_TD_function'></td>
+                <td><input type="checkbox" id="TR69_CHX_PeriodicInformEnable"/></td>
+              </tr>
+              <tr>
+                <td width="200" id='TR69_TD_InformInter'></td>
+                <td><input type='text' id='TR69_TEXT_InformInter' size="20" maxlength="256"></td>
+              </tr>
+              <tr>
+                <td width="200" id= 'TR69_TD_ConnReqName'></td>
+                <td><input type='text' id='TR69_TEXT_ConnReqName' size="20" maxlength="256"></td>
+              </tr>
+              <tr>
+                <td id = 'TR69_TD_ConnReqPwd'></td>
+                <td><input type='password' id='TR69_PWD_ConnReqPwd' size="20" maxlength="256"></td>
+              </tr>
+              <tr>
+                <td width="200" id='TR69_TD_HrefCert'></td>
+                <td align="left"><input class="buttonX" type='button' id='TR69_BTN_Certificate'></td>
+              </tr>
+              <tr>
+                <td id='maintenancechange'></td>
+                <td><input type='button' id='maintenancechangebtn' class="buttonX" style="width: 150px;"></td>
+              </tr>
+            </table>
+
+
+           </form>
+        </div>
+
+
+        <div class="NET6CO">
+          <li id="MENU_STS_NET6_CO"></li>
+          <form>
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="200" id='STUNset'></td>
+                <td><input type="checkbox" id="TR69_CHX_ConnReqAuth" /></td>
+              </tr>
+            </table>
+           <div id="TR69_DIV_Mdw">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="200" id='TR69_TD_Mdw'></td>
+                  <td><input name='TR69_RADIO_Mdw' type='radio'>
+                    <span id='TR69_Mldmode1'></span>
+                    <input name='TR69_RADIO_Mdw' type='radio'>
+                    <span id='TR69_Mldmode2'></span>
+                    <input name='TR69_RADIO_Mdw' type='radio'>
+                    <span id='TR69_Mldmode3'></span></td>
+                </tr>
+                <tr>
+                  <td width="200" id= 'TR69_TD_MldAddr'></td>
+                  <td><input type='text' id='TR69_TEXT_MldAddr' size="20" maxlength="256"></td>
+                </tr>
+                <tr>
+                  <td width="200" id = 'TR69_TD_MldPort'></td>
+                  <td><input type='text' id='TR69_TEXT_MldPort' size="20" maxlength="256"></td>
+                </tr>
+              </table>
+            </div>
+          </form>
+        </div>
+
+          <input class="buttonX" type='button' id='BTN_Apply' style="float: left;margin-left: 380px;"/>
+          <input class="buttonX" type='button' id='BTN_cancle' style="float: left;margin-left: 10px;" onclick="location.reload();"/>
+    </div>
+  </div>
+  <!--
+	<div class="MainRight">
+		<form>
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><input type="checkbox" id="TR69_CHX_ConnReqAuth"></td>
+          <td id= 'TR69_TD_ConnReqAuth'></td>
+        </tr>
+      </table>
+    </form>
+	</div>-->
+</body>
+</html>

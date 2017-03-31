@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>FIREWALL</title>
+    <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+    <link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" src="lib/js/jquery.js"></script>
+    <script language="javascript" src="lib/js/common.js"></script>
+    <script language="javascript" src="lib/js/kt_firewall_setup.js"></script>
+</head>
+<body>
+<img class="load" id="loadPic" src="pic/loading.gif">
+<div class="main">
+    <div class="mainLeft"></div>
+    <div class="mainShadow"></div>
+    <div class="mainBody">
+        <div class="Firewall">
+            <li id="FIREWALL_LB_menSecFireWallLevel"></li>
+            <form>
+                <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                    <tr>
+                        <td class='hdNobac' width="220px"><label for="FIREWALL_CHX_portScanDetectEnable" id="FIREWALL_LB_portScanDetectEnable">&nbsp;</label></td>
+                        <td><input type="checkbox" id="FIREWALL_CHX_portScanDetectEnable" ></td>
+                    </tr>
+                    <tr>
+                        <td class='hdNobac' width="220px"><label for="FIREWALL_CHX_pingofDeathAttackEnable" id="FIREWALL_LB_pingofDeathAttackEnable">&nbsp;</label></td>
+                        <td><input type="checkbox" id="FIREWALL_CHX_pingofDeathAttackEnable" ></td>
+                    </tr>
+                    <tr>
+                        <td class='hdNobac' width="220px"><label for="FIREWALL_CHX_synFloodAttackEnable" id="FIREWALL_LB_synFloodAttackEnable">&nbsp;</label></td>
+                        <td><input type="checkbox" id="FIREWALL_CHX_synFloodAttackEnable" ></td>
+                    </tr>
+                    <tr>
+                        <td class='hdNobac' width="220px"><label for="FIREWALL_CHX_winnukeAttackEnable" id="FIREWALL_LB_winnukeAttackEnable">&nbsp;</label></td>
+                        <td><input type="checkbox" id="FIREWALL_CHX_winnukeAttackEnable" ></td>
+                    </tr>
+                    <tr>
+                        <td class='hdNobac' width="220px"><label for="FIREWALL_CHX_smurfAttackEnable" id="FIREWALL_LB_smurfAttackEnable">&nbsp;</label></td>
+                        <td><input type="checkbox" id="FIREWALL_CHX_smurfAttackEnable" ></td>
+                    </tr>
+                    <tr>
+                        <td class='hdNobac' width="220px"><label for="FIREWALL_CHX_portredirectAttackEnable" id="FIREWALL_LB_portredirectAttackEnable">&nbsp;</label></td>
+                        <td><input type="checkbox" id="FIREWALL_CHX_portredirectAttackEnable" ></td>
+                    </tr>
+                </table>
+                <br>
+                <div>
+                    <input class="buttonX" type='button' id="BTN_Apply">
+                    <input class="buttonX" type="button" id="BTN_ApplyNo" value="取消">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

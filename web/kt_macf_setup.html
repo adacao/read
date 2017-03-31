@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>mac filter</title>
+	<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+	<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+	<script language="javascript" src="lib/js/jquery.js"></script>
+	<script language="javascript" src="lib/js/util.js"></script>
+	<script language="javascript" src="lib/js/common.js"></script>
+	<script language="javascript" src="lib/js/kt_macf_setup.js"></script>
+</head>
+<body>
+	<img class="load" id="loadPic" src="pic/loading.gif">
+	<div class="main">
+		<div class="mainLeft"></div>
+		<div class="mainShadow"></div>
+		<div class="mainBody">
+			<div class="Macf_setup">
+				<li id="MACF_MenuSecMacList"></li>
+				<form id="MACF_FORM_Config">
+					<table width="100%" border="0" cellpadding="3" cellspacing="0">
+						<tr>
+							<td width="220px" class="hdNobac" id="MACF_FilterTip">&nbsp;</td>
+							<td>&nbsp;<input type="checkbox" id="MACF_CHX_Enable" /></td>
+						</tr>
+					</table>
+					<div id = "MACF_DIV_Config">
+						<table>
+							<tr >
+								<td id="MACF_ModeTip" width="220px" class="hdNobac"></td>
+								<td width="150ox"><input type="radio" name="MACF_RADIO_Mode" id="MACF_RADIO_BlackList" /><label for="MACF_RADIO_BlackList" id="MACF_LB_BlackListTip"></label></td>
+								<td ><input type="radio" name="MACF_RADIO_Mode" id="MACF_RADIO_WhiteList" /><label for="MACF_RADIO_WhiteList" id="MACF_LB_WhiteListTip"></label></td>
+							</tr>
+							<tr height="27px">
+								<td id="MACF_SrcTip" class="hdNobac"></td>
+								<td colspan="2"><input type="text" id="MACF_TEXT_SrcAddr" />&nbsp; (xx:xx:xx:xx:xx:xx)</td>
+							</tr>
+							<tr height="27px">
+								<td id="MACF_DestTip" class="hdNobac"></td>
+								<td colspan="2"><input type="text" id="MACF_TEXT_DestAddr" />&nbsp; (xx:xx:xx:xx:xx:xx)</td>
+							</tr>
+						</table>
+						<table id="MACF_DIV_ConfigDiv" width="100%" border="0" cellpadding="3" cellspacing="1">
+							<tr>
+								<td align="right"><input class="buttonX" id="BTN_Add" type="button" /></td>
+							</tr>
+						</table>
+						<table width='100%' border='0' cellspacing='1' cellpadding='3'>
+							<tr>
+								<td height="27" colspan="2"><hr color="#B5B5E6" size="1" width="100%"></td>
+							</tr>
+						</table>
+						<br />
+						<table id="MACF_TB_RuleDiv" width="100%" border="1" cellpadding="3" cellspacing="0">
+							<tr align="center">
+								<td id="MACF_SrcAddrTip"  class="hd"></td>
+								<td id="MACF_DestAddrTip"  class="hd"></td>
+								<td id="MACF_DelCheckBoxTip"  class="hd"></td>
+							</tr>
+							<tbody id="MACF_FilterRuleList"></tbody>
+						</table>
+						<br />
+						<table id="MACF_TB_DelBtnDiv" width="100%" border="0" cellpadding="3" cellspacing="1">
+							<tr>
+								<td align="right"><input class="buttonX" id="BTN_Del" type="button" /></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				
+				<form id="MACF_FROM_ModeChange" style="display:none">
+					<br />
+					<p>
+						<b id="MACF_ModeChangeTitle"></b>
+						<br />
+						<br />
+						<b id="MACF_ModeChangeTip" style="color:#F00"></b>
+						<br />
+						<br />
+						<b id="MACF_ModeChangeConfirm"></b>
+						<br />
+						<br />
+					</p>
+					<left>
+						<input class="buttonX" id="BTN_Confirm" type="button" />
+						<input class="buttonX" id="BTN_Back" type="button" />
+					</left>
+				</form>
+				<div id="MACF_DIV_Button">
+					<input class="buttonX" id="BTN_Apply" type="button" />
+					<input class="buttonX" id="BTN_Cancel" type="button" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

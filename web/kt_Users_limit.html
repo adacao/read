@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mac filter</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/kt_Users_limit.js"></script>
+<style>
+	.contentbox{
+	  width:250px;
+	  overflow: hidden;
+	  margin-bottom: 20px;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+    	<div class="mainLeft"></div>
+    	<div class="mainShadow"></div>
+    	<div class="mainBody">
+        	<div class="NETCON" id="NETCON">
+          		<li id="MENU_STS_NET_CON"></li>
+          		<img class="load" id="loadPic" src="pic/loading.gif">
+          		<form>
+					<div class="contentbox">
+						<p  id="mandatory" style="float:left;"></p>
+						<select id="mwband"  style="float: right;">
+							<option id="mwbandenable"></option>
+							<option id="mwbanddisable"></option>
+						</select>
+					</div>
+					
+					<input type="button" class="buttonX"  id="BTN_Apply" style="width: 60px;float: left;"/>
+					<input type="button" class="buttonX"  id="BTN_Calcel" style="width: 60px;float: left;margin-left:30px;"/>
+					
+				</form>
+        	</div>
+    	</div>
+	</div>
+</body>
+</html>

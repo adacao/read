@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAN IPV4 INFORMATION</title>
+    <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+    <link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+    <link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" src="lib/js/jquery.js"></script>
+    <script language="javascript" src="lib/js/common.js"></script>
+    <script language="javascript" src="lib/js/kt_wan_status.js"></script>
+</head>
+<body>
+    <img class="load" id="loadPic" src="pic/loading.gif">
+    <div class="main">
+        <div class="mainLeft"></div>
+        <div class="mainShadow"></div>
+        <div class="mainBody">
+            <div class="NETCON" id="NETCON" style="display:none">
+                <li id="MENU_STS_NET_CON"></li>
+                <form>
+                    <table  width="100%" border="1" cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td width="220" height="22" class='hd pad' id="LOGIN_USER_NAME"></td>
+                            <td class='pad' id="WAN_USER_NAME"></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="LOGIN_PASSWOERD"></td>
+                            <td class='pad' id="WAN_USER_PASSWORD"></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="WAN_INFO_START"></td>
+                            <td class='pad' id="WAN_CONNECT_STATUS"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="NET6CO">
+                <li id="MENU_STS_NET6_CO"></li>
+                <form>
+                    <table width="100%" border="1" cellpadding="3" cellspacing="0">
+                        <thead>
+                            <tr align='center'>
+                                <td class='hd' id="WAN_NET_INFO_TITLE"></td>
+                                <td class='hd' id="WAN_INFO_STYLE"></td>
+                                <td class='hd' id="WAN_INFO_IPADDR"></td>
+                                <td class='hd' id="WAN_TD_NetSubMask"></td>
+                            </tr>
+                        </thead>
+                        <tbody id="WAN_InfoTbody"></tbody>
+                    </table>
+                </form>
+                <form>
+                    <table width="100%" border="1" cellpadding="3" cellspacing="0">
+                        <thead>
+                            <tr align='center'>
+                                <td class="hd" id="WAN_NET_INFO_NAME"></td>
+                                <td class="hd" id="WAN_TD_NetDefGw"></td>
+                                <td class="hd" id="WAN_TD_NetPriDns"></td>
+                                <td class="hd" id="WAN_TD_NetSecDns"></td>
+                            </tr>
+                        </thead>
+                        <tbody id="WAN_InfoSecTbody"></tbody>
+                    </table>
+                    <input class="buttonX"  type="button" id="BTN_Refresh" value="应用" style="margin:20px 0 0 282px">
+                </form>
+            </div>
+            <div class="ETHINFO">
+                <li id="MENU_WAN_ETH_INFO"></li>
+                <form>
+                    <table width="100%" border="1" cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td width="220" class='hd pad' id="PON_TD_ConnStat"></td>
+                            <td class='pad' id="PON_TD_LinkState"></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="PON_TD_LoidAuth"></td>
+                            <td class='pad' id="PON_TD_LoidAuthState"></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="PON_TD_LoidTime"></td>
+                            <td class='pad' id="PON_TD_upTime"></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="PON_TD_TxPower"></td>
+                            <td class='pad' id='PON_TD_TxPowerInfo'></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="PON_TD_RxPower"></td>
+                            <td class='pad' id='PON_TD_RxPowerInfo'></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="PON_TD_Temperature"></td>
+                            <td class='pad' id='PON_TD_TemperatureInfo'></td>
+                        </tr>
+                        <tr id="PON_Rx_id" style="display:none">
+                            <td class='hd pad' id="PON_TD_Rx"></td>
+                            <td class='pad' id="PON_TD_PonRxBytes"></td>
+                        </tr>
+                        <tr id="PON_Tx_id" style="display:none">
+                            <td class='hd pad' id="PON_TD_Tx"></td>
+                            <td class='pad' id="PON_TD_PonTxBytes"></td>
+                        </tr>
+                        <tr id="PON_CLS_id" style="display:none">
+                            <td class='hd pad' id="PON_TD_CLS"></td>
+                            <td class='pad' id="PON_CLS_PonAlarmInfo"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!--<div class="EPONINFO">
+                <li id="MENU_WAN_EPON_INFO"></li>
+                <form>
+                    <table  width="100%" border="1" cellpadding="3" cellspacing="0">
+                        <tr>
+                            <td width="220" height="22" class='hd pad' id="MENU_STA_SER_TR069"></td>
+                            <td class='pad'></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="MENU_STA_SER_INTERNET"></td>
+                            <td class='pad'></td>
+                        </tr>
+                        <tr>
+                            <td class='hd pad' id="MENU_STA_SER_OTHER"></td>
+                            <td class='pad' ></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>-->
+        </div>
+    </div>
+</body>
+</html>

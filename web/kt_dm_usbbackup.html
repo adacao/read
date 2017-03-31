@@ -1,0 +1,126 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+    <title>MANAGEMENT STATITICS INFORMATION</title>
+    <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+    <link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" src="lib/js/jquery.js"></script>
+    <script language="javascript" src="lib/js/common.js"></script>
+    <!-- // <script language="javascript" src="lib/js/kt_dm_usbbackup.js"></script> -->
+    <script language="javascript">
+        $(document).ready(function(){
+            $("#Usb_Applysideset").append(getTagTextFromXmlDoc("USBApplysideset"));
+    	    $("#MENU_STS_NET6_CO").append(getTagTextFromXmlDoc("USBApplyupdate"));
+            $("#setdoc").append(getTagTextFromXmlDoc("USBApplyDoc"));
+    	    $("#setbtn").attr("value", getTagTextFromXmlDoc("USBApplyBtnset"));
+            $("#setchange").append(getTagTextFromXmlDoc("resdefsetBtnCtx"));
+            $("#changebtn").attr("value", getTagTextFromXmlDoc("USBApplydebtnfalut"));
+            $("#restorefile").append(getTagTextFromXmlDoc("USBReApplyrestorefile"));
+            $("#restorebtn").attr("value", getTagTextFromXmlDoc("USBReApplyrestorebtn"));
+            $("#savechange").append(getTagTextFromXmlDoc("USBReApplysavechange"));
+            $("#fixedfile").append(getTagTextFromXmlDoc("USBReApplyfixedfile"));
+            $("#fixedbtn").attr("value", getTagTextFromXmlDoc("USBReApplyfixedbtn"));
+    })
+    //备份
+    function backupClick() {
+       var loc = 'backupsettings.conf';
+       var code = 'location="' + loc + '"';
+       eval(code);
+    }
+    //恢复出厂设置
+    function btnApply()
+    {
+    	var postData;
+    	setCfg("resettodefault.cgi", null, null);
+    }
+    function registerEvent()
+    {
+    	$("#changebtn").click(function()
+    	{
+    		btnApply();
+    	});
+    }
+    var progress = 0;
+    //恢复文件
+    function restore() 
+    {
+    	if ( progress == 0 )  
+    	{
+    		progress = 1;
+    		return true;
+    	}
+    	alert('Updating settings is in progress and the router will reboot. Please wait for a minute.');
+    	return false;
+    }
+    //升级固件
+    function fixed() 
+    {
+
+    	if ( progress == 0 )
+    	{
+    		progress = 1;
+    		return true;
+    	}
+    	alert('Upload software is in progress. Please wait for a minute.');
+    	return false;
+    }
+    </script>
+</head>
+<body>
+    <img class="load" id="loadPic" src="pic/loading.gif">
+    <div class="main">
+        <div class="mainLeft"></div>
+        <div class="mainShadow"></div>
+        <div class="mainBody">
+            <div class="Usb_BackUp">
+                <li id="Usb_Applysideset"></li>
+                <div>
+                    <table>
+                        <tr>
+                              <td id="setdoc" class="hdNobac" width="80px"></td>
+                              <td>
+                                  <input class="buttonX" type='button' id="setbtn" style="float: right;" onClick='backupClick()'/>
+                              </td>  
+                        </tr>
+                        <tr>
+                              <td id="setchange" class="hdNobac"></td>
+                              <td><input class="buttonX" type='button' id="changebtn" style="float: right;" /></td>  
+                        </tr> 
+                        <tr>
+                              <td id="restorefile" class="hdNobac"></td>
+                              <td>
+                                  <form method='post' enctype='multipart/form-data' action='uploadsettings.cgi' onSubmit='return restore();'>
+                                      <input class="buttonX" type="submit" id="restorebtn" style="float: right;"/>
+                                      <input type="file" class="concentfile" name='filename'/>
+                                  </form>
+                              </td>  
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="Usb_Upload">
+                <li id="MENU_STS_NET6_CO"></li>
+                <div>
+                    <table>
+                        <tr>
+                            <td id="savechange" class="hdNobac" width="80px"></td>
+                            <td><input type="checkbox" id="savechangebtn" style="float: right;margin-right: 50px;" checked readonly disabled/></td>
+                        </tr>
+                        <tr>
+                            <td id="fixedfile" class="hdNobac"></td>
+                            <td align="right">
+                                <form method='post' enctype='multipart/form-data' action='upload.cgi' onSubmit='return fixed();'>
+                                      <input class="buttonX" type="submit" id="fixedbtn" style="float: right;" />
+                                      <input  type="file"  name='filename' class="concentfile"/>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

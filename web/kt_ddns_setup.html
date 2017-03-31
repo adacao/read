@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ddns Config</title>
+	<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+	<script language="javascript" src="lib/js/jquery.js"></script>
+	<script language="javascript" src="lib/js/common.js"></script>
+	<script language="javascript" src="lib/js/kt_ddns_setup.js"></script>
+	<script language="javascript" src="lib/js/util.js"></script>
+</head>
+<body>
+	<img class="load" id="loadPic" src="pic/loading.gif">
+	<div class="main">
+		<div class="mainLeft"></div>
+		<div class="mainShadow"></div>
+		<div class="mainBody">
+			<div class="DDNS_DIV">
+				<li id="MainLeftStatus"></li>
+				<form id="DDNS_FORM_Mngr">
+					<table  width="100%" border="1" cellpadding="3" cellspacing="0">
+						<tr align="center">
+							<td id="Isstatus"></td>
+							<td id="provider"></td>
+							<td id="hostname"></td>
+							<td id="domainname"></td>
+							<td id="username"></td>
+							<td id="password"></td>
+							<td id="dinterface"></td>
+							<td id="dremove"></td>
+						</tr>
+						<tbody id="DDNS_TBODY_Config" align="center"></tbody>
+					</table>
+					<table class="hidediv" width="100%" border="1" cellpadding="3" cellspacing="0" style="display: none;font-size:0px"><tr align="center"><td>13245</td></tr></table>
+					<div class="addbox">
+						<input type="button" class="buttonX"  id="add" />
+					</div>
+					<div id="DDNS_DIV_Button">
+						<input class="buttonX" id="apply" type="button" style="margin-left: 243px;">
+						<input class="buttonX" id="delet" type="button">
+					</div>
+				</form>
+				<div id = "DDNS_DIV_AddTitle">
+					<h3 class="titleCtx" id="DDNS_AddTitle"></h3>
+					<p id="DDNS_AddTitleDesc"></p>
+				</div>
+				<form id="DDNS_FORM_ADD" style="display:none">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td id="DDNS_Provider" width='220'></td>
+							<td>
+								<select id='DDNS_SEL_Mode' size="1">
+									<option value="oray" selected id="DDNS_OrayLable"></option>
+									<option value="dyndns">DynDNS.org</option>
+									<option value="tzo">TZO</option>
+								</select>
+							</td>		
+						</tr>
+						<tr>
+							<td id="DDNS_Htpc"></td>
+							<td><input type="text" id='DDNS_TEXT_Htpc'></td>      <!--未填 主机名有什么限制 -->
+						</tr>
+					</table>
+					<br>
+					<table border="0" cellpadding="0" cellspacing="0" id = "ddnsInfo">
+						<tr>
+							<td id="DDNS_AddHostName" width='220'></td>
+							<td><input type="text" id='DDNS_TEXT_HostName'></td>
+						</tr>
+						<tr>
+							<td id="DDNS_InterfaceAdd"></td>
+							<td><select id="DDNS_SEL_Interface"></select></td>
+						</tr>
+					</table>
+					<br>
+					<table id = "DDNS_TB_OrayInfo" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width='220' ><div id="DDNS_OrayUsername"></div></td>
+							<td><input type='text' id='DDNS_TEXT_OrayUsername' size='20' maxlen='64'></td>
+						</tr>
+
+						<tr>
+							<td><div id="DDNS_OrayPassword"></div></td>
+							<td><input type="password" id='DDNS_PWD_OrayPassword'></td>
+						</tr>
+					</table>
+					<table id = "DDNS_TB_DynInfo" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width='220' ><div id="DDNS_DynUsername"></div></td>
+							<td><input type='text' id='DDNS_TEXT_DynUsername' size='20' maxlen='64'></td>
+						</tr>
+
+						<tr>
+							<td><div id="DDNS_DynPassword"></div></td>
+							<td><input type="password" id='DDNS_PWD_DynPassword'></td>
+						</tr>
+					</table>
+					<table border="0" cellpadding="0" cellspacing="0" id= "DDNS_TB_TzoInfo">
+						<tr>
+							<td id="DDNS_AddTzo"></td></tr><br>
+						<tr>
+							<td width='220'><div id="DDNS_TzoEmail"></div></td>
+							<td><input type="text" id='DDNS_TEXT_TzoEmail'></td>
+						</tr>
+						<tr>
+							<td><div id="DDNS_TzoKey"></div></td>
+							<td><input type="password" id='DDNS_PWD_TzoKey' ></td>
+						</tr>
+					</table>
+					<br>
+					<table border="0" cellpadding="0" cellspacing="0" align ='left'>
+						<tr>
+							<input class="buttonX" id="BTN_Apply" type="button">
+							<input class="buttonX" id="BTN_BACK" type="button">
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

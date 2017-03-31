@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DIAG PING</title>
+    <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+    <link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" src="lib/js/jquery.js"></script>
+    <script language="javascript" src="lib/js/common.js"></script>
+    <script language="javascript" src="lib/js/util.js"></script>
+    <script language="javascript" src="lib/js/kt_diag_ping.js"></script>
+</style>
+</head>
+<body>
+  <img class="load" id="loadPic" src="pic/loading.gif">
+  <div class="main">
+      <div class="mainLeft"></div>
+      <div class="mainShadow"></div>
+      <div class="mainBody">
+          <div class="Diag_ping">
+              <li id="MENU_STS_NET_CON"></li>
+              <form>
+                <select style="width: 100px;" id="type">
+                    <option>ping</option>
+                    <option>traceroute</option>
+                </select><br>
+                <input type="text" class="itme" id="DIAG_TEXT_PingIpaddr"/>
+                <div style="margin-top: 10px;overflow: hidden;">
+                    <select style="width: 180px;float:left;margin-top:4px" id="WAN_SEL_WanLinkName">
+                    </select>
+                    <input type="button" class="buttonX" style="float: left;margin-left:10px;" id="BTN_Apply"/>
+                </div>
+                
+              </form>
+          </div>
+          <div class="NET6CO">
+              <li id="MENU_STS_NET6_CO"></li>
+              <form>
+                <fieldset id="DIAG_PingTestInfo" class="content" style="display:none">
+     		            <legend><b id="DIAG_PingGeneralInfo"></b></legend>
+                    <span id="waitNotice" class="waitNotice"></span>
+      	            <div  id="DIAG_DIV_PingResult"></div>
+              </fieldset>
+              </form>
+          </div>
+     </div>
+  </div>
+</body>
+</html>

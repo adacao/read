@@ -1,0 +1,342 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mac filter</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/kt_wlan_setup.js"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="mainLeft" style="height:100%;overflow: scroll;"></div>
+    <div class="mainShadow"></div>
+    <div class="mainBody" style="height:100%;overflow: scroll;">
+        <div class="NETCON" id="NETCON">
+           <li id="MENU_STS_NET_CON"></li>
+           <img class="load" id="loadPic" src="pic/loading.gif">
+           <from style="width: 638px;padding:10px 10px 0px 50px;float: right;">
+             <table border="0" cellpadding="4" cellspacing="0">
+    	          <tr>               
+                  <td width="180px"><label for="WLAN_CHX_Enbl1" id="WLAN_LB_Enbl1"></label></td>
+                  <td width="30">
+                    <input type="checkbox" id='WLAN_CHX_Enbl1' />               
+                      
+                  </td>
+                </tr>
+	           </table>
+           </from>
+        </div>
+
+        <div class="NET6CO" >
+          <li id="MENU_STS_NET6_CO"></li>
+            <form style="width: 638px;padding:0px 10px 0px 50px;float: right;">
+                <div id="WLAN_DIV_Bottom">
+                  <table border="0" cellpadding="4" cellspacing="0">
+                    <tr width="180"  >
+                        <td id="WLAN_NET_TYPE"></td>
+                            <td colspan="5">
+                              <select id='WLAN_TR_Standard' style="width:150px"	size="1" >
+                                <option value="n" id="WLAN_OPT_StandardN">n</option>
+                                <option value="b" id="WLAN_OPT_StandardB">b</option>
+                                <option value="g" id="WLAN_OPT_StandardG">g</option>
+                                <option value="b,g" id="WLAN_OPT_StandardBG">b,g</option>
+                                <option value="b,g,n" id="WLAN_OPT_StandardBGN">b,g,n</option>
+                              </select>
+                            </td>
+                    </tr>
+                    <tr  id="WLAN_TR_AboutChannel">
+                      <td id="WLAN_TD_Channel"></td>
+                      <td width="200">
+                        <select id='WLAN_SEL_Channel' style="width:60px"></select>
+                      </td>
+                      <!--<td id="WLAN_TD_CurrChannel"></td>					-->
+                    </tr>	
+                    <tr>
+     	                <td id="WLAN_TD_NBwCap" width="180px;"></td>
+                      <td width="200">
+                        <select id='WLAN_SEL_NBwCap'	style="width:60px"	size="1">
+        	                <option value="0">20</option>
+                          <option value="1">40</option>
+                          <option value="2">20/40</option>
+                        </select>
+                        <span>MHZ</span>
+                      </td>
+                      <!--<td id="WLAN_TD_CurrNbw"></td>-->
+ 	                  </tr>
+                  </table>		
+                 <table id="WLAN_SPEED" border="0" cellpadding="4" cellspacing="0">	
+                   <tr>
+                    <td id="WLAN_TD_NMmcsidx" width="180" ></td>
+                    <td colspan="2" width="180" ><select id='WLAN_SEL_NMmcsidx'	style="width:150px"	size="1" disabled="disabled">
+                    </select></td>
+                  </tr>
+                </table>
+                <table id="WLAN_TB_TxPower" border="0" cellpadding="4" cellspacing="0">
+                  <tr>
+                    <td width="180" id="WLAN_TD_TxPower"></td>
+                    <td><select id="WLAN_SEL_TxPower"	style="width:60px"	size="1">
+                      <option value="20">20%</option>
+                      <option value="40">40%</option>
+                      <option value="60">60%</option>
+                      <option value="80">80%</option>
+                      <option value="100">100%</option>
+                    </select></td>
+                  </tr>
+                </table>
+                <table id="WLAN_TB_PreambleType" border="0" cellpadding="4" cellspacing="0">
+                  <tr>
+                    <td width="180" id="WLAN_TD_PreambleType"></td>
+                    <td><select id="WLAN_SEL_PreambleType"	style="width:40px"	size="1">
+                    <option value="long" id="WLAN_OPT_PreambleLong"></option>
+                    <option value="short" id="WLAN_OPT_PreambleShort"></option>
+                    </select></td>
+                  </tr>
+                </table>                 
+            </div>
+          </form>
+        </div>
+
+        <div class="ETHINFO" >
+          <li id="MENU_WAN_ETH_INFO"></li>
+          <form style="width: 638px;padding:0px 10px 0px 50px;float: right;">
+            <table id="WLAN_TB_MultiSsid" border="0" cellpadding="4" cellspacing="0">
+              
+               <tr>
+                <td width="180px" id="WLAN_TD_Band"></td>
+                  <td colspan="2" width="180">
+                    <select id="WLAN_SEL_Band" style="width: 150px;"></select>
+                  </td>
+              </tr>
+              <tr>
+                <td width="180px" id="WLAN_TD_SsidSel"></td>
+                <td width="180">
+                  <select id="WLAN_SEL_SsidSel" style="width: 150px;"></select>
+                </td>
+              </tr>
+          </table>
+         
+
+          <table border="0" cellpadding="0" cellspacing="0">  
+              <!--<tr id="WLAN_TR_ChoiceCard">   
+                <td id="WLAN_TD_ChoiceCard">interface</td>      
+                <td width="180"><select id='WLAN_SEL_ChoiceCard'>
+                <option value="wlan0" id="WLAN_OPT_Card4G"></option>
+                <option value="wlan1" id="WLAN_OPT_Card5G"></option>
+                </select></td>
+            </tr>-->
+            <tr>
+              <td width="180px" id="WLSEC_TD_SsidSelCtx"></td>
+              <td width="180">
+                <input type="text" id="WLSEC_SEL_SsidSel" style="width: 150px;color: black;"/>
+              </td>
+            </tr>
+            <tr>
+              
+              <td><label for="WLAN_CHX_Enbl" id="WLAN_LB_Enbl"></label></td>
+              <td width="30">
+                <input type='checkbox'  value="ON" id="WLAN_CHX_Enbl"/>
+              </td>
+            </tr>
+          </table>
+          <div  id="ableSSID">
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              
+              <td width="180px"><label for="WLAN_CHX_Hide" id="WLAN_LB_Hide"></label></td>
+              <td  width="180"><input type='checkbox' id='WLAN_SSID_Hide' value="ON"></td>
+            </tr>
+            <tr>
+              <td  width="180px" id="WLSEC_TD_AuthModeCtx"></td>
+              <td width="180"><select id="WLSEC_SEL_SecAuthMode" style="width:150px">
+                  <option value="open" id="WLSEC_OPT_AuthOpen"></option>
+                  <option value="shared" id="WLSEC_OPT_AuthShare"></option>
+                  <option value="psk">WPA-PSK</option>        
+                  <option value="psk2">WPA2-PSK</option>             
+                  <option value="psk psk2">Mixed WPA2/WPA-PSK</option>
+                </select></td>
+            </tr>
+          </table>
+          <table id="WLSEC_TB_WpaPreShareKey" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width='180' id="WLSEC_TD_PreShareKeyCtx"></td>
+                <td><input type='password' id='WLSEC_PWD_SecWpaPsk' size='20' style="width: 150px;"/></td>
+              </tr>
+            </table>
+            <table id="WLSEC_TB_ShowPassword" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width='180'></td>
+                <td><input type='checkbox' id='WLSEC_CHX_SecPreKeyShow' /></td>
+                <td><label for="WLSEC_CHX_SecPreKeyShow" id="WLSEC_LB_ShowCtx"></label></td>
+              <tr>
+                <td height="5px"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </tr>
+              
+            </table>
+            <table id="WLSEC_TB_Preauth" border="0" cellpadding="0" cellspacing="0">
+              <!--<tr>
+                <td width='180' id="WLSEC_TD_PreauthCtx"></td>
+                <td width="180"><select id='WLSEC_SEL_SecPreauth' size="1">
+                    <option value="off" id="WLSEC_OPT_PreauthDisable"></option>
+                    <option value="on" id="WLSEC_OPT_PreauthEnable"></option>
+                  </select></td>
+              </tr>-->
+            </table>
+            <table id="WLSEC_TB_WpaD" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width='180' id="WLSEC_TD_WpaCtx"></td>
+                <td width="180">
+                  <select id="WLSEC_SEL_Wpa" style="width:150px">
+                  </select>
+                  </td>
+              </tr>
+            </table>
+            <table id="WLSEC_TB_NetReauth" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width='180' id="WLSEC_TD_ReauthCtx"></td>
+                <td><input type='text' id='WLSEC_TEXT_SecNetReauth' size='20' maxlength='10'></td>
+              </tr>
+            </table>
+            <table id="WLSEC_TB_WpaGTKRekey" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width='180' id="WLSEC_TD_GTKRekeyCtx"></td>
+                <td><input type='text' id='WLSEC_TEXT_WpaGtkRekey' size='20' maxlength='10'></td>
+              </tr>
+            </table>
+          <!--open-->
+          <table id="WLSEC_TB_WepD" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width='180' id="WLSEC_TD_WepCtx"></td>
+              <td width="180"><select id="WLSEC_SEL_Wep">
+                </select></td>
+            </tr>
+          </table>
+            <table id='WLSEC_TB_KeyInfo' border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width='180' id="WLSEC_TD_KeyLen"></td>
+                <td width="180"><select id='WLSEC_SEL_KeyBit' size='1'>
+                    <option value="0" selected>128-bit</option>
+                    <option value="1">64-bit</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td id="WLSEC_TD_KeyIdx"></td>
+                <td width="180"><select id='WLSEC_SEL_KeyIndex' size='1'>
+                  </select></td>
+              </tr>
+              <tr>
+                <td id="WLSEC_TD_Key1"></td>
+                <td><input type='text' id="WLSEC_TEXT_Keys1" name='WLSEC_TEXT_Keys' size='30' maxlength=26></td>
+              </tr>
+              <tr>
+                <td id="WLSEC_TD_Key2"></td>
+                <td ><input type='text' id="WLSEC_TEXT_Keys2" name='WLSEC_TEXT_Keys' size='30' maxlength=26></td>
+              </tr>
+              <tr>
+                <td id="WLSEC_TD_Key3"></td>
+                <td><input type='text' id="WLSEC_TEXT_Keys3" name='WLSEC_TEXT_Keys' size='30' maxlength=26></td>
+              </tr>
+              <tr>
+                <td id="WLSEC_TD_Key4"></td>
+                <td><input type='text' id="WLSEC_TEXT_Keys4" name='WLSEC_TEXT_Keys' size='30' maxlength=26></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td id="WLSEC_TD_WepNotice"></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            <br>
+            <br>
+            <!--open stop-->
+            <div id="WLSEC_DIV_WscAddClient">
+              <h3 class="titleCtx" id="wlanWsCTitle"></h3>
+              <p id="WLWSC_P_Comment"></p>
+
+            <table width="445" id="WLWSC_TB_DisableWsc" style="display:none">
+              <tr>
+                <td colspan="2"><font color="red" id="WLWSC_TB_DisableWscWarn"></font></td>
+                </tr>
+            </table>
+
+            <table border="0" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="180" id="WLWSC_TD_WscEnblCtx">WPS</td>
+                    <td width="180">
+                        <!--<select id="WLWSC_SEL_WscEnbl" >
+                            <option value="0" id="WLWSC_SEL_Wscdisable"></option>
+                            <option value="1" id="WLWSC_SEL_Wscenable"></option>
+                        </select>-->
+                        <input type="checkbox" id="WLWSC_SEL_WscEnbl"/>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <div id="WLSEC_1" style="display: none;">
+            <table border="0" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="180" id="WLWSC_TD_WscMethod"></td>
+                    <td>
+                        <input type='radio' value="0" name='WLWSC_RADIO_WscMethod' onClick="showhide('WLSEC_TB_WscStaPin', 0);showhide('WLSEC_TB_WscApPin', 0);">
+                            <span id="WLWSC_RADIO_WscMethodPBC"></span>
+                        </input>
+                        <input type='radio' value="1" name='WLWSC_RADIO_WscMethod' onClick="showhide('WLSEC_TB_WscStaPin', 1);showhide('WLSEC_TB_WscApPin', 0);">
+                      <span id="WLWSC_RADIO_WscMethodSTAPIN"></span>
+                  </input>
+                        <input type='radio' value="2" name='WLWSC_RADIO_WscMethod' checked='true' onClick="showhide('WLSEC_TB_WscStaPin', 0);showhide('WLSEC_TB_WscApPin', 1);">
+                            <span id="WLWSC_RADIO_WscMethodAPPIN"></span>
+                        </input>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table id="WLSEC_TB_WscStaPin" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="180">&nbsp;</td>
+                <td width='180'><input id="WLSEC_TEXT_WscStaPin" name='paWscStaPin' size='20' maxlength='9'></td>
+              </tr>
+            </table>
+
+            <table id="WLSEC_TB_WscApPin" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="180">&nbsp;</td>
+                <td width='180'><input id="WLSEC_TEXT_WscDevPin" name='paWscDevPin' size='20' maxlength='8'></td>
+                <td width="95"><input class="buttonX" id="BTN_REBUILT" type="button"></td>
+                <td width="95"><input class="buttonX" id="BTN_RESET" type="button"></td>
+              </tr>
+          </table>
+            </div>
+            <!--<table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+              <td width="180">&nbsp;</td>
+              <td width='180'><input class="buttonX" id="BTN_SAVEWPS" type='button'></td>
+              </tr>
+          </table>-->
+            <br> 
+          </div>
+          </div>
+         <!--<table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width='180'><input class="buttonX" id="BTN_BACK" type='button' ></td>
+              <td width='180'><input class="buttonX" id="BTN_SAVE" type='button'></td>
+            </tr>
+          </table>-->
+       </form> 
+    </div>
+   
+    <input class="buttonX" id="BTN_SAVE" type='button' style="float: left;margin-left:400px;" />
+     <input class="buttonX" id="BTN_BACK" type='button' style="float: left;margin-left: 10px;" onclick="location.reload();"/>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+</body>
+</html>
+

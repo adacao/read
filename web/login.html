@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HGU LOGIN</title>
+<!--
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+-->
+<script language="javascript" src="lib/js/jquery.js"></script>
+<!--
+<script language="javascript" src="lib/js/util.js"></script>
+-->
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/login.js"></script>
+<style>
+body {margin:0px; padding:0px; background:#fff;
+font-size:12px; color:#000;font-family:"宋体",Arial;
+line-height:170%;text-align:center;
+    vertical-align: middle ;
+    padding-top: 100px;
+}
+.ct_text{width:134px;height:24px;border-radius:2px;border:1px #999 solid;padding-left:5px;margin-left:3px;}
+.buttonX
+{
+    FONT-SIZE: 12px;
+    WIDTH:94px;
+    FONT-FAMILY: "Arial", "Helvetica";
+    height:22px;
+    *padding-top:3px;
+    padding-bottom:3px; 
+    TEXT-ALIGN: center;
+    text-decoration : none;
+    event:expression(onmouseover = function(){this.className='buttonX_over';},
+                     onmouseout = function(){this.className='buttonX';})
+}
+.buttonX_over
+{/
+    FONT-SIZE: 12px;
+    WIDTH: 94px;
+    COLOR: #ffffff;
+    FONT-FAMILY: "Arial", "Helvetica";
+    height:22px;
+    *padding-top:3px;
+    padding-bottom:3px;
+    TEXT-ALIGN: center;
+    text-decoration : none;
+
+}
+.buttonX[disabled="disabled"]
+{
+        color:#999;
+        background-color: #CADAF4;
+}
+
+</style>
+</head>
+<body leftmargin="0" topmargin="0"	bgcolor="fff">
+<form >
+  <table width="500" border="0" cellpadding="0" cellspacing="0" align="center"  >
+    <tr height="35px">
+        <td colspan="3""></td>
+    </tr>
+    <tr height="143">
+    	<td colspan="3" align="center">
+        	<img src="pic/logo.jpg" width="500" height="143" >
+        </td>
+    </tr>
+    <tr>
+    	<td width="214" height="27" align="right" id="LOGIO_UserName" font-size="14px"></td>
+        <td  align="left"><input type="text" id="LOGIO_TEXT_UserName" class="ct_text" maxlength="32" value="user"/></td>
+    </tr>
+      <tr height="6px" >
+          <td colspan="3" align="right"></td>
+      </tr>
+    <tr>
+        <td width="214" height="18" align="right" id="LOGIO_Pwd" font-size="14px"></td>
+        <td align="left"><input type="password" id="LOGIO_PWD_Password" class="ct_text" maxlength="32" onkeypress='if(13 == event.charCode ) return false;' /></td>
+    </tr>
+      <tr height="7px" >
+          <td colspan="3" align="right"></td>
+      </tr>
+
+    <tr>
+        <td colspan="3" align="center"heigth="26px">
+            <input name="login" id="BTN_Login" type="button" class="buttonX" style="cursor:pointer;"/ >
+            <input type="button" class="buttonX" name="cancel" id="BTN_Cancel" style="cursor:pointer;"/>
+            <input class="buttonX" type="button"  id="BTN_Register" style="cursor:pointer;"/>
+        </td>
+    </tr>
+
+    
+    <!-- 填充-->
+     <tr height="55px" >
+      <td colspan="4"></td>
+    </tr>
+    
+     <tr height="15px" >
+      <td colspan="4" align="right" id="LOGIO_BottomLogo"></td>
+    </tr>
+
+  </table>
+  
+</form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ALG Config</title>
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/kt_route_static_v4_setup.js"></script>
+</head>
+<body>
+  <img class="load" id="loadPic" src="pic/loading.gif">
+  <h3 id="ROUTE_Title"></h3>
+  <!--<h3 id="ROUTE_CfgNote"></h3>-->
+  <p id="ROUTE_CfgHelp"></p>
+<div id="ROUTE_DIV_View" style="display:">
+<form>
+ <center>
+   <table border='1' cellpadding='0' cellspacing='0'>
+     <tr align='center'>
+        <td class='hd'><p id="ROUTE_IpVersion"></p></td>
+        <td class='hd'><p id="ROUTE_DstIp"></p></td>
+        <td class='hd'><p id="ROUTE_Gateway"></p></td>
+        <td class='hd'><p id="ROUTE_InterfaceHead"></p></td>
+        <td class='hd'><p id="ROUTE_MetricHead"></p></td>
+        <td class='hd'><p id="ROUTE_Del"></p></td>
+     </tr>
+     <tbody id="ROUTE_CfgTbody">
+     </tbody>
+   </table>
+ </center>
+  <br>
+  
+  <center>
+     <input class="buttonX" type='button' id="BTN_Add">
+     <input class="buttonX" type='button' id="BTN_Del">
+  </center>
+
+</form>
+</div>
+
+<div id="ROUTE_DIV_ADD" style="display:">
+  <form>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="ROUTE_DstIpAddr" width="180"></td>
+        <td><input type='text' id='ROUTE_TEXT_DstAddr'></td>
+      </tr>
+      <tr>
+        <td id="ROUTE_IpMask" width="180"></td>
+        <td><input type='text' id='ROUTE_TEXT_DstMask'></td>
+      </tr>
+      <tr>
+        <td id="ROUTE_Metric" width="180"></td>
+        <td><input type='text' id='ROUTE_TEXT_Metric'></td>
+      </tr>
+     </table>
+     <br>
+     <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+           <td width="180"><input type="checkbox" id='ROUTE_CHX_GateWay'><span id="ROUTE_GateWay"></span></td>
+           <td><input type='text' id='ROUTE_TEXT_GateWay'></td>
+        </tr>
+        <tr>
+           <td width="180"><input type="checkbox" id='ROUTE_CHX_Interface' checked><span id="ROUTE_Interface"></span></td>
+           <td width="300"><select id='ROUTE_SEL_DstWanIf'>
+           </select></td>
+        </tr>
+     </table>
+     <br>
+     <center>
+        <input class="buttonX" type='button' id="BTN_Apply">
+     </center>
+  </form>
+</div>
+
+</body>
+</html>

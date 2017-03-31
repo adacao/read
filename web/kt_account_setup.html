@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ALG Config</title>
+    <link href="lib/css/layout_style.css" type="text/css" rel="stylesheet"/>
+	<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+	<script language="javascript" src="lib/js/jquery.js"></script>
+	<script language="javascript" src="lib/js/common.js"></script>
+	<script language="javascript" src="lib/js/util.js"></script>
+	<script language="javascript" src="lib/js/kt_account_setup.js"></script>
+</head>
+</head>
+<body>
+    <img class="load" id="loadPic" src="pic/loading.gif">
+	<div class="main">
+	    <div class="mainLeft"></div>
+	    <div class="mainShadow"></div>
+	    <div class="mainBody">
+	        <div class="Accout_Setup">
+	            <li id="ACCOUNT_MenuManageUser"></li>
+	            <form>
+	            	<table width="100%" border="0" cellpadding="3" cellspacing="0">
+						<tr>
+	                        <td class="hdNobac" width="220px" id="ACCOUNT_OriginalUserName"></td>
+	                        <td>
+	                        	<select id='ACCOUNT_TEXT_OldUserName'>
+									<option value="user" selected="selected">user</option>
+									<option value="admin" id="ACCOUNT_Change_admin">admin</option>
+								</select>
+
+	                        </td>
+	                    </tr>
+
+	                    <!--<tr id="ACCOUNT_TrChange" style="display:none">
+			      			<td class="hdNobac" id="ACCOUNT_OriginalUserPassword"></td>
+			      			<td><input id='ACCOUNT_PWD_OldUserPassword' type="password" maxlength="16"></td>
+			    		</tr>-->
+
+			    		<tr>
+			      			<td class="hdNobac" id="ACCOUNT_P_NewPassword"></td>
+			      			<td><input id='ACCOUNT_PWD_NewPassword' type="password" maxlength="16"></td>
+			    		</tr>
+			    		<tr>
+			      			<td class="hdNobac" id="ACCOUNT_P_ConfirmPassword"></td>
+			      			<td><input id='ACCOUNT_PWD_ConfirmPassword' type='password' maxlength="16"></td>
+			    		</tr>
+					</table>
+	            </form>
+	            <div>
+	            	<input class="buttonX" type="button" id="BTN_Apply">
+	            	<input class="buttonX" type="button" id="BTN_ApplyNo" onClick="self.location.reload();">
+	        	</div>
+	        </div>	
+	    </div>
+	</div>
+
+</body>
+</html>

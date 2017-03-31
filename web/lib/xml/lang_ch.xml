@@ -1,0 +1,2355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s304>
+	<!-- for common context -->
+	<publicCommom>
+		<addCtx>添加</addCtx>
+		<delCtx>删除</delCtx>
+		<ensureCtx>确认</ensureCtx>
+		<cancelCtx>取消</cancelCtx>
+		<enableCtx>启用</enableCtx>
+		<disableCtx>禁用</disableCtx>
+		<enableCtxAlarm>产生</enableCtxAlarm>
+		<disableCtxAlarm>未产生</disableCtxAlarm>
+		<autoCtx>自动</autoCtx>
+		<editCtx>编辑</editCtx>
+		<refreshCtx>刷新</refreshCtx>
+		<upCtx>上升</upCtx>
+		<downCtx>下降</downCtx>
+		<blacklistCtx>黑名单</blacklistCtx>
+		<whitelistCtx>白名单</whitelistCtx>
+		<macAddrCtx>MAC 地址</macAddrCtx>
+		<ipAddrCtx>IP 地址</ipAddrCtx>
+		<ipMaskCtx>子网掩码</ipMaskCtx>
+		<filterModeCtx>过滤模式</filterModeCtx>
+		<applyCtx>应用</applyCtx>
+		<saveApplyCtx>应用</saveApplyCtx>
+		<saveApplyNo>取消</saveApplyNo>
+		<advanceCtx>高级</advanceCtx>
+		<backCtx>返回</backCtx>
+		<interfaceCtx>接口</interfaceCtx>
+		<portCtx>端口</portCtx>
+		<timeout>请求超时，请重新登录!</timeout>
+		<wanConnectName>连接名称</wanConnectName>
+		<userCtx>用户名</userCtx>
+		<passwdCtx>密码</passwdCtx>
+		<servNameCtx>服务名称</servNameCtx>
+		<timeUnitSecCtx>秒</timeUnitSecCtx>
+		<timeUnitMinCtx>分钟</timeUnitMinCtx>
+		<timeUnitHourCtx>小时</timeUnitHourCtx>
+		<timeoutNoticeMsg>本页面已经超时，请重新登录!</timeoutNoticeMsg>
+		<timeoutRelogin>重新登录</timeoutRelogin>
+		<timeoutHideMsg>隐藏信息</timeoutHideMsg>
+		<!--<menuQoeDisable>Qoe关闭</menuQoeDisable>-->
+		<qoeDisableTitle>关闭Qoe功能</qoeDisableTitle>
+		<qoeURL>QOE服务器域名</qoeURL>
+		<qoeNotice>一旦关闭，需要去平台手动开启，页面不提供开启功能</qoeNotice>
+	</publicCommom>
+	<!-- for Redirect page -->
+	<redirectPage>
+		<redirectPageAlert1>已经有当前用户登陆，请退出当前用户再登陆</redirectPageAlert1>
+		<redirectPageAlert2>登陆信息验证失败</redirectPageAlert2>
+		<redirectPageAlert3_1>用户名和密码错误输入已经达到</redirectPageAlert3_1>
+		<redirectPageAlert3_2>次！请等待</redirectPageAlert3_2>
+		<redirectPageAlert3_3>后重试</redirectPageAlert3_3>
+		<redirectPageAlert4_1>用户名和密码错误输入已经超过</redirectPageAlert4_1>
+		<redirectPageAlert4_2>次！请等待</redirectPageAlert4_2>
+		<redirectPageAlert4_3>后重试</redirectPageAlert4_3>
+		<redirectPageAlert5_1>已经有其它用户登陆，请等待</redirectPageAlert5_1>
+		<redirectPageAlert5_2>后重试</redirectPageAlert5_2>
+		<redirectPageAlert6>请插入卡</redirectPageAlert6>
+	</redirectPage>
+	<loginPage>
+		<loginTitle>家庭网关 登录</loginTitle>
+		<loginUserName>用户名</loginUserName>
+		<loginPwd>密 码</loginPwd>
+		<loginCtx>登 录</loginCtx>
+		<loginOutCtx>退 出</loginOutCtx>
+		<loginCLearCtx>取 消</loginCLearCtx>
+		<loginReset>复 位</loginReset>
+		<loginDevRegister>设备注册</loginDevRegister>
+		<loginUserNameWarn>用户名不能为空，请输入用户名</loginUserNameWarn>
+	</loginPage>
+	<!-- for main.html -->
+	<mainPage>
+		<mainLang>
+			<mainLangCh>中文</mainLangCh>
+			<mainLangEn>英文</mainLangEn>
+		</mainLang>
+		<mainProduct>型号</mainProduct>
+		<mainSet>设置</mainSet>
+		<mainGatewayName>网关名称</mainGatewayName>
+		<mainGatewayType>E8-C网关</mainGatewayType>
+		<mainWelcome>欢迎您！</mainWelcome>
+
+		<menuStatus value="状态">
+			<menuStatDevInfo value="设备信息">
+				<!--<menuStatDevInfoBasic>设备基本信息</menuStatDevInfoBasic>
+				<menuWizardInfo>配置向导</menuWizardInfo>-->
+				<menuStatStatus>状态</menuStatStatus>
+			</menuStatDevInfo>
+			<menuStatNetInfo value="网络侧信息">
+				<!--<menuStatNetConnInfo>IPV4 连接信息</menuStatNetConnInfo>
+				<menuStatNet6ConnInfo>IPV6 连接信息</menuStatNet6ConnInfo>
+				<menuStatGponConnInfo >Gpon 连接信息</menuStatGponConnInfo>
+				<menuStatEponConnInfo >Epon 连接信息</menuStatEponConnInfo>-->
+				<menuStatBroadbandAccount >宽带账号</menuStatBroadbandAccount>
+				<menuStatNetInfoMessage >网络侧状态信息</menuStatNetInfoMessage>
+				<menuStatGponUpInfo >链路链接信息</menuStatGponUpInfo>
+				<menuStatService >业务信息</menuStatService>
+				<menuStatServiceTRO69 >TRO69_VID_4085</menuStatServiceTRO69>
+				<menuStatServiceINTERNET>INTERNET_R_44</menuStatServiceINTERNET>
+				<menuStatServiceOTHER>OTHER_R_45</menuStatServiceOTHER>
+			</menuStatNetInfo>
+			<menuStatLanInfo value="用户侧信息">
+				<!--<menuStatWlanInfo>WLAN接口信息</menuStatWlanInfo>
+				<menuStatWlanInfo1>WLAN1接口信息</menuStatWlanInfo1>
+				<menuStatEthInfo>以太网接口信息</menuStatEthInfo>
+				<menuStatUsbInfo>USB接口信息</menuStatUsbInfo>
+				<menuStatMwband>上网终端限制数</menuStatMwband>
+                <menuStatCatvInfo>CATV 信息</menuStatCatvInfo>-->
+				<menuStatWlanInfo>无线状态信息</menuStatWlanInfo>
+				<menuStatUserInfo>用户侧状态信息</menuStatUserInfo>
+			</menuStatLanInfo>
+			<!--<menuStatVoipInfo value="宽带语音信息">
+				<menuStatVoipRegStatus>业务注册状态</menuStatVoipRegStatus>
+				<menuStatVoipPhone>电话号码</menuStatVoipPhone>
+				<menuStatVoipUser>用户状态</menuStatVoipUser>
+			</menuStatVoipInfo>-->
+			<menuStatTr69Info value="远程管理状态">
+				<!--<menuStatTr69Conn>交互建立</menuStatTr69Conn>
+				<menuStatTr69Oper>业务配置下发状态</menuStatTr69Oper>-->
+				<menuStatTr69Rep>主动通知上报</menuStatTr69Rep>
+				<menuStatTr69TCNS>接受TCMS请求状态</menuStatTr69TCNS>
+				<menuStatTr69Sev>业务配置下发状态</menuStatTr69Sev>
+			</menuStatTr69Info>
+		</menuStatus>
+		
+		<menuNet value="网络">
+			<menuNetBand value="宽带设置">
+				<!--<menuNetBandInternet>Internet连接</menuNetBandInternet>-->
+				<menuNetBandInternet>网络列表</menuNetBandInternet>
+				
+				<menuNetBandSet>网络设置</menuNetBandSet>
+				<menuNetBandmapping>端口映射</menuNetBandmapping>
+				<menuNetBandmodify>修改</menuNetBandmodify>
+			</menuNetBand>
+			<menuNetBandSetup value="用户数量限制">
+				<menuNetBandMode>模式</menuNetBandMode>
+				<menuNetBandMaxUser>最大用户数限制</menuNetBandMaxUser>
+				<menuNetBandUser>用户数限制</menuNetBandUser>
+			</menuNetBandSetup>
+			<menuNetLan value="局域网设置">
+				<menuNetLanSet>局域网色设置</menuNetLanSet>
+				<menuNetLanDHCP>DHCP列表</menuNetLanDHCP>
+				<menuNetLanDNS>DNS设置</menuNetLanDNS>
+			</menuNetLan>
+			<menuNetWlan value="WLAN">
+				<menuNetWlanUse>使能无线设置</menuNetWlanUse>
+				<menuNetWlanSet>基本设置</menuNetWlanSet>
+				<menuNetWlanSafe>安全设置</menuNetWlanSafe>
+			</menuNetWlan>
+			<menuNetMove value="设备移机">
+
+			</menuNetMove>
+			<menuNetTr69 value="远程管理">
+				<menuNetTr69Itms>ITMS 服务</menuNetTr69Itms>
+				<menuNetTr069status>TR069状态</menuNetTr069status>
+				<menuNetTrtcms>TCMS 服务</menuNetTrtcms>
+				<changeusermain>维护账号修改</changeusermain>
+				<STUNset>STUN设置</STUNset>
+				<tr69Informfunction>周期通知使能</tr69Informfunction>
+			</menuNetTr69>
+			<menuNetQos value="Qos">
+				<menuNetQosConf>Qos</menuNetQosConf>
+				<menuNetFcConf>Qos列表</menuNetFcConf>
+				<menuNetServiceName>业务名称</menuNetServiceName>
+				<menuNetQosKind>Qos类别</menuNetQosKind>
+				<menuNetQosKindSet>Qos分类设置</menuNetQosKindSet>
+				<menuNetQosCarSet>Qos-car设置</menuNetQosCarSet>
+			</menuNetQos>
+			<!--<menuNetLoid value="LOID认证">
+			</menuNetLoid>-->
+			<!--<menuNetSn value="SN认证">
+				<menuNetSnOlt>LOID</menuNetSnOlt>
+			</menuNetSn>-->
+			<menuNetSntp value="时间管理">
+				<menuNetSntpSystem>系统时间</menuNetSntpSystem>
+				<menuNetSntpSame>时间同步</menuNetSntpSame>
+				<sntpNTP>使能NTP</sntpNTP>
+			</menuNetSntp>
+			<menuNetRoute value="路由配置">
+				<menuNetRouteDym>DNS 策略路由</menuNetRouteDym>
+				<menuNetRouteStatic>静态路由</menuNetRouteStatic>
+				<!--<menuNetRouteStaticIpv6>IPV6 静态路由</menuNetRouteStaticIpv6>-->
+			</menuNetRoute>
+			<!--<menuNetL2tp value="L2TP配置">
+			</menuNetL2tp>	-->
+		</menuNet>
+		
+		<menuSec value="安全">
+			<menuSecUrlfilter value="URL 过滤">
+				<menuSecUrlList>黑/白名单</menuSecUrlList>
+				<menuSecUrlTitle>URL 过滤表</menuSecUrlTitle>
+				<menuSecUrlMoreTitle>URL 过滤</menuSecUrlMoreTitle>
+			</menuSecUrlfilter>
+			<menuSecFireWall value="防火墙">
+				<menSecFireWallLevel>防火墙设置</menSecFireWallLevel>
+				<!--<menSecFireWallAnti>攻击保护设置</menSecFireWallAnti>-->
+			</menuSecFireWall>
+			<menuSecMacfilter value="MAC 过滤">
+				<menuSecMacList>黑/白名单</menuSecMacList>
+				<menuSecMacTitle>MAC 过滤表</menuSecMacTitle>
+				<menuSecMacMoreTitle>MAC 过滤</menuSecMacMoreTitle>
+			</menuSecMacfilter>
+			<menuSecIpfilter value="IP/Port 过滤">
+				<menuSecIpList>黑/白名单</menuSecIpList>
+				<menuSecIpTitle>IP/Port 过滤表</menuSecIpTitle>
+				<menuSecIpMoreTitle>IP/Port 过滤</menuSecIpMoreTitle>
+			</menuSecIpfilter>
+			<!--<menuSecAcess value="服务访问控制"></menuSecAcess>-->
+			<!--<menuSecAccessControlList value="服务访问控制"></menuSecAccessControlList>-->
+		</menuSec>
+		
+		<menuApp value="服务">
+			<menuAppDdns value="DDNS">
+				<menuAppDdnslist>DDNS列表</menuAppDdnslist>
+				<menuAppDdnsstatus>启用</menuAppDdnsstatus>
+				<menuAppDdnscom>服务提供商</menuAppDdnscom>
+				<menuAppDdnshost>主机名</menuAppDdnshost>
+				<menuAppDdnsdomain>域名</menuAppDdnsdomain>
+				<menuAppDdnsuser>账号</menuAppDdnsuser>
+				<menuAppDdnspassword>密码</menuAppDdnspassword>
+				<menuAppDdnsinterface>接口</menuAppDdnsinterface>
+				<menuAppDdnsdel>删除</menuAppDdnsdel>
+				<menuAppDdnsname>名称</menuAppDdnsname>
+				<menuAppDdnsip>内部IP</menuAppDdnsip>
+				<menuAppDdnsport>内部端口</menuAppDdnsport>
+				<menuAppDdnsfarip>远程IP</menuAppDdnsfarip>
+				<menuAppDdnsfarport>外部端口</menuAppDdnsfarport>
+				<menuAppDdnshttp>协议</menuAppDdnshttp>
+				<menuAppDdnsstatus>状态</menuAppDdnsstatus>
+				<menuAppDdnsdel>删除</menuAppDdnsdel>
+				<menuAppDdnsinterface>接口</menuAppDdnsinterface>
+			</menuAppDdns>
+			<menuAppNat value="高级NAT">
+				<menuAppNatAlg>ALG 配置</menuAppNatAlg>
+				<menuAppNatDmz>DMZ 配置</menuAppNatDmz>
+				<menuAppdmzip>DMZ IP地址</menuAppdmzip>
+			</menuAppNat>
+			<menuAppUpnp value="UPNP 配置"></menuAppUpnp>
+			<!--<menuAppVoip value="宽带语音配置">
+				<menuAppVoipBasic>基本配置</menuAppVoipBasic>
+				<menuAppVoipLogplot>数图配置</menuAppVoipLogplot>
+				<menuAppVoipMedia>语音媒体</menuAppVoipMedia>
+				<menuAppVoipSip>SIP 业务</menuAppVoipSip>
+				<menuAppVoipH248>H248 业务</menuAppVoipH248>
+				<menuAppVoipIms>IMS 业务</menuAppVoipIms>
+				<menuAppVoipDebug>调试配置</menuAppVoipDebug>
+			</menuAppVoip>-->
+			<menuAppPort value="端口转发">
+				<menuAppList>端口转发列表</menuAppList>
+				<menuAppTranspond>端口转发</menuAppTranspond>
+			</menuAppPort>
+			<!--<menuAppDlna value="DLNA 配置"></menuAppDlna>-->
+			<menuAppIgmp value="IGMP">
+				<menuAppIgmpSnopping>IGMP Snooping使能</menuAppIgmpSnopping>
+				<menuAppIgmpProxy>IGMP 代理使能</menuAppIgmpProxy>
+			</menuAppIgmp>
+			<menuAppTelnet value="Telnet 服务">
+				<menuAppTelentserver>Telnet服务器</menuAppTelentserver>
+				<menuAppTelentserveruse>使能Telnet服务</menuAppTelentserveruse>
+			</menuAppTelnet>
+			<menuAppForce value="强制门户">
+				<menuAppmandatory>强制门户</menuAppmandatory>
+				<menuAppForceUser>强制门户使能</menuAppForceUser>
+				<menuAppForceMain>Portal主机地址</menuAppForceMain>
+				<menuAppForcePath>Portal路径</menuAppForcePath>
+			</menuAppForce>
+			<menuAppDaily value="日常应用">
+				<menuAppDailyStorage>家庭存储</menuAppDailyStorage>
+				<menuAppDailyuse>日常应用</menuAppDailyuse>
+				<!--<menuAppDailyIptv>IPTV</menuAppDailyIptv>
+				<menuAppDailyDms>多媒体</menuAppDailyDms>
+				<menuAppDailyIpp>打印服务器</menuAppDailyIpp>-->
+			</menuAppDaily>
+		</menuApp>
+		
+		<!--<menuManage value="管理">
+			<menuManageDev value="设备管理">
+				<menuManageDevReset>恢复出厂设置</menuManageDevReset>
+				<menuManageDevUpload>软件升级</menuManageDevUpload>
+				<menuManageDevMonitor>CPU和内存监控</menuManageDevMonitor>
+			</menuManageDev>
+		</menuManage>-->
+		
+		<menuDiag value="系统">
+			<menuManageAdmin value="Admin 账号管理">
+				<menuManageUser>用户管理</menuManageUser>
+			</menuManageAdmin>
+			<menuManageDevBak value="备份/恢复"></menuManageDevBak>
+			<menuManageDevFwUpgrade value="升级固件"></menuManageDevFwUpgrade>
+			<menuManageDevReboot value="重启">
+			</menuManageDevReboot>
+			<menuManageLog value="系统日志">
+				<menuManageLogLevel>写入等级设置</menuManageLogLevel>
+				<menuManageMaintain>维护</menuManageMaintain>
+				<menuManageLogInfo>日志设置</menuManageLogInfo>
+				<menuManageIssetup>启用日志功能</menuManageIssetup>
+			</menuManageLog>
+			<menuDiagNet value="诊断">
+				<menuDiagNetLine>网络诊断</menuDiagNetLine>
+				<menuDiagNetPing>诊断结果</menuDiagNetPing>
+				<check>诊断</check>
+				<menuReport>手动上报</menuReport>
+				<menuReportbtn>上报</menuReportbtn>
+				<menuDiagInform>手动上报测试</menuDiagInform>
+				<Networkmeeting>网络监控</Networkmeeting>
+				<Networkport>接口</Networkport>
+				<Networkmaincomputer>主机</Networkmaincomputer>
+				<Networktime>时间</Networktime>
+				<Networkweek>星期</Networkweek>
+			</menuDiagNet>
+			<menuChinaLanguage value="语言">
+				<menuLanguage>语言</menuLanguage>
+			</menuChinaLanguage>
+			
+		</menuDiag>
+		
+			<menuHelp>帮助</menuHelp>
+			<menuHelpStatus>1 状态</menuHelpStatus>
+			<menuHelpNet>2 网络</menuHelpNet>
+			<menuHelpSec>3 安全</menuHelpSec>
+			<menuHelpApply>4 服务</menuHelpApply>
+			<menuHelpManage>5 系统</menuHelpManage>
+			<menuHelpDiag>6 退出</menuHelpDiag>
+			<menuHelpUserPassword value="管理密码"></menuHelpUserPassword>
+ 
+	</mainPage>
+	
+	<wanPage>
+		<wanCfgTitle>Internet (WAN） 连接设置</wanCfgTitle>
+		<wanUsModeCtx>上行方式</wanUsModeCtx>
+		<wanLinkNameCtx>连接名称</wanLinkNameCtx>
+		<wanConnModeCtx>模式</wanConnModeCtx>
+		<wanIpModeCtx>IP 模式</wanIpModeCtx>
+		<wanServModeCtx>服务模式</wanServModeCtx>
+		<wanDhcpNotice>从ISP处自动得到一个IP地址</wanDhcpNotice>
+		<wanStaticNotice>经ISP处配置一个IP静态地址</wanStaticNotice>
+		<wanPppoeNotice>若ISP使用PPPOE请选择此项</wanPppoeNotice>
+		<wanPppoeNoProxyCtx>不启用PPPOE代理或PPPoE路由桥混合模式</wanPppoeNoProxyCtx>
+		<wanPppoeProxyCtx>启用PPPOE代理</wanPppoeProxyCtx>
+		<wanPppProxyNumCtx>代理用户数</wanPppProxyNumCtx>
+		<wanPppMaxProxyNumCtx>可用代理</wanPppMaxProxyNumCtx>
+		<wanPppoeProxyNotice>注:配置该WAN连接需要重启!</wanPppoeProxyNotice>
+		<wanPppoeMixCtx>PPPoE路由桥混合模式</wanPppoeMixCtx>
+		<wanAddNewConnCtx>新增WAN连接</wanAddNewConnCtx>
+		<wanLanPort1Ctx>端口_1</wanLanPort1Ctx>
+		<wanLanPort2Ctx>端口_2</wanLanPort2Ctx>
+		<wanLanPort3Ctx>端口_3</wanLanPort3Ctx>
+		<wanLanPort4Ctx>端口_4</wanLanPort4Ctx>
+		<wanWLanSSIDenable>使能SSID</wanWLanSSIDenable>
+		<wanWLanSSIDdisable>隐藏SSID</wanWLanSSIDdisable>
+
+		<wanWLanPort1Ctx>无线(SSID1)</wanWLanPort1Ctx>
+		<wanWLanPort2Ctx>无线(SSID2)</wanWLanPort2Ctx>
+		<wanWLanPort3Ctx>无线(SSID3)</wanWLanPort3Ctx>
+		<wanWLanPort4Ctx>无线(SSID4)</wanWLanPort4Ctx>
+		<wanWLanPort5Ctx>无线(SSID5)</wanWLanPort5Ctx>
+		<wanWLanPort6Ctx>无线(SSID6)</wanWLanPort6Ctx>
+		<wanWLanPort7Ctx>无线(SSID7)</wanWLanPort7Ctx>
+		<wanWLanPort8Ctx>无线(SSID8)</wanWLanPort8Ctx>	
+		<wanAdslServTypeCtx>服务类别</wanAdslServTypeCtx>
+		<wanPeakCellRateCtx>峰值信元速率</wanPeakCellRateCtx>
+		<wanSustainableCellRate>持续信元速率</wanSustainableCellRate>
+		<wanMaxBurstSizeCtx>最大突发信元大小</wanMaxBurstSizeCtx>
+		<wanPackageMethodCtx>封装方式</wanPackageMethodCtx>
+		
+		<wanVlanEnableCtx>启用Vlan</wanVlanEnableCtx>
+		
+		<wanDialMethodCtx>拨号方式</wanDialMethodCtx>
+		<wanAutoConnCtx>自动连接</wanAutoConnCtx>
+		<wanOnDemandCtx>按需连接</wanOnDemandCtx>
+		<wanManualConn>手动连接</wanManualConn>	
+		<wanManualDisconn>手动断开</wanManualDisconn>				
+		<wanIdleTimeCtx>空闲断线时间</wanIdleTimeCtx>
+		<wanDefGwCtx>默认网关</wanDefGwCtx>
+		<wanPriDnsCtx>首选DNS</wanPriDnsCtx>
+		<wanSecDnsCtx>备用DNS</wanSecDnsCtx>
+		<wanGw6IpAddrCtx>网关IPv6地址</wanGw6IpAddrCtx>
+		<wanGetIpv6AddrCtx>获取地址</wanGetIpv6AddrCtx>
+		<wanGetIpv6PrefixCtx>获取前缀</wanGetIpv6PrefixCtx>
+		<wanIpv6AddrCtx>IPv6 地址</wanIpv6AddrCtx>
+		<wanIpv6PrefixLenCtx>IPv6 前缀长度</wanIpv6PrefixLenCtx>
+		<wanIpv6FstDnsCtx>首选IPv6 DNS</wanIpv6FstDnsCtx>
+		<wanIpv6SecDnsCtx>备选IPv6 DNS</wanIpv6SecDnsCtx>
+		<wanManuDSLiteCtx>手动配置DS-lite</wanManuDSLiteCtx>
+		<wanDSLiteRemoteAddrCtx>DS-lite对端IPv6地址</wanDSLiteRemoteAddrCtx>
+		<wanAutoDSLiteCtx>自动配置DS-lite</wanAutoDSLiteCtx>
+		<wanBindPortCtx>绑定端口</wanBindPortCtx>
+		<wanPortBindNotice>注: WAN连接之间不能共享绑定端口，最后绑定端口的WAN连接绑定操作将冲掉之前其它WAN连接对该端口的绑定操作！</wanPortBindNotice>
+		<wanPortBindWarn>服务模式为OTHER的Bridge连接绑定时，端口对应的PC不会通过网关动态（DHCP）得到IP地址。当服务模式为OTHER时，请注意不要把所有以太网端口绑定为此种情况！</wanPortBindWarn>
+		<wanBindDataCtx>绑定数据</wanBindDataCtx>
+		<wanVlanBindCtx>vlan 绑定</wanVlanBindCtx>
+		<wanVlanBindNotice>注: 已经做端口绑定的端口不能做vlan数据绑定，最后的WAN连接绑定vlan数据操作将冲掉之前其它WAN连接对该端口的vlan数据绑定！</wanVlanBindNotice>
+		
+		<wanUsInvalidWarn>上行模式无效</wanUsInvalidWarn>
+		<wanSameInternetWarn>相同的Wan连接已经存在</wanSameInternetWarn>
+		<wanSameVidWarn>VlanID已经存在</wanSameVidWarn>
+		<wanAddTr69Warn>不能添加多个TR069管理通道</wanAddTr69Warn>
+		<wanAddVoipWarn>不能添加多条VOIP WAN连接</wanAddVoipWarn>
+		<wanNotEditTr69Warn>不能编辑TR069相关WAN 连接</wanNotEditTr69Warn>
+		<wanMtuInvalidWarn>MTU值非法, 取值范围(68--1500)</wanMtuInvalidWarn>
+		<wanVlanInvalidWarn>VID值非法, 取值范围(1--4094)</wanVlanInvalidWarn>
+		<wanIpAddrInvalidWarn>输入地址不合法</wanIpAddrInvalidWarn>
+		<wanIpMaskInvalidWarn>输入子网掩码不合法</wanIpMaskInvalidWarn>
+		<wanIpv6AddrInvalidWarn>输入地址不合法</wanIpv6AddrInvalidWarn>
+		<wanPppExMaxLen64Warn>长度不能超过64</wanPppExMaxLen64Warn>
+		<wanPppExMaxLen32Warn>长度不能超过32</wanPppExMaxLen32Warn>
+		<wanInvalidCharWarn>包含非法字符</wanInvalidCharWarn>
+		<wanPppProxyInvalidWarn>代理数不合法</wanPppProxyInvalidWarn>
+		<wanPppProxyNumRangeWarn>代理数范围:1-</wanPppProxyNumRangeWarn>
+		<wanPppProxyPortBindWarn>代理必须绑定端口</wanPppProxyPortBindWarn>
+		<wanPppDisconnTimeWarn>空间断线时间间隔范围:1-30</wanPppDisconnTimeWarn>
+		<wanIpv6PreFixLenWarn>前缀长度不能为空</wanIpv6PreFixLenWarn>
+		<wanIpv6PreFixLenWarn2>前缀长度不合法</wanIpv6PreFixLenWarn2>
+	        <wanIpv6MetricWarn>Metric长度不合法</wanIpv6MetricWarn>
+	        <wanIpv6InvalidArgsExist>存在不符要求的参数值，请重新输入！</wanIpv6InvalidArgsExist>
+	        <wanPppConnecting>正在连接，错误</wanPppConnecting>
+		<wanPppError691> 691: 验证失败，用户名或密码错误。</wanPppError691>
+		<wanPppError734> 734: 链路被服务器请求中断，可尝试删除并重新创建宽带连接。</wanPppError734>
+		<wanPppError678> 678: 远程服务器没有响应，可能是网络故障。</wanPppError678>
+		<wanPppDisconnected>未连接，错误 617: 设备连接已断开</wanPppDisconnected>
+		<wanPppConnected>拨号成功，已连接!</wanPppConnected>
+        	<wanPppConfigured>配置成功</wanPppConfigured>
+		<wanPppRefresh>刷新 = </wanPppRefresh>
+		<wanPppHideShowBox>隐藏</wanPppHideShowBox>
+        <wanBindPortDuplicate>此端口已被绑定，继续绑定将冲掉其他WAN连接对此端口的绑定</wanBindPortDuplicate>
+	</wanPage>
+	
+	<usbInfoPage>
+		<usbInfoTitle>USB接口状态</usbInfoTitle>
+		<usbInfoUsbName>USB接口</usbInfoUsbName>
+		<usbInfoUsing>使用中</usbInfoUsing>
+		<usbInfoIdle>空闲</usbInfoIdle>
+	</usbInfoPage>
+	
+	<wanInfoPage>
+		<!--<wanInfoTitle>WAN 连接信息</wanInfoTitle>
+		<wanInfoIntfName>接口名</wanInfoIntfName>
+		<wanInfoIntfDesc>接口描述</wanInfoIntfDesc>-->
+		<!--<wanInfoType>类型</wanInfoType>-->
+		<!--<wanInfoFw>防火墙</wanInfoFw>-->
+		<wanInfoStat>连接状态</wanInfoStat>
+		<menuNetBandmapping>端口映射</menuNetBandmapping>
+		<!--<wanInfoDns>DNS地址</wanInfoDns>-->
+		<wanInfoIpAddr>IP地址</wanInfoIpAddr>
+		<wanNetInfoTitle>网络名称</wanNetInfoTitle>
+		<wanNetDefGw>默认网关</wanNetDefGw>
+		<wanNetSubMask>子网掩码</wanNetSubMask>
+		<wanNetPriDns>首选DNS服务器</wanNetPriDns>
+		<wanNetSecDns>备用DNS服务器</wanNetSecDns>
+	</wanInfoPage>
+	
+	<waninfo6Page>
+		<wanInfo6Title>WAN IPv6连接信息</wanInfo6Title>
+		<wanInfo6IpAddr>IPv6地址</wanInfo6IpAddr>
+		<wanInfo6Prefix>前缀信息</wanInfo6Prefix>
+		<wanNet6DefGw>默认IPv6网关</wanNet6DefGw>
+		<wanNet6PriDns>首选IPv6 DNS服务器</wanNet6PriDns>
+		<wanNet6SecDns>备用IPv6 DNS服务器</wanNet6SecDns>
+	</waninfo6Page>
+	
+	<wanGponPage>
+	    <wanGponBasicInfo>基本信息</wanGponBasicInfo>
+		<wanGponSieniorInfo>高级信息</wanGponSieniorInfo>
+		<wanGponTitle>GPON连接信息</wanGponTitle>
+		<wanEponTitle>EPON连接信息</wanEponTitle>
+		<wanGponConnStat>GPON链路连接状态</wanGponConnStat>
+		<wanEponConnStat>EPON链路连接状态</wanEponConnStat>
+		<wanGponLoidAuthStat>LOID 验证状态</wanGponLoidAuthStat>
+		<wanGponLoidAuthStat0>初始状态</wanGponLoidAuthStat0>
+		<wanGponLoidAuthStat1>认证成功</wanGponLoidAuthStat1>
+		<wanGponLoidAuthStat2>LOID不存在</wanGponLoidAuthStat2>
+		<wanGponLoidAuthStat3>PASSWORLD错误</wanGponLoidAuthStat3>
+		<wanGponLoidAuthStat4>LOID冲突</wanGponLoidAuthStat4>
+		<wanGponLoidAuthStat5>认证失败</wanGponLoidAuthStat5>
+		<wanGponUsFEC>上行FEC</wanGponUsFEC>
+		<wanGponDsFEC>下行FEC</wanGponDsFEC>
+		<wanGponEncryMode>加密模式</wanGponEncryMode>
+		<wanGponOnuAlm>告警信息</wanGponOnuAlm>
+		<wanGponRougeONU>流氓猫</wanGponRougeONU>
+		<wanGponNormalONU>无</wanGponNormalONU>
+		<wanGponOpticalTitle>光模块信息</wanGponOpticalTitle>
+		<wanGponTemperature>工作温度(℃)</wanGponTemperature>
+		<wanGponVoltage>电压(100uV)</wanGponVoltage>
+		<wanGponI>电流(2uA)</wanGponI>
+		<wanGponTxPower>发光功率(dbm)</wanGponTxPower>
+		<wanGponRxPower>收光功率(dbm)</wanGponRxPower>
+		<wanGponRxTxTitle>收发包情况</wanGponRxTxTitle>
+		<wanGponRx>PON口接收字节</wanGponRx>
+		<wanGponTx>PON口发送字节</wanGponTx>
+		<wanGponTime>连接时间(s)</wanGponTime>
+		<wanGponIntf>接口</wanGponIntf>
+		<wanGponBytes>字节数</wanGponBytes>
+		<wanGponPackages>封包数</wanGponPackages>
+		<wanGponFrames>帧数</wanGponFrames>
+		<wanGponMsg>消息</wanGponMsg>
+		<wanGponLossFrames>丢失的帧数</wanGponLossFrames>
+		<wanGponRxBcastFrames>接收的广播帧数</wanGponRxBcastFrames>
+		<wanGponLossBcastFrames>丢失的广播帧数</wanGponLossBcastFrames>
+		<wanGponAlertMsgTitle>告警信息</wanGponAlertMsgTitle>
+	</wanGponPage>
+		
+	<wanEponPage>
+		<wanEponDropPackage>丢包数</wanEponDropPackage>
+		<wanEponOmciPortAesEnable>已开启</wanEponOmciPortAesEnable>
+	</wanEponPage>
+    
+    <CatvInfoPage>
+        <CatvBasicInfo>CATV信息</CatvBasicInfo>
+        <CatvOutputVoltage>输出电平(100uV)</CatvOutputVoltage>
+        <RecOptPower>接收光功率(0.1uW)</RecOptPower>
+    </CatvInfoPage>
+    
+	<macFltPage>
+		<macFltAddRuleTitle>添加MAC地址过滤规则</macFltAddRuleTitle>
+		<macFltCtx>MAC过滤使能</macFltCtx>
+		<macFltProtocolCtx>协议类型</macFltProtocolCtx>
+		<macFltModeChangeTitile>转换MAC地址过滤模式</macFltModeChangeTitile>
+		<macfltNotice1>注意: 黑白名单的转换将自动删除所有已定义的规则，请重新定义需要的规则.</macfltNotice1>
+		<macfltChangeTo>转换为</macfltChangeTo>
+		<macfltEnsureCtx>您确定要切换mac过滤模式吗</macfltEnsureCtx>
+		<macfltWarn1>是无效的</macfltWarn1>
+		<macSrcAddrCtx>源MAC地址</macSrcAddrCtx>
+		<macDestAddrCtx>目的MAC地址</macDestAddrCtx>
+		<macFltWarn>源MAC不能和目的MAC相等</macFltWarn>
+	</macFltPage>
+	
+	<firewallPage>
+		<firewallLevelTitle>选择防火墙等级，进行相应的设置。</firewallLevelTitle>
+		<firewallLevel>防火墙等级</firewallLevel>
+		<firewallLevelHigh>高</firewallLevelHigh>
+		<firewallLevelMedium>中</firewallLevelMedium>
+        <enalbeportScanDetectCtx>端口扫描防护</enalbeportScanDetectCtx>
+        <enalbepingofDeathAttackCtx>Ping of Death攻击</enalbepingofDeathAttackCtx>
+        <enalbesynFloodAttackCtx>SYN flood攻击</enalbesynFloodAttackCtx>
+        <enablewinnukeAttackCtx>Winnuke攻击</enablewinnukeAttackCtx>
+        <enablesmurfAttackCtx>Smurm攻击</enablesmurfAttackCtx>
+        <enableportredirectAttackCtx>ICMP重定向</enableportredirectAttackCtx>
+	</firewallPage>
+	
+	<antiAttackPage>
+		<antiAttackTitle>攻击 保护</antiAttackTitle>
+		<antiAttackNotice>如果想设定 DOS 保护或防端口扫描，您必须设定此项目。</antiAttackNotice>
+	</antiAttackPage>
+	
+	<wlanBasicPage>
+		<wlanTitle>无线设置 -- 基本</wlanTitle>
+		<wlanComment>本页配置无线LAN 口的基本特性。 包括启用或禁用无线LAN口、从工作站的AP扫描搜索中隐藏SSID、设置无线网络名(即SSID)。
+点击"保存/应用"，无线设置的基本配置生效.</wlanComment>
+		<wlanSsidSel>SSID</wlanSsidSel>
+		<wlanEnable>无线使能</wlanEnable>
+		<wlannettype>网络类型</wlannettype>
+		<wlanHide>隐藏热点</wlanHide>
+		<wlanApIsolation>客户端分离</wlanApIsolation>
+		<wlanDisableWme>禁用WMM广播</wlanDisableWme>
+		<wlanEnableWmf>启用WMF</wlanEnableWmf>
+		<wlanChoiceCard>无线标准型号</wlanChoiceCard>
+		<wlanCard4G>wlan0</wlanCard4G>
+		<wlanCard5G>wlan1</wlanCard5G>
+		<wlanBand>频段</wlanBand>
+		<wlanChannel>信道选择</wlanChannel>
+		<wlanCurrChannel>当前信道</wlanCurrChannel>
+		<wlanCsScanTimer>自动寻道时间(分)</wlanCsScanTimer>
+		<wlanNmodeSel>802.11n/EWC</wlanNmodeSel>
+		<wlanNBwCap>带宽</wlanNBwCap>
+		<wlanCurNbw>当前带宽</wlanCurNbw>
+		<wlanNCtrlsb>控制边带</wlanNCtrlsb>
+		<wlanCurNCtrlsb>当前控制边带</wlanCurNCtrlsb>
+		<wlanNMmcsidx>速率</wlanNMmcsidx>
+		<wlanNMmcSPEED>速率</wlanNMmcSPEED>
+		<!--<wlanNMmcSPEEDauto>自动</wlanNMmcSPEEDauto>-->
+		<wlanNProtection>802.11n保护模式</wlanNProtection>
+		<wlanNReqd>仅支持802.11n客户端</wlanNReqd>
+		<wlanRate>54g&#8482;速率</wlanRate>
+		<wlanMCastRate>多播速率</wlanMCastRate>
+		<wlanBasicRate>基础速率</wlanBasicRate>
+		<wlanFrameBurst>XPress&#8482;技术</wlanFrameBurst>
+		<wlanwlFrgThrshld>分段阈值</wlanwlFrgThrshld>
+		<wlanRtsThrshld>RTS阈值</wlanRtsThrshld>
+		<wlanDtmIntvl>DTIM间隔</wlanDtmIntvl>
+		<wlanBcnIntvl>同步间隔</wlanBcnIntvl>
+		<wlanGlobalMaxAssoc>全部客户端数量</wlanGlobalMaxAssoc>
+		<wlanGModeSel>54g&#8482;模式选择</wlanGModeSel>
+		<wlanProtection>54g&#8482;保护模式</wlanProtection>
+		<wlanRegMode>调制模式</wlanRegMode>
+		<wlanDfsPreIsm>Pre-NetworkRadarCheck</wlanDfsPreIsm>
+		<wlanDfsPostIsm>In-NetworkRadarCheck</wlanDfsPostIsm>
+		<wlanTpcDb>TPCMitigation(db)</wlanTpcDb>
+		<wlanAfterBurner>AfterburnerTechnology</wlanAfterBurner>
+		<wlanPreambleType>保护间隔</wlanPreambleType>
+		<wlanPreambleTypeLONG>长</wlanPreambleTypeLONG>
+		<wlanPreambleTypeSHORT>短</wlanPreambleTypeSHORT>
+		<wlanTxPower>发射功率等级</wlanTxPower>
+		<wlanWme>WMM(Wi-Fi多媒体)</wlanWme>
+		<wlanWmeNoAck>WMM 服务质量</wlanWmeNoAck>
+		<wlanWmeApsd>WMMAPSD</wlanWmeApsd>
+		<wlanSsidWarn1>不能为空</wlanSsidWarn1>
+		<wlanSsidWarn2>不能包含无效字符</wlanSsidWarn2>
+		<wlanSsidWarn3>长度超出范围入</wlanSsidWarn3>
+		<wlanSsidWarn4>不是以ChinaNet-开头</wlanSsidWarn4>
+		<wlanSsidWarn5>长度不能小于4</wlanSsidWarn5>
+		<wlanRegmodeWarn1>Pre-NetworkRadarCheck 值应该在0-99之间</wlanRegmodeWarn1>
+		<wlanRegmodeWarn2>In-NetworkRadarCheck 值应该在10-99之间</wlanRegmodeWarn2>
+		<wlanRegmodeWarn3>SSID已经存在，请重新输入!</wlanRegmodeWarn3>
+	</wlanBasicPage>
+	
+	<wlanSecurityPage>
+		<wlanSecTitle>无线设置 -- 安全</wlanSecTitle>
+		<wlanSecComment>本页配置无线LAN 口的安全特性。 包括设置认证方式、数据加密方式、无线网络认证密钥和密钥长度。</wlanSecComment>
+		<wlanSecSsidSelCtx>SSID</wlanSecSsidSelCtx>
+		
+		<wlanSecAuthModeCtx>加密类型</wlanSecAuthModeCtx>
+		<wlanSecAuthOpen>开放</wlanSecAuthOpen>
+		<wlanSecAuthShare>共享</wlanSecAuthShare>
+		<wlanSecPreauthCtx>WPA2 预认证方式</wlanSecPreauthCtx>
+		<wlanSecReauthCtx>网络认证重启动间隔</wlanSecReauthCtx>
+		<wlanSecPreShareKeyCtx>WPA 预共享密钥</wlanSecPreShareKeyCtx>
+		<wlSecShowCtx>显示文本</wlSecShowCtx>
+		<wlanSecGTKRekeyCtx>WPA 更新会话密钥间隔</wlanSecGTKRekeyCtx>
+		<wlanSecRadiusIpCtx>RADIUS 服务器 IP 地址</wlanSecRadiusIpCtx>
+		<wlanSecRadiusPortCtx>RADIUS 端口号</wlanSecRadiusPortCtx>
+		<wlanSecRadiusPwdCtx>RADIUS 密码</wlanSecRadiusPwdCtx>
+		<wlanSecWpaCtx>WPA 加密</wlanSecWpaCtx>
+		<wlanSecWepCtx>WEP 加密</wlanSecWepCtx>
+		<wlanSecKeyLen>密钥长度</wlanSecKeyLen>
+		<wlanSecKeyIdx>当前网络密钥索引号</wlanSecKeyIdx>
+		<wlanSecKey1>WPA 密钥</wlanSecKey1>
+		<wlanSecKey2>WPA 密钥1</wlanSecKey2>
+		<wlanSecKey3>WPA 密钥2</wlanSecKey3>
+		<wlanSecKey4>WPA 密钥3</wlanSecKey4>
+		<wlanWPSenable>使能WPS</wlanWPSenable>
+		<wlanWPSmode>WPS模式</wlanWPSmode>
+		<wpsButton>WPS按钮</wpsButton>
+		<wlanAPPIN>个人识别码（PIN）</wlanAPPIN>
+		<wlanSTAPIN>AP PIN码</wlanSTAPIN>
+		<wlanSaveWPS>保存WPS</wlanSaveWPS>
+		<wlanWPSRebuild>重新生成</wlanWPSRebuild>
+		<wlanWPSDefault>恢复默认</wlanWPSDefault>
+	<!--	<wlanSecKey2>网络密钥 2</wlanSecKey2>
+		<wlanSecKey3>网络密钥 3</wlanSecKey3>
+		<wlanSecKey4>网络密钥 4</wlanSecKey4>-->
+		<wlanSecWepNotice>密钥的长度不小于8并且不大于63</wlanSecWepNotice>
+		<wlanSecWpaWarn>WPA预共享的密钥应该在8个和63个ASCII字符或64个十六进制数字之间</wlanSecWpaWarn>
+		<wlanSecNetReauthWarn>WPA 网络重新验证间隔时间'应该在 0 到 2147483647 之间</wlanSecNetReauthWarn>
+		<wlanSecWpaReKeyWarn>WPA群组更新密钥间隔时应该在 0 到 2147483647 之间</wlanSecWpaReKeyWarn>
+		<wlanSecRadiusWarn>RADIUS 服务器 IP 地址是无效 IP 地址</wlanSecRadiusWarn>
+		<wlanSecWepkey64Warn>请输入5个ASCII字符或10个十六进制为64位WPA密钥</wlanSecWepkey64Warn>
+		<wlanSecWepkey128Warn>请输入13个ASCII字符或26个十六进制为128位WPA密钥</wlanSecWepkey128Warn>
+	</wlanSecurityPage>
+	
+	<wlanInfoPage>
+		<wlanInfoTitle>WLAN接口信息</wlanInfoTitle>
+		<wlanInfoConnStatus>无线状态</wlanInfoConnStatus>
+		<wlanInfoChannel>信道</wlanInfoChannel>
+		<wlanInfoIndex>SSID索引</wlanInfoIndex>
+		<wlanInfoSsid1>SSID名字</wlanInfoSsid1>
+		<wlanInfoAutoMode>认证</wlanInfoAutoMode>
+		<wlanInfoSsid2>SSID名称</wlanInfoSsid2>
+		<wlanInfoAutoMode2>加密</wlanInfoAutoMode2>
+		<wlanInfoStatistic>无线报文统计信息</wlanInfoStatistic>
+		<wlanInfoIntf>接口</wlanInfoIntf>
+		<wlanInfoRx>接收</wlanInfoRx>
+		<wlanInfoTx>发送</wlanInfoTx>
+	</wlanInfoPage>
+	
+	<ddnsPage>
+		<ddnsTitleCtx>动态DNS</ddnsTitleCtx>
+		<ddnsDomainCtx>域名</ddnsDomainCtx>
+		<ddnsUsernameCtx>用户名</ddnsUsernameCtx>
+		<ddnsPasswordCtx>密码</ddnsPasswordCtx>
+		<ddnsServiceCtx>服务</ddnsServiceCtx>
+		<ddnsEnableCtx>启用动态DNS服务</ddnsEnableCtx>
+		<ddnsConfigShowCtx1>动态DNS服务允许你将一个动态IP地址化名为</ddnsConfigShowCtx1>
+		<ddnsConfigShowCtx2>任意多域中的一个静态主机名,允许您的路由器</ddnsConfigShowCtx2>
+		<ddnsConfigShowCtx3>更容易被来自因特网的不同位置访问.</ddnsConfigShowCtx3>
+		<ddnsConfigShowCtx4>选择添加或移除来配置动态DNS.</ddnsConfigShowCtx4>
+		<ddnsAddShowCtx1>该页允许你从DynDNS.org或TZO添加一个动态DNS地址.</ddnsAddShowCtx1>
+		<ddnsAddShowCtx2>服务提供商</ddnsAddShowCtx2>
+		<ddnsAddHtpc>主机名</ddnsAddHtpc>
+		<ddnsAddTitleCtx>添加动态DNS</ddnsAddTitleCtx>
+		<ddnsAddTzoCtx>TZO配置</ddnsAddTzoCtx>
+		<ddnsAddTzoEmailCtx>Email</ddnsAddTzoEmailCtx>
+		<ddnsAddTzoKeyCtx>密钥</ddnsAddTzoKeyCtx>
+	</ddnsPage>
+	
+	<lanStatsPage>
+		<lanStatsTitle>网关信息</lanStatsTitle>
+		<lanStatsTitle2>收发包情况</lanStatsTitle2>
+		<lanStatsTitle3>内网设备信息</lanStatsTitle3>
+		<lanStatsRX>接收</lanStatsRX>
+		<lanStatsTX>发送</lanStatsTX>
+		<lanStatsDeviceType>设备</lanStatsDeviceType>
+		<lanStatsLeaseTime>状态</lanStatsLeaseTime>
+		<lanStatsIpv4Addr>LAN侧IPv4地址:</lanStatsIpv4Addr>
+		<lanStatsIpv6Addr>LAN侧IPv6地址:</lanStatsIpv6Addr>
+		<lanStatsSTB>机顶盒</lanStatsSTB>
+		<lanStatsCamera>摄像头</lanStatsCamera>
+		<lanStatsIPPhone>IP电话</lanStatsIPPhone>
+		<lanStatsPC>计算机</lanStatsPC>
+	</lanStatsPage>
+	
+	<dhcpPage>
+		<dhcpTitle>局域网(LAN)设置</dhcpTitle>
+		<dhcpComment>为局域网配置路由器IP地址和子网掩码接口。"保存/应用"按钮保存LAN配置数据</dhcpComment>
+		<dhcpNotice>修改需重启生效</dhcpNotice>
+		<dhcpSubnetMask>子网掩码</dhcpSubnetMask>
+		<dhcpStpDisable>禁用环流控制</dhcpStpDisable>
+		<dhcpStpEnabel>启用环流控制</dhcpStpEnabel>
+		<dhcpDisable>禁用DHCP服务器</dhcpDisable>
+		<dhcpEnable>启用DHCP服务器</dhcpEnable>
+		<dhcpLeaseTime>延续时间</dhcpLeaseTime>
+		<dhcpRelayEnable>启用DHCP服务器中继</dhcpRelayEnable>
+		<dhcpServerIpAddr>DHCP服务器IP地址</dhcpServerIpAddr>
+		<dhcpReserveIpAddr>预留IP地址</dhcpReserveIpAddr>
+		<dhcpReserveIpComment>选择"编辑预留IP地址列表" 来配置预留IP地址列表</dhcpReserveIpComment>
+		<dhcpReserveIpNotice>注意1:最多预留10个ip地址和特殊的mac </dhcpReserveIpNotice>
+		<dhcpReservWarn>预留地址数不能超过最大预留数</dhcpReservWarn>
+		<dhcpReserveWarn1>已经存在了</dhcpReserveWarn1>
+		<dhcpPCStart>PC起始地址</dhcpPCStart>
+		<dhcpPCEnd>PC终止地址</dhcpPCEnd>
+		<dhcpCamerastartAddr>摄像头起始地址</dhcpCamerastartAddr>
+		<dhcpCameraendAddr>摄像头终止地址</dhcpCameraendAddr>
+		<dhcpSTBstartAddr>机顶盒起始地址</dhcpSTBstartAddr>
+		<dhcpSTBendAddr>机顶盒终止地址</dhcpSTBendAddr>
+		<dhcpSIPPhonestartAddr>IP电话起始地址</dhcpSIPPhonestartAddr>
+		<dhcpSIPPhoneendAddr>IP电话终止地址</dhcpSIPPhoneendAddr>
+		<dhcpEthStart>初始IP地址</dhcpEthStart>
+		<dhcpEthEnd>终止IP地址</dhcpEthEnd>
+		<dhcpOneMinute>一分钟</dhcpOneMinute>
+		<dhcpOneHour>一小时</dhcpOneHour>
+		<dhcpOneDay>一天</dhcpOneDay>
+		<dhcpOneWeek>一周</dhcpOneWeek>
+		<dhcpLanDnsAuto>自动</dhcpLanDnsAuto>
+		<dhcpLanDnsManual>手动</dhcpLanDnsManual>
+		<dhcpWarn1>是无效的IP地址</dhcpWarn1>
+		<dhcpWarn2>起始地址与终止地址不在同一网段</dhcpWarn2>
+		<dhcpWarn3>起始地址与终止地址的大小关系错误(正确对应原则：起始地址小于终止地址)</dhcpWarn3>
+		<dhcpWarn4>地址池冲突</dhcpWarn4>
+		<dhcpWarn5>您输入的信息有误,位置在</dhcpWarn5>
+		<dhcpWarn6>表单中有无效的数据,请检查</dhcpWarn6>
+		<dhcpWarn7>是无效的子网掩码地址</dhcpWarn7>
+		<dhcpWarn8>是无效的MAC地址</dhcpWarn8>
+		<dhcpWarn9>首选DNS服务器和备用DNS服务器地址不能相同</dhcpWarn9>
+		<dhcpWarn10>WAN接口网段和LAN接口网段不能相同</dhcpWarn10>
+		<dhcpPCPool>PC地址池</dhcpPCPool>
+		<dhcpCameraPool>摄像头地址池</dhcpCameraPool>
+		<dhcpSTBPool>机顶盒地址池</dhcpSTBPool>
+		<dhcpSIPPhonePool>IP电话地址池</dhcpSIPPhonePool>
+		<dhcpStaticIpTitle>DHCP静态IP租期</dhcpStaticIpTitle>
+		<dhcpStaticIpComment>输入Mac地址和静态IP地址，然后点击"应用/保存"按钮</dhcpStaticIpComment>
+		<dhcpLanDnsRelayEnable>DNS 服务器</dhcpLanDnsRelayEnable>
+		<dhcpLanDns1>首选 DNS 服务器</dhcpLanDns1>
+		<dhcpLanDns2>备用 DNS 服务器</dhcpLanDns2>
+		<dhcpOptionTitle>Dhcp 选项</dhcpOptionTitle>
+		<dhcpOptionComment>添加 Dhcp 选项</dhcpOptionComment>
+		<dhcpOptionId>Code配置</dhcpOptionId>
+		<dhcpOptionValue>值配置</dhcpOptionValue>
+	</dhcpPage>
+	
+	<dhcpv6Page>
+		<dhcpv6Title>IPv6LAN侧主机配置</dhcpv6Title>
+		<dhcpv6Address>IPv6 静态地址(需指定前缀)</dhcpv6Address>
+		<dhcpv6Enable>启用DHCPv6服务</dhcpv6Enable>
+		<dhcpv6LeaseTime>释放时间</dhcpv6LeaseTime>
+		<dhcpv6Hour>小时</dhcpv6Hour>
+		<dhcpv6PrefixLen>使用前缀长度</dhcpv6PrefixLen>
+        	<dhcpv6DnsType>Dns 类型</dhcpv6DnsType>
+		<dhcpv6Title2>IPv6SitePrefix配置类型</dhcpv6Title2>
+		<dhcpv6EnableRadvd>启用RADVD</dhcpv6EnableRadvd>
+		<dhcpv6SendCycle>发送周期(秒)</dhcpv6SendCycle>
+		<dhcpv6Second>秒</dhcpv6Second>
+		<dhcpv6DisableMMark>禁用 M标志(无状态模式)</dhcpv6DisableMMark>
+		<dhcpv6AuthorizedFromWan>来自WAN侧的授权</dhcpv6AuthorizedFromWan>
+		<dhcpv6Static>静态</dhcpv6Static>
+		<dhcpv6SitePrefix>SitePrefix</dhcpv6SitePrefix>
+		<dhcpv6SitePrefixLength>SitePrefixLength</dhcpv6SitePrefixLength>
+		<dhcpv6Warn1>是无效的ipv6地址</dhcpv6Warn1>
+		<dhcpv6Warn2>不能为空或"0"</dhcpv6Warn2>
+		<dhcpv6Warn3>不能为空</dhcpv6Warn3>
+		<dhcpv6Warn4>是无效的</dhcpv6Warn4>
+		<dhcpv6Warn5>IPv6前缀长度或前缀值不合法，请重新输入！</dhcpv6Warn5>
+	</dhcpv6Page>
+	
+	<algPage>
+		<algTitleCtx>ALG</algTitleCtx>
+		<algShow>请选择如下ALG</algShow>
+		<enalbeh323Ctx> 启用 H323</enalbeh323Ctx>
+		<enalbeRtspCtx>启用 RTSP</enalbeRtspCtx>
+		<enalbePptpCtx>启用 PPTP</enalbePptpCtx>
+		<enableIpsecCtx>启用 IPSEC</enableIpsecCtx>
+		<enablesipCtx>启用 SIP</enablesipCtx>
+		<sipPort1Ctx>sipPort1</sipPort1Ctx>
+		<sipPort2Ctx>sipPort2</sipPort2Ctx>
+		<sipPort3Ctx>sipPort3</sipPort3Ctx>
+		<enalbeL2tpCtx>启用 L2TP</enalbeL2tpCtx>
+		<enalbeFtpCtx>启用 FTP</enalbeFtpCtx>
+		<enalbedmzCtx>启用 DMZ</enalbedmzCtx>
+		<algPortWarn>是无效的</algPortWarn>
+	</algPage>
+	<dmzPage>
+		<dmzTitle>NAT--DMZ主机</dmzTitle>
+		<dmzComment>路由器将所有来自广域网中不属于虚拟服务列表中配置的应用的Ip报文发给DMZ主机</dmzComment>
+		<dmzEnable>启用DMZ主机</dmzEnable>
+		<dmzPrompt1>输入电脑IP地址，然后点击"应用"按钮激活DMZ主机</dmzPrompt1>
+		<dmzPrompt2>清空IP地址输入框，然后点击"应用"按钮解除DMZ主机</dmzPrompt2>
+		<dmzIpAddr>DMZ主机IP地址</dmzIpAddr>
+		<dmzIpWarn>是无效的IP地址</dmzIpWarn>
+	</dmzPage>
+	
+	<usbPage>
+		<usbTitle>服务状态</usbTitle>
+		<usbFtpServer>FTP服务器</usbFtpServer>
+		<usbFtpServerOn>On</usbFtpServerOn>
+		<usbFtpServerOff>Off</usbFtpServerOff>
+		<usbRefresh>刷新本页</usbRefresh>
+		<usbRemoteDownload>USB远程下载</usbRemoteDownload>
+		<usbDownloadDir>下载文件存放目录</usbDownloadDir>
+		<usbUsername>用户名</usbUsername>
+		<usbPassword>密码</usbPassword>
+		<usbRemoteURL>远程URL</usbRemoteURL>
+		<usbDownload>下载</usbDownload>
+		<usbNoUsb>无usb存储设备</usbNoUsb>
+		<usbDoenloadMsg1>警告:服务器连接失败，请检查服务器地址或者端口是否正确。</usbDoenloadMsg1>
+		<usbDoenloadMsg2>警告:服务器登录失败，请检查登录帐号和密码是否正确。</usbDoenloadMsg2>
+		<usbDoenloadMsg3>文件正在下载中.....................请稍候。</usbDoenloadMsg3>
+		<usbDoenloadMsg4>文件下载完毕，总共下载了</usbDoenloadMsg4>
+		<usbDoenloadMsg5>警告:存储设备空间不够，总共下载了</usbDoenloadMsg5>
+		<usbDoenloadMsg6>警告:文件不存在。</usbDoenloadMsg6>
+		<usbDoenloadMsg7>服务器连接中.....................请稍候。</usbDoenloadMsg7>
+		<usbDoenloadMsg8>存储设备或存储目录不可写。</usbDoenloadMsg8>
+		<usbDoenloadMsg9>访问被拒绝，没有相应权限。</usbDoenloadMsg9>
+		<usbDoenloadMsg10>设备中已有同名文件，不需下载。</usbDoenloadMsg10>
+		<usbDoenloadMsg11>重复下载或路径错误。</usbDoenloadMsg11>
+		<usbAlarm>警告:Url中已指定端口号，将优先使用该端口号进行下载，是否继续？</usbAlarm>
+		<usbWarn1>端口号必须在0--65535范围内</usbWarn1>
+		<usbWarn2>是无效的URL,必须是(ftp://xxx/filename或http://xxx/filename)的格式</usbWarn2>
+		<usbBite>字节</usbBite>
+                <DMSConf>DMS配置</DMSConf>
+                <dmsEnabled>启用DMS</dmsEnabled>
+                <dmsConfigTime>更新间隔时间(s)</dmsConfigTime>
+                <dmsConfig>媒体库的路径</dmsConfig>
+	</usbPage>
+	
+	<multicastvlanPage>
+		<iptvTitle>IPTV 业务</iptvTitle>
+		<iptvComment>请点击下面按钮启用或禁用IPTV业务</iptvComment>
+		<iptvEnableCtx>启用IPTV</iptvEnableCtx>
+		<mcVlanTitle>公共组播VLAN</mcVlanTitle>
+		<mcVlanComment>请选择需要配置公共组播VLAN 的网络连接， 输入公共组播VLAN ID，并点击"保存/应用"，可以启用公共组播VLAN。配置需重启生效。</mcVlanComment>
+		<mcVlanComment2>配置为-1 表示禁用公共组播VLAN。</mcVlanComment2>
+		<mcVlanId>公共组播VLAN</mcVlanId>
+		<mcVlanNoWanConnect>无可用wan连接</mcVlanNoWanConnect>
+		<mcVlanWarn1>公共组播VLAN不能为空！</mcVlanWarn1>
+		<mcVlanWarn2>Vlan Id 无效，请输入0到4095之间的整数。如需禁用，请填入-1。</mcVlanWarn2>
+	</multicastvlanPage>
+	
+	<tr69Connect>
+		<tr69InformInfo>主动上报Inform情况</tr69InformInfo>
+		<tr69ItmsReqInfro>接受ITMS连接请求情况</tr69ItmsReqInfro>
+		<tr69Statusmsg1>未上报（e家终端正在启动）</tr69Statusmsg1>
+		<tr69Statusmsg2>未上报（无远程管理WAN连接）</tr69Statusmsg2>
+		<tr69Statusmsg3>未上报（远程管理WAN连接未生效）</tr69Statusmsg3>
+		<tr69Statusmsg4>未上报（无管理通道DNS信息）</tr69Statusmsg4>
+		<tr69Statusmsg5>未上报（无ACS配置参数）</tr69Statusmsg5>
+		<tr69Statusmsg6>未上报（ACS域名解析失败）</tr69Statusmsg6>
+		<tr69Statusmsg7>未上报</tr69Statusmsg7>
+		<tr69InformStatus1>上报无回应</tr69InformStatus1>
+		<tr69InformStatus2>上报过程中断</tr69InformStatus2>
+		<tr69InformStatus3>上报成功</tr69InformStatus3>
+		<tr69InformStatus4>上报验证失败</tr69InformStatus4>
+		<tr69ConnStatus1>未收到远程连接请求</tr69ConnStatus1>
+		<tr69ConnStatus2>ITMS发起的远程连接过程成功</tr69ConnStatus2>
+		<tr69ConnStatus3>ITMS发起的远程连接认证失败</tr69ConnStatus3>
+		<tr69ConnStatus4>ITMS发起的远程连接过程中断</tr69ConnStatus4>
+	</tr69Connect>
+	
+	<tr69CfgView>
+		<tr69ViewTitle>最近远程业务配置情况</tr69ViewTitle>
+		<tr69RemoteCfg1>正在接受ITMS发起的远程业务配置</tr69RemoteCfg1>
+		<tr69RemoteCfg2>业务配置成功</tr69RemoteCfg2>
+		<tr69RemoteCfg3>业务配置失败</tr69RemoteCfg3>
+		<tr69RemoteCfg4>未收到远程业务配置</tr69RemoteCfg4>
+	</tr69CfgView>
+	
+	<ipfltPage>
+		<ipfltTitle>IP地址过滤配置</ipfltTitle>
+		<ipfltComment>通过下列配置，您可以阻止或允许某些IP地址通过您的网关访问其他资源。</ipfltComment>
+		<ipfltServer>IP地址过滤:</ipfltServer>
+		<ipfltListType>请选择过滤类型:</ipfltListType>
+		<ipfltNotice>由于本机没有配置Internet路由连接，故本功能暂时无法使用!</ipfltNotice>
+		<ipfltBListButton>黑名单(LAN=>WAN 流出过滤)</ipfltBListButton>
+		<ipfltWListButton>白名单(WAN=>LAN 流入过滤)</ipfltWListButton>
+		<ipfltBLVTitle>流出IP过滤器配置</ipfltBLVTitle>
+		<ipfltBLVComment1>默认情况下,允许所有IP通信从LAN流出,但是可以通过设置IP过滤器来阻止某些IP通信。</ipfltBLVComment1>
+		<ipfltBLVComment2>选择添加或删除按钮来配置LAN的流出IP过滤器.</ipfltBLVComment2>
+		<ipfltFlterName>过滤器名</ipfltFlterName>
+		<ipfltIpVersion>IP版本</ipfltIpVersion>
+		<ipfltProtocol>协议</ipfltProtocol>
+		<ipfltSourceIpAndMask>源IP地址(范围)/掩码</ipfltSourceIpAndMask>
+		<ipfltSourcePort>源端口</ipfltSourcePort>
+		<ipfltSourcePortNote>源端口(端口:端口)</ipfltSourcePortNote>
+		<ipfltDestIpAndMask>目的IP地址(范围)/掩码</ipfltDestIpAndMask>
+		<ipfltDestPort>目的端口</ipfltDestPort>
+		<ipfltDestPortNote>目的端口(端口:端口)</ipfltDestPortNote>
+		<ipfltBLATitle>添加IP过滤器--流出</ipfltBLATitle>
+		<ipfltBLAComment>您可以通过指定一个新的过滤器名和至少下列状态的一种来为识别流出的IP通信而创建一个过滤器规则。在过滤器规则中所有指定的状态必须使规则有效。如果设置了源或目的IP地址范围，则无需设置相应的子网掩码。点击'保存/应用'保存和激活过滤器。</ipfltBLAComment>
+		<ipfltProSelect1>ALL</ipfltProSelect1>
+		<ipfltProSelect2>TCP/UDP</ipfltProSelect2>
+		<ipfltProSelect3>TCP</ipfltProSelect3>
+		<ipfltProSelect4>UDP</ipfltProSelect4>
+		<ipfltProSelect5>ICMP</ipfltProSelect5>
+		<ipfltSourceIp>源IP地址(范围):</ipfltSourceIp>
+		<ipfltSourceMask>源子网掩码:</ipfltSourceMask>
+		<ipfltDestIp>目的IP地址(范围):</ipfltDestIp>
+		<ipfltDestMask>目的子网掩码:</ipfltDestMask>
+		<ipfltWLVTitle>流入IP过滤器配置</ipfltWLVTitle>
+		<ipfltWLVComment1>默认情况下，当WAN侧防火墙启用时，禁止所有来自广域网的IP通信流入.但是可以通过设置IP过滤器来接受某些IP通信.</ipfltWLVComment1>
+		<ipfltWLVComment2>选择添加或删除按钮来配置WAN的流入IP过滤器</ipfltWLVComment2>
+		<ipfltWLATitle>添加IP过滤器--流入</ipfltWLATitle>
+		<ipfltWLAComment>您可以通过指定一个新的过滤器名和下列状态中至少一种来为识别流入的IP通信而创建一个过滤器规则。在过滤器规则中所有指定的状态必须满足才能使规则有效。如果设置了源或目的IP地址范围，则无需设置相应的子网掩码。点击'保存/应用'来保存和激活过滤器。</ipfltWLAComment>
+		<ipfltWLATitle2>WAN接口(在路由模式而且启用防火墙)</ipfltWLATitle2>
+		<ipfltWLAComment2>选择下面显示的至少一个或多个接口来应用这个规则。</ipfltWLAComment2>
+		<ipfltSelectAll>全选</ipfltSelectAll>
+		<ipfltPrefixLength>前缀长度:</ipfltPrefixLength>
+		<ipfltWarn1>无效的过滤器名</ipfltWarn1>
+		<ipfltWarn2>无效的Ipv6地址</ipfltWarn2>
+		<ipfltWarn3>无效的Ipv4地址</ipfltWarn3>
+		<ipfltWarn4>无效的子网掩码</ipfltWarn4>
+		<ipfltWarn5>无效的端口</ipfltWarn5>
+		<ipfltWarn6>表单中存在错误，请检查!</ipfltWarn6>
+		<ipfltWarn7>源Ip地址范围冲突!</ipfltWarn7>
+		<ipfltWarn8>目的Ip地址范围冲突!</ipfltWarn8>
+		<ipfltWarn9>至少需要选择一个wan接口!</ipfltWarn9>
+		<ipfltWarn10>表单中的信息量太少，无法递交，请接着填写。</ipfltWarn10>
+		<ipfltWarn11>若已填写"源子网掩码"，则源IP不能为空!</ipfltWarn11>
+		<ipfltWarn12>若已填写"目的子网掩码"，则目的IP不能为空!</ipfltWarn12>
+		<ipfltWarn13>请至少选择一个规则!</ipfltWarn13>
+	</ipfltPage>
+
+	<virtaulServerPage>
+		<vsNeedEnableNat>NAT未启用. 需要建立启用NAT的路由WAN服务</vsNeedEnableNat>
+		<vsTitle>NAT--虚拟服务器设置</vsTitle>
+		<vsComment>虚拟服务器允许将WAN侧输入流(根据协议和端口识别)直接转发到LAN侧拥有私有地址的内部服务器.</vsComment>
+		<vsComment2>仅当外部端口需要转化为LAN侧服务器不同的端口时,内部端口才需设置.</vsComment2>
+		<vsComment3>最多可配置32个条目.</vsComment3>
+		<vsServerName>服务器名称</vsServerName>
+		<vsOuterStartPort>外部开始端口</vsOuterStartPort>
+		<vsOuterEndPort>外部结束端口</vsOuterEndPort>
+		<vsProtocol>协议</vsProtocol>
+		<vsInnerStartPort>内部开始端口</vsInnerStartPort>
+		<vsInnerEndPort>内部结束端口</vsInnerEndPort>
+		<vsServerIp>服务器IP地址</vsServerIp>
+		<vsWanConnName>WAN连接名称</vsWanConnName>
+		
+		<vsCfgComment>选择服务名并输入服务器的IP地址，然后点击"保存/应用"，为这项服务将IP包转发到指定的服务器。</vsCfgComment>
+		<vsCfgNotice>注意：不可能改变"内部结束端口"。如果你修改，这通常类似于"外部结束端口"或者"内部开始端口"被修改</vsCfgNotice>
+		<vsCfgWanConnName>选择WAN连接</vsCfgWanConnName>
+		<vsCfgServerName>服务器名称</vsCfgServerName>
+		<vsCfgSelServer>选择一项服务</vsCfgSelServer>
+		<vsCfgPleaseSel>请选择一项</vsCfgPleaseSel>
+		<vsCfgSelfdefServer>自定义服务器</vsCfgSelfdefServer>
+		<vsCfgSelfdefServerIp>服务器IP地址</vsCfgSelfdefServerIp>
+		<vsCfgRemainNotice>可剩余配置条目</vsCfgRemainNotice>
+		
+		<vsCfgPortInvalid>端口不合法</vsCfgPortInvalid>
+		<vsCfgPortRangeInvalid>端口范围无效</vsCfgPortRangeInvalid>
+		<vsCfgAlertSelServer>请选择一项应用服务</vsCfgAlertSelServer>
+		<vsCfgSelfSrvNameInvalid>自定义服务名称无效</vsCfgSelfSrvNameInvalid>
+		<vsCfgIpInvalidWarn>请输入合法的服务器IP地址</vsCfgIpInvalidWarn>
+		<vsCfgExMaxNumWarn>超出了剩余的可配置数,  请先删除规则</vsCfgExMaxNumWarn>
+		<vsCfgWebServPortUsedWarn>既然端口80被使用,路由器WEB服务器端口将被移到8080.</vsCfgWebServPortUsedWarn>
+		<vsCfgTelnetServPortUsedWarn>既然端口23被使用,路由器TELNET服务器端口将被移到2323.</vsCfgTelnetServPortUsedWarn>
+		<vsCfgSshServPortUsedWarn>既然端口22被使用,路由器SSH服务器端口将被移到2222.</vsCfgSshServPortUsedWarn>
+		<vsCfgFtpServPortUsedWarn>既然端口21被使用,路由器FTP服务器端口将被移到2121.</vsCfgFtpServPortUsedWarn>
+		<vsCfgTftpServPortUsedWarn>既然端口69被使用,路由器TFTP服务器端口将被移到6969.</vsCfgTftpServPortUsedWarn>
+		<vsCfgSnmpServPortUsedWarn>既然端口161被使用,路由器SNMP服务器端口将被移到16116.</vsCfgSnmpServPortUsedWarn>
+	</virtaulServerPage>
+	
+	<upnpPage>
+		<upnpTitle>UPNP 配置</upnpTitle>
+		<upnpup>启用UPNP</upnpup>
+		<upnpSwitch>upnp服务</upnpSwitch>
+		<upnpComment>通过下方的配置，您可以禁止一部分lan侧IP使用upnp功能。</upnpComment>
+		<upnpIpStart>起始IP</upnpIpStart>
+		<upnpIpEnd>终止IP</upnpIpEnd>
+		<upnpRuleDiv>lan侧阻塞IP列表</upnpRuleDiv>
+		<upnpWarn1>是无效的IP地址，请检查!</upnpWarn1>
+		<upnpWarn2>起始地址不能大于终止地址!</upnpWarn2>
+	</upnpPage>	
+	<IgmpPage>
+	    <IgmpSnoopingInfoTitleCtx>IGMP Snooping 配置</IgmpSnoopingInfoTitleCtx>
+	    <IgmpSnooping>IGMP Snooping</IgmpSnooping>
+		<IgmpSnoopingfuc>IGMP Snooping使能</IgmpSnoopingfuc>
+		<IgmpSnoopingagent>IGMP 代理</IgmpSnoopingagent>
+		<IgmpSnoopingagentfuc>IGMP 代理使能</IgmpSnoopingagentfuc>
+
+		<IgmpSnoopingCtx>这个页面允许你启用或者禁用IGMP Snooping功能。</IgmpSnoopingCtx>
+		<enalbeigmpSnoopingCtx>启用IGMP Snooping</enalbeigmpSnoopingCtx>
+		<mcastModeStd>标准模式</mcastModeStd>
+		<mcastModeBlock>阻塞模式</mcastModeBlock>
+		<mcastModeStdNotice>注意: 在这种模式下，如果没有组播转发条目, 数据流将会洪泛。</mcastModeStdNotice>
+		<mcastModeBlockNotice>注意:在这种模式下，如果没有组播转发条目, 数据流将会丢弃。</mcastModeBlockNotice>
+		<IgmpProxyInfoTitleCtx>IGMP 服务器设定 </IgmpProxyInfoTitleCtx>
+		<IgmpProxyCtx>启用服务器功能可以允许使用者在局端网络使用因特网服务器的多媒体服务 </IgmpProxyCtx> 
+		<IgmpConfigCtx>IGMP 配置</IgmpConfigCtx>
+		<IgmpConfigProxyCtx>这个页面允许你针对特定WAN连接启用IGMP代理</IgmpConfigProxyCtx>
+		<IgmpProxyInternetCtx>因特网连接 </IgmpProxyInternetCtx>
+		<IgmpServerStartCtx>IGMP 服务器启用</IgmpServerStartCtx>
+		<MldSnoopingInfoTitleCtx>MLD Snooping 配置</MldSnoopingInfoTitleCtx>
+		<MldSnoopingCtx>这个页面允许你启用或者禁用MLD Snooping功能。</MldSnoopingCtx>
+		<enalbemldSnoopingCtx>启用MLD Snooping</enalbemldSnoopingCtx>	
+		<MldProxyInfoTitleCtx>MLD 服务器设定 </MldProxyInfoTitleCtx>
+		<MldProxyCtx>启用服务器功能可以允许使用者在局端网络使用因特网服务器的多媒体服务 </MldProxyCtx> 
+		<MldConfigCtx>MLD 配置</MldConfigCtx>
+		<MldConfigProxyCtx>这个页面允许你针对特定WAN连接启用MLD代理</MldConfigProxyCtx>
+		<MldProxyInternetCtx>因特网连接 </MldProxyInternetCtx>
+		<MldServerStartCtx>MLD 服务器启用</MldServerStartCtx>
+	</IgmpPage>
+	<Management>
+		<UserManagementCtx>访问控制 -- 密码</UserManagementCtx>
+		<UserManagementInfo1Ctx>访问路由器通过两个用户名来控制: telecomadmin和useradmin。</UserManagementInfo1Ctx>
+		<UserManagementInfo2Ctx>用户名"telecomadmin"可以不受限制地浏览和修改路由器。</UserManagementInfo2Ctx>
+		<UserManagementInfo3Ctx>用户名"useradmin"可以访问路由器，浏览配置和统计表。</UserManagementInfo3Ctx>
+		<UserManagementInfo4Ctx>注意：用户名和密码只能在16个字符以内,且不能包含空格。</UserManagementInfo4Ctx>
+		<UserManagementInfo5Ctx>本页面只允许修改密码。</UserManagementInfo5Ctx>
+		<UserManagementInfo6Ctx>注意：如果修改成功,需要重新登录。</UserManagementInfo6Ctx>
+		<UserManagementInfo7Ctx>注意：密码只能在16个字符以内,且不能包含空格。</UserManagementInfo7Ctx>
+		<userAccountType>修改普通用户密码</userAccountType>
+		<adminAccountType>修改超级管理员用户密码</adminAccountType>
+		<OriginalUserNameCtx>用户名</OriginalUserNameCtx>
+		<OriginalUserPasswordCtx>原密码</OriginalUserPasswordCtx>
+		<NewPasswordCtx>新密码</NewPasswordCtx>
+		<ConfirmPasswordCtx>确认新密码</ConfirmPasswordCtx>
+		<UserManagementDone>密码修改成功</UserManagementDone>
+		<UserManagementDone2>密码修改成功,您需要重新登录系统</UserManagementDone2>
+		<UserManagementError>密码修改失败</UserManagementError>
+		<UserManagementError2>密码修改失败,原密码输入有误，请重新输入</UserManagementError2>
+		<UserManagementWarn1>密码不能为空</UserManagementWarn1>
+		<UserManagementWarn2>密码长度不能超过16个字符</UserManagementWarn2>
+		<UserManagementWarn3>密码中不能含有空格</UserManagementWarn3>
+		<UserManagementWarn4>新密码与确认密码不一致</UserManagementWarn4>
+		<ClickRebootCtx>重启设备</ClickRebootCtx>
+		<rebootBtnCtx>重启</rebootBtnCtx>
+		<FastRecoveryCtx>快速恢复：</FastRecoveryCtx>
+		<USBDisableCtx>禁用</USBDisableCtx>
+		<USBEnableCtx>启用</USBEnableCtx>
+		<USBParSelectionCtx>USB分区选择：</USBParSelectionCtx>
+		<USBApplyBtnCtx>备份配置</USBApplyBtnCtx>
+		<USBApplyBtnset>备份</USBApplyBtnset>
+		<USBApplyDoc>备份文件</USBApplyDoc>
+		<USBApplysideset>备份/恢复</USBApplysideset>
+		<USBApplyupdate>升级固件</USBApplyupdate>
+		<USBApplydebtnfalut>默认</USBApplydebtnfalut>
+		<USBReApplyrestorefile>恢复文件</USBReApplyrestorefile>
+		<USBReApplyrestorebtn>恢复</USBReApplyrestorebtn>
+		<USBReApplysavechange>保留配置</USBReApplysavechange>
+		<USBReApplyfixedfile>固件文件</USBReApplyfixedfile>
+		<USBReApplyfixedbtn>升级固件</USBReApplyfixedbtn>
+		<USBReApplyBtnCtx>重新备份配置</USBReApplyBtnCtx>
+		<USBConfigSuccCtx>备份成功</USBConfigSuccCtx>						
+		<USBConfigFaileCtx>备份失败</USBConfigFaileCtx>								
+		<USBSpaceNotEnoughCtx>U盘空间不足</USBSpaceNotEnoughCtx>										
+		<USBFileExistCtx>文件已存在，如果需要重新备份，请点击重新备份配置</USBFileExistCtx>												
+		<DefaultSettingsCtx>配置--恢复出厂默认设置</DefaultSettingsCtx>
+		<DefaultSettings1Ctx>将路由器配置恢复到出厂值。</DefaultSettings1Ctx>
+		<resdefsetBtnCtx>恢复出厂设置</resdefsetBtnCtx>
+		<resdefsetBtnCtx1>完全恢复出厂设置</resdefsetBtnCtx1>
+		<MaintenancereportedCtx>维护结束上报</MaintenancereportedCtx>
+		<Maintenancereported1Ctx>点击"维护结束"按纽，系统会自动把新修改的数据上报到服务器。</Maintenancereported1Ctx>
+		<MaintenanceEndBtnCtx>维护结束</MaintenanceEndBtnCtx>
+		<SystemLogCtx>系统日志--配置 </SystemLogCtx>
+		<SystemLog1Ctx>如果日志模式已开启，系统将开始记录所有选择的事件。对于日志等级，所有等于或之上的所选择等级的事件</SystemLog1Ctx>
+		<SystemLog2Ctx>都将被记录。对于显示等级，所有等于或之上的所选择等级的事件都将被显示。如果选择的模式是"远程"或</SystemLog2Ctx>
+		<SystemLog3Ctx>"两者"，事件将被发送到通过远程系统日志服务器特定的IP地址和UDP端口。如果选择的模式是"本地"或</SystemLog3Ctx>
+		<SystemLog4Ctx>"两者"，事件将由本地存储器记录。</SystemLog4Ctx>
+		<SystemLog5Ctx>选择所要的值，点击"应用/保存"用以配置这些系统日志选项。</SystemLog5Ctx>	
+		<SystemLogAbleCtx>日志:</SystemLogAbleCtx>
+		<SystemLogEnableCtx>启用</SystemLogEnableCtx>
+		<SystemLogDisableCtx>禁用</SystemLogDisableCtx>
+		<LevelLogCtx>日志等级:</LevelLogCtx>
+		<LevelDisplayCtx>显示等级:</LevelDisplayCtx>
+		<LogModeCtx>模式:</LogModeCtx>
+		<LocalCtx>本地</LocalCtx>
+		<RemoteCtx>远程</RemoteCtx>
+		<BothCtx>两者</BothCtx>
+		<LogAddrCtx>服务器IP地址：</LogAddrCtx>
+		<LogPortCtx>服务器UDP端口：</LogPortCtx>
+		<systemLogCtx>系统记录</systemLogCtx>
+		<SystemLog1Ctx>您可以查看系统记录.</SystemLog1Ctx>
+		<systemLog2Ctx>点击"访问记录"查看系统访问记录.</systemLog2Ctx>
+		<systemLog3Ctx>点击"安全记录"查看系统安全记录.</systemLog3Ctx>
+		<systemLog4Ctx>另外在启用日志记录后，您可以创建日志文件以及清理系统记录.</systemLog4Ctx>
+		<visitRecordBtnCtx>访问记录</visitRecordBtnCtx>
+		<safetyRecordBtnCtx>安全记录</safetyRecordBtnCtx>
+		<logDateCtx>日间/日期</logDateCtx>
+		<logDeviceCtx>设备</logDeviceCtx>
+		<logSeverityCtx>严重程度</logSeverityCtx>
+		<logInfoCtx>信息</logInfoCtx>
+		<CreateLogFilesBtnCtx>创建日志文件</CreateLogFilesBtnCtx>
+		<ClearRecordBtnCtx>清除记录</ClearRecordBtnCtx>
+		<SystemSecLogCtx>系统安全日志</SystemSecLogCtx>
+		<freshSecCtx>刷新</freshSecCtx>
+		<shutSecCtx>关闭</shutSecCtx>
+		<exportSecCtx>导入</exportSecCtx>
+		<SystemAccessLogCtx>系统访问日志</SystemAccessLogCtx>
+		<freshAccessCtx>刷新</freshAccessCtx>
+		<shutAccessCtx>关闭</shutAccessCtx>
+		<exportAccessCtx>导入</exportAccessCtx>
+		<Emergency>Emergency</Emergency>
+		<Alert>Alert</Alert>
+		<Critical>Critical</Critical>
+		<Error>Error</Error>
+		<Warning>Warning</Warning>
+		<Notice>Notice</Notice>
+		<Informational>Informational</Informational>
+		<Debugging>Debugging</Debugging>
+		<logNumerical>Numerical Code</logNumerical>
+		<ClickMonitorCtx>CPU和内存监控</ClickMonitorCtx>
+		<CpuThresholdName>CPU上限阈值</CpuThresholdName>
+		<MemThresholdName>内存上限阈值</MemThresholdName>
+		<ThreshSave>保存</ThreshSave>
+		<MonitorWarning>CPU和内存的上限阈值的范围是0到100%</MonitorWarning>
+	</Management>
+	<HelpPage>
+		<devicehelpInfoTitleCtx>设备信息帮助</devicehelpInfoTitleCtx>
+		<deviceStatusHelpInfoCtx>设备基本信息页面显示设备型号,设备标识号,硬件版本,软件版本</deviceStatusHelpInfoCtx>
+		<netWorkhelpInfoTitleCtx>网络信息帮助</netWorkhelpInfoTitleCtx>
+		<deviceNetHelpInfoCtx>网络侧信息包括IPv4连接信息,IPv6连接信息和GPON链路连接连接信息</deviceNetHelpInfoCtx>
+		<userhelpInfoTitleCtx>用户侧信息帮助</userhelpInfoTitleCtx>
+		<deviceUserHelpInfoCtx>用户侧信息包括WLan接口信息,以太网接口信息,USB接口信息</deviceUserHelpInfoCtx>
+		<internetSetHelpCtx>宽带设置帮助</internetSetHelpCtx>
+		<internetSetHelpModeCtx>模式: 配置桥或路由的WAN连接</internetSetHelpModeCtx>
+		<internetSetHelpServerModeCtx>服务模式: 选择TR069专用通道或用户上网通道</internetSetHelpServerModeCtx>
+		<DHCPConfigHelpCtx>DHCP 配置帮助 </DHCPConfigHelpCtx>
+		<DHCPServerCtx>DHCP 服务器</DHCPServerCtx>
+		<DHCPServerInfoCtx>连接到本装置的 DHCP 用户信息都会被显示在DHCP 用户列表中。这个表格会显示DHCP 客户端计算机的主机名称、IP 地址、和 MAC 地址
+		</DHCPServerInfoCtx>
+		<ipaddressStartCtx>可用IP范围起始地址:</ipaddressStartCtx>
+		<ipaddressStart1Ctx>DHCP服务器可指定的 IP 起始地址。</ipaddressStart1Ctx>
+		<ipaddressEndCtx>可用IP范围结束地址:</ipaddressEndCtx>
+		<ipaddressEnd1Ctx>DHCP服务器可指定的IP结束地址。</ipaddressEnd1Ctx>
+		<leaseTimeCtx>租约时间:</leaseTimeCtx>
+		<leaseTime1Ctx>IP 地址的租约时间。</leaseTime1Ctx>
+		<ipv4DNSRelayCtx>DNS中继:两种模式,自动或手动。当“自动”,PC局域网的一方将获得DNS地址形式本地IP地址。“手动”时,PC局域网的一方将获得DNS地址形式由Web GUI设置。</ipv4DNSRelayCtx>
+		<DHCPDisplayCtx>连接到本装置的固定 DHCP 用户信息都会被显示在 DHCP 用户列表中。这个表格会显示DHCP 客户端计算机的主机名称、IP 地址、和 MAC 地址。 名称: 参考指派的固定 IP 。</DHCPDisplayCtx> 
+		<lanIPv4SettingCtx>LAN侧IPv4设置帮助</lanIPv4SettingCtx>
+		<IPv4ReservedIpAddressCtx>保留IP地址</IPv4ReservedIpAddressCtx>
+		<IPv4ReservedIpAddressshowCtx>在预留IP Addresss表,你可以找到一个“添加”按钮。您可以添加一个规则,一个MAC地址对应一个IP地址。如果你想删除这个规则,选择删除此规则后,然后点击删除按钮。</IPv4ReservedIpAddressshowCtx>
+		<ipaddressCtxn1>IPv4 配置</ipaddressCtxn1>
+		<ipaddressCtx>IP 地址:</ipaddressCtx>
+		<ipaddress1Ctx> IP 地址是在 LAN 上的特定位置。</ipaddress1Ctx>
+		<macaddressCtx>MAC 地址:</macaddressCtx>
+		<macaddress1Ctx>MAC 地址是在 LAN 上的特定位置。</macaddress1Ctx>
+		<ReservedipaddressForPCCtx>IP地址:预留IP地址为一个MAC地址。</ReservedipaddressForPCCtx>
+		<SubnetmaskCtx>子网掩码:本地IP地址的子网掩码,通常是255.255.255.0</SubnetmaskCtx>
+		<lanIPv4EnableCirControlCtx>环回检测控制:启用环回检测控制,意味着局域网侧启用STP的功能。</lanIPv4EnableCirControlCtx>
+		<lanIPv4EnableDHCPServerCtx>启用DHCP服务器:启用局域网DHCP服务，则地址DHCP服务器池将启用。</lanIPv4EnableDHCPServerCtx>
+		<ipaddressPCStartCtx>PC起始地址:启动IP地址池中的一个可用的IP地址。IP地址将遵循本地IP地址网段。例如,本地IP地址是192.168.1.1,可用的IP地址必须为192.168.1.x 。</ipaddressPCStartCtx>
+		<ipaddressPCEndCtx>PC末地址:最后一个可用的IP地址。最大的IP地址通过计算本地IP地址和子网掩码。如果子网掩码是255.255.255.0和本地IP地址是192.168.1.1,最大的IP地址将192.168.1.254</ipaddressPCEndCtx>
+		<ipaddressOtherStartCtx>摄像头设备开始地址:可用IP地址范围开始。IP地址必须遵循“PC端地址”。“机顶盒启动地址”和“IP电话开始地址”将会遵守这些规则。</ipaddressOtherStartCtx>
+		<ipaddressOtherSEndCtx>摄像头设备最大地址:可用IP地址范围结束。这个IP地址将大于相机开始地址。“机顶盒端地址”和“IP电话结束地址”将会遵守这些规则。</ipaddressOtherSEndCtx>
+		<ipv4DHCPRelayCtx>启用DHCP中继服务器:如果你启用DHCP中继,DHCP服务器地址池将不会工作。和你会输入一个可用的DHCP服务器的IP地址。</ipv4DHCPRelayCtx>
+		<DHCPClientCtx>DHCP 用户端:</DHCPClientCtx>
+		<DHCPClient1Ctx>您可以从下列表中选择您想指定到固定 IP 的位置。</DHCPClient1Ctx>
+		<DHCPClientDisplayCtx>固定 DHCP 用户端列表是将您想指定特定 IP-MAC 的位置 都显示表中，连接到本装置的固定 DHCP 用户信息都会被显示在DHCP用户列表中， 这个表格会显示DHCP 客户端计算机的主机名称、IP 地址、和 MAC 地址。</DHCPClientDisplayCtx>
+		<lanIPv6SettingHelpCtx>IPv6 配置</lanIPv6SettingHelpCtx>
+		<lanipv6localAddressCtx>IPv6地址:本地的IPv6地址。你可以在LAN侧通过这个IP地址访问Web GUI。</lanipv6localAddressCtx>
+		<ipv6radvdConfigurationCtx>启用RADVD: 你若选择了该项意味着启用该功能。</ipv6radvdConfigurationCtx>
+		<ipv6EnableDHCPv6ServerCtx>启用DHCPv6 Server:你若选择了该项意味着启用该功能。</ipv6EnableDHCPv6ServerCtx>
+		<ipv6LANaddressConfigModeCtx>局域网地址访问模式:两个模式,有状态的和无状态的,选择其中一个模式。</ipv6LANaddressConfigModeCtx>
+		<ipv6StatefullAddressModeCtx>有状态地址生成模式:当你选择“局域网地址访问模式”是有状态的,那么有两个生成地址模式。从MAC地址的模式意味着IP地址的计算方法是用电脑的MAC和DHCP。从主机模式数量意味着IP地址由主机编号和DHCP计算而来。开始接口ID、端接口ID,DHCPv6租赁时间和DHCPv6有效时间用于从主机号的模式。</ipv6StatefullAddressModeCtx>
+		<ipv6DNSRelayCtx>IPv6 DNS中继:启用,局域网侧的DNS为本地的IPv6地址。禁用,您可以配置它。</ipv6DNSRelayCtx>
+		<ipv6GetPrefixModeCtx>获得前缀模式:两种模式,一是通过WAN连接,另一个是静态的方式。</ipv6GetPrefixModeCtx>
+		<WlanConfigHelpCtx>Wlan配置帮助 </WlanConfigHelpCtx>
+		<enableWlanCtx>开启无线:</enableWlanCtx>
+		<enableWlan1Ctx>如果你想使无线有效,你必须把这个复选框选上.否则隐藏的SSID, 信道选择, 调制模式等选项将不被显示出来。</enableWlan1Ctx>
+		<hiddenHotspotsCtx>隐藏热点 </hiddenHotspotsCtx>
+		<hiddenHotspots1Ctx>如果你想为你的路由器隐藏接入点,你必须把这个框选上.这样的话,配置就无法通过被动扫描来获取SSID。</hiddenHotspots1Ctx> 
+		<SSIDCtx>SSID:</SSIDCtx>
+		<SSID1Ctx>SSID (Service Set Identification) 是无线网络中共享的独一无二的名字,The SSID对于网络中的所有设备必须是一样的。</SSID1Ctx>
+		<remoteManagementHelpCtx>远程管理帮助 </remoteManagementHelpCtx>
+		<ITMSServerCtx>ITMS服务器</ITMSServerCtx>
+		<ITMSServer1Ctx>远程管理允许您通过 Web 浏览器从 WAN (Wide Area Network) 端来作组态设定。存取浏览器界面仍需要使用者名称和密码来登入。
+		</ITMSServer1Ctx>
+		<ipAddressCtx>IP地址:</ipAddressCtx>
+		<ipAddress1Ctx>存取路由器的互联网 IP 地址。若指定的 IP 地址为 0.0.0.0 ，则所有的主机都可以连上 DI-624+A 作组态设定。</ipAddress1Ctx>
+		<portHelpCtx>端口</portHelpCtx>
+		<port1Ctx>存取路由器的端口号码。例:http://x.x.x.x:8080，x.x.x.x 即是路由器的WAN IP地址，8080 即为Web-管理界面的端口。</port1Ctx>
+		<OLTcertificationCtx>OLT认证 </OLTcertificationCtx>
+		<OLTcertification1Ctx>GPON上行要求路由支持OLT认证 </OLTcertification1Ctx>
+		<OLTcertification2Ctx>OLT端要求认证以确保路由是授权访问外网，认证成功后OLT开启链路通畅，否则链路不通</OLTcertification2Ctx>
+		<OLTcertification3Ctx>设备注册功能中包含OLT认证过程。</OLTcertification3Ctx>
+		<QosHelpCtx>QOS</QosHelpCtx>
+		<QosHelp1Ctx>是网络的一种安全机制, 是用来解决网络延迟和阻塞等问题的一种技术,QoS指的是报文传送的吞吐量、时延、时延抖动、丢失率等性能。
+		</QosHelp1Ctx>
+		<DyroutingCtx>动态路由</DyroutingCtx>
+		<Dyrouting1Ctx>为这个设备激活RIP, 选上使能单选框启用全局 RIP 模式. 要配置个人界面,选择想要的RIP版本和操作。</Dyrouting1Ctx>
+		<Ipv4StaroutingCtx>静态路由</Ipv4StaroutingCtx>
+		<Ipv4DestCtx>目的:数据包到达的IP地址。</Ipv4DestCtx>
+		<Ipv4MaskCtx>掩码:目的IP的子网掩码。</Ipv4MaskCtx>
+		<Ipv4GatewayCtx>网关:数据包将通过的网关。</Ipv4GatewayCtx>	
+		<IPv4InterfaceCtx>接口:数据包通过路由时选择的接口。</IPv4InterfaceCtx>
+		<Ipv6StaroutingCtx>IPv6 静态路由</Ipv6StaroutingCtx>
+		<Ipv6DestCtx>目的IPv6 地址: 数据包到达的IPv6 地址。</Ipv6DestCtx>
+		<Ipv6PrefixCtx>子网Prefix长度:目的IP的子网掩长度。</Ipv6PrefixCtx>
+		<Ipv6GatewayCtx>IPv6 网关地址: 数据包将通过的网关。</Ipv6GatewayCtx>
+		<IPv6InterfaceCtx>接口:数据包通过路由时选择的接口。</IPv6InterfaceCtx>
+		<timeManageHelpCtx>时间管理帮助</timeManageHelpCtx>
+		<timeManageHelp1Ctx>选中"与因特网时间服务器自动同步", 设备将与因特网时间同步。</timeManageHelp1Ctx>
+		<URLfilterCtx>URL过滤</URLfilterCtx>
+		<URLfilter1Ctx>使用URL拒绝LAN 端计算机存取特定的Web端。URL是一个用于区域网络而特定编排的字串。如果任何一段的URL包含在阻绝字里,将会无法存取。如果任何一段的URL包含在阻绝字里，网页将不会显示。</URLfilter1Ctx>
+		<FirewallCtx>防火墙 </FirewallCtx>
+		<Firewall1Ctx>防火墙是用于允许或者拒绝封包资料通过机器。它的工作方式以及设定与IP过滤器一样。</Firewall1Ctx>
+		<macAddressFilterCtx>MAC 地址过滤 </macAddressFilterCtx>
+		<macAddressFilter1Ctx>MAC (Media Access Control) 地址过滤是以使用者计算机的MAC地址来允许或拒绝存取LAN及互联网。用MAC Filter可过滤连接到LAN端口用户以及无线的用户。</macAddressFilter1Ctx>
+		
+		<macAddressFilterCtx>MAC过滤帮助</macAddressFilterCtx>
+		<macAddressFilterHelpTitle1Ctx>MAC过滤</macAddressFilterHelpTitle1Ctx>
+		<macFilterInfoHelpCtx>MAC(Media Access Control)过滤基于用户计算机的MAC地址来允许或拒绝访问局域网和互联网。我们可以通过MAC过滤器连接到局域网端口用户和无线用户。注意:MAC过滤工作在路由的桥模式。</macFilterInfoHelpCtx>
+		<macFilterEnableHelpCtx>MAC过滤:启用或禁用,默认值是禁用的。</macFilterEnableHelpCtx>
+		<macFilterModeHelpCtx>过滤模式:两个模式,黑名单和白名单。启用黑名单后,默认为所有的MAC地址可以通过,但MAC在MAC过滤器表是根据相应的规则限制。当启用白名单,默认为所有的MAC地址不能通过,MAC在MAC过滤器表允许根据相应的规则。这些规则将空黑名单和白名单之间。</macFilterModeHelpCtx>
+		<macFilterProtocolTypeHelpCtx>协议类型:七种协议。</macFilterProtocolTypeHelpCtx>
+		<macFilterPPPoEHelpCtx>1.PPPoE客户端是用来过滤局域网侧PC的PPPoE消息,如果你想限制局域网一边的电脑拨号,你可以添加的MAC地址这个电脑在黑名单。</macFilterPPPoEHelpCtx>
+		<macFilterIPv4orIPv6HelpCtx>2.“IPv4”是用来过滤IPv4的消息。“IPv6”是用来过滤IPv6的消息。</macFilterIPv4orIPv6HelpCtx>
+		<macFilterAppleTalkHelpCtx>3.“Apple-talk”是由苹果公司提出的一个多层协议,支持网络路由、事务服务、数据流服务,域名服务,并通过LocalTalk apple硬件接口文件和打印共享之间的Apple系统服务。通过以太网桥使用LocalTalk或以太网扩大Apple机制提供板,和其他方法来实现其他网络媒体之间的联系可路由协议组。可路由协议组协议包含许多其他第三方应用程序。</macFilterAppleTalkHelpCtx>
+		<macFilterIPXHelpCtx>4."IPX" 是互联网络数据包交换协议, 用于网络操作系统的操作系统, 这是分组交换协议, IPX是第三层协议的IPX协议套件。</macFilterIPXHelpCtx>
+		<macFilterNetBEUIHelpCtx>5."NetBEUI", 即NetBios增强的用户界面,或者NetBios增强用户界面。它的NetBIOS增强版本的协议,一旦所采用的操作系统,比如Windows工作组,Windows 9 x系列,Windows NT等。NETBEUI是IBM开发了路由协议,用于携带NetBIOS通信。NetBEUI协议主要用于本地局域网,通常不能用于电脑和其他网络交流,不同于TCP / IP,IPX / SPX协议。</macFilterNetBEUIHelpCtx>
+		<macFilterIGMPHelpCtx>6."IGMP"用于过滤PC的IGMP消息。</macFilterIGMPHelpCtx>
+		<macFilterMACAddressHelpCtx>MAC地址:局域网侧PC的MAC地址。</macFilterMACAddressHelpCtx>		
+		
+		<ipAddressFilterCtx>IP过滤</ipAddressFilterCtx>
+		<ipAddressFilter1Ctx>使用 IP 地址过滤器拒绝特定的 IP 地址存取互联网上的资料。您可以拒绝特定的端口或者特定 IP 地址的所有端口。在屏幕上会显示出定义的端口。想使用它们,可以选择编 辑项目。您只需要输入计算机 LAN IP 地址就可以定义互联网的存取。</ipAddressFilter1Ctx>
+		<IpDisplayCtx>IP：</IpDisplayCtx>
+		<IpDisplay1Ctx>IP 地址为在 LAN 端计算机存取互联网的资料。 您可以新增一个 IP 范围或者一个 IP 地址。</IpDisplay1Ctx>
+		<portDisplayCtx>端口：</portDisplayCtx>
+		<portDisplay1Ctx>使用单个端口或者一段端口范围来定义互联网存取。 如果没有定义特定的端口, 那么所有的端口将会拒绝存取。</portDisplay1Ctx>
+		<portDisplay2Ctx>点击 "安全" -->" IP 过滤" ，在缺省情况下, 防火墙是启用的。 防火强被用来阻止文件在因特网和PC机之间的传输。仅仅认证的文件能传输到LAN端。</portDisplay2Ctx>
+		<noteDisplayCtx>注意：</noteDisplayCtx>
+		<noteDisplay1Ctx> 如果 路由 配置桥方式, IP过滤将禁用。IP 过滤的接口不显示。如果路由没有配置桥方式, MAC 过滤禁用， MAC过滤接口不显示 
+		</noteDisplay1Ctx>
+		<NATDMZHostCtx>NAT -- DMZ 主机 </NATDMZHostCtx>
+		<NATDMZHost1Ctx>解除DMZ是使网关设备允许所有输入小包内部指定的服务器的技术。使LAN在互联网可能做一台个人计算机完全地被暴露在所有用户， 并且它可能也允许一个指定的IP地址和其他互联网用户或者服务器没有限制地	相互通信，允许更多地应用运行在指定的IP地址。指定IP地址接收所有能辨别的连接和文件。 
+ 在"DMZ 主机 IP 地址" 页面，点击 "保存/应用" 使DMZ主机激活。</NATDMZHost1Ctx>
+ 		<DMZCtx> DMZ </DMZCtx>
+		<DMZ1Ctx>如果您有一台计算机不能够正常确地在 路由器下运作互联网应用程序，您可以准许这台计算机无限制的存取互联网。设定在 DMZ (Demilitarized 
+Zone)下的计算机可无限制存取互联网，设定客户端计算机到 DMZ ，将使计算机面临种种的安全风险，所以使用这个选项是最逼不得已的办法。</DMZ1Ctx>
+		<NATServerSetCtx>NAT -- 虚拟服务器设置</NATServerSetCtx>
+		<NATServerSet1Ctx>服务器名:选择一项服务, 例如(SMTP),(POP3),(HTTP), FTP Server, and TFTP. 被选择的项将显示在下表框中。
+		</NATServerSet1Ctx>
+		<NATServerSet2Ctx>定制的服务器:输入一个新的服务名建立指定的用户服务类型。</NATServerSet2Ctx>
+		<NATServerSet3Ctx>服务器IP地址:分配一个指定的地址到虚拟服务器。</NATServerSet3Ctx>
+		<NATServerSet4Ctx>外部端口初始/终止:当选择了一种服务,端口号自动显示，也可以根据需要更改。</NATServerSet4Ctx>
+		<NATServerSet5Ctx>协议:为服务选择正确的协议。</NATServerSet5Ctx>
+		<NATServerSet6Ctx>内部端口初始/终止:当选择了一种服务,端口号自动显示，也可以根据需要更改。</NATServerSet6Ctx>
+		<NATALGCtx>NAT -- SIP ALG </NATALGCtx> 
+		<NATALG1Ctx>点击 "NAT"-->" ALG" ，可以启用SIP ALG。</NATALG1Ctx>
+		<UPnPCtx>UPnP</UPnPCtx>
+		<UPnPDisplayCtx> 一般短的接头和网络联机的内部结构提供网络联机协调性的配备, 软件和周边设备.路由器 是 UPnP 激活的路由器和工作于其它 UPnP 装置/软件.如果您想使用 UPnP 的功能, 要使 UPnP 无效可以设定"关闭"。</UPnPDisplayCtx>
+		<IGMPCtx>IGMP设置</IGMPCtx>
+		<IGMPDisplayCtx>可以通过设置IGMP Snooping、IGMP Proxy功能，使用用户可以通过路由器观看IPTV节目。</IGMPDisplayCtx>
+		<homeStorageCtx>家庭存储</homeStorageCtx>
+		<homeStorage1Ctx>可以通过家庭存储功能，在内网或外网访问插在路由器的U盘中的文件，同时允许用户远程通知路由下载指定的文件到U盘中。
+		</homeStorage1Ctx>
+		<VOIPCtx>VOIP</VOIPCtx>
+		<VOIPDisplayCtx>服务模式的WAN连接，可以支持voip通道，实现voip宽带电话功能。</VOIPDisplayCtx>
+		<helpManageDisplayCtx>点击 "访问控制-->"密码",修改密码。</helpManageDisplayCtx>
+		<deviceManagementCtx>设备重启</deviceManagementCtx>
+		<deviceManagement1Ctx>点击 "重启" 按钮使配置生效。</deviceManagement1Ctx>
+		<deviceManagement1TitleCtx>设备重启</deviceManagement1TitleCtx>
+		<deviceManagement2TitleCtx>备份配置</deviceManagement2TitleCtx>
+		<deviceManagement3TitleCtx>恢复配置</deviceManagement3TitleCtx>
+		<deviceManagement4TitleCtx>恢复出厂值</deviceManagement4TitleCtx>
+		<deviceManagement5TitleCtx>软件升级</deviceManagement5TitleCtx>
+		<deviceManagement1Ctx>配置文件重启生效</deviceManagement1Ctx>
+		<deviceManagement2Ctx>备份当前的配置文件</deviceManagement2Ctx>
+		<deviceManagement3Ctx>恢复当前的配置文件到设备</deviceManagement3Ctx>
+		<deviceManagement4Ctx>恢复配置文件到出厂设置</deviceManagement4Ctx>
+		<deviceManagement5Ctx>升级新版本固件</deviceManagement5Ctx>
+		
+		<SystemlogHelpTitleCtx>系统日志帮助</SystemlogHelpTitleCtx>
+		<Systemlog1Ctx>点击管理->日志文件，设置新的日志选项, 点击管理->日志信息，你可以查看日志信息</Systemlog1Ctx>
+		<loglevelSettingHelpTitleCtx>系统日志</loglevelSettingHelpTitleCtx>
+		<loglevelSettingHelpCommentCtx>设置系统日志级别选项。</loglevelSettingHelpCommentCtx>
+		<loglevelSettingHelpEnableCtx>日志:启用或禁用系统日志。</loglevelSettingHelpEnableCtx>
+		<loglevelSettingHelpCtx>日志级别:按选择级别写入系统日志。低级别是紧急,高级别是调试。如果更高的层次上,将有更详细的日志。</loglevelSettingHelpCtx>
+		<loglevelDisplayHelpCtx>显示级别:按选择级别显示日志。当你查看日志,它将按照设置显示日志。</loglevelDisplayHelpCtx>
+		<loglevelModeHelpCtx>模式:这个模式的存储,三种模式。“远程”,为期将日志发送到远程日志服务器。“本地”,将存储在本地日志。“两者”,为期将发送远程日志并且存储日志在本地。</loglevelModeHelpCtx>
+		<loglevelRemoteIPHelpCtx>服务器IP:远程日志服务器的IP地址。</loglevelRemoteIPHelpCtx>
+		<loglevelRemotePortHelpCtx>服务器UDP端口:远程日志服务器的UDP端口。</loglevelRemotePortHelpCtx>
+		<LogLevelInfoHelpCtx>系统记录</LogLevelInfoHelpCtx>
+		<LogLevelInfoHelpCommentCtx>显示系统日志信息。</LogLevelInfoHelpCommentCtx>
+		<logInfoAccessRecordHelpCtx>访问记录:显示访问记录日志</logInfoAccessRecordHelpCtx>
+		<logInfoSafetyRecordHelpCtx>安全记录:显示安全记录日志</logInfoSafetyRecordHelpCtx>
+		<logInfoCreatLogFileHelpCtx>创建日志文件:为创建两个日志文件在/ var /日志、访问记录和安全记录。</logInfoCreatLogFileHelpCtx>
+		<logInfoClearHistoryHelpCtx>清空历史记录:清除所有日志。</logInfoClearHistoryHelpCtx>		
+		
+		
+		<SystemlogCtx>系统日志 </SystemlogCtx>
+		<Systemlog1Ctx>点击 "系统日志"按钮， 浏览系统日志信息，也可以配置系统日志选项。</Systemlog1Ctx>
+		<ConfSystemLogCtx>配置系统日志 </ConfSystemLogCtx>
+		<ConfSystemLog1Ctx>点击 "配置系统日志" 按钮，启用或禁用系统日志，选择日志等级,显示等级和模式, 点击 "应用"使配置生效。</ConfSystemLog1Ctx>
+		<LogLevelCtx>日志等级 </LogLevelCtx>
+		<LogLevel1Ctx>日志等级,分别显示等级和模式的选项。</LogLevel1Ctx>
+		<LogInfoCtx>日志信息</LogInfoCtx>
+		<LogInfo1Ctx>配置日志信息，点击 "浏览日志信息" 显示日志信息,点击 "刷新"按钮 刷新系统日志信息，点击 "关闭"按钮 退出此页面。</LogInfo1Ctx>
+		<MaintenanceHelpCtx>路由器设备能够测试连接.单独的测试在下面列出.如果测试显示了一个错误的状态, 点击"重新运行诊断测试"在本页的底部确认测试状态一致。如果测试持续错误,点击"帮助" 遵循故障解决程序。</MaintenanceHelpCtx>
+		<LineDiagnosisCtx>线路诊断 </LineDiagnosisCtx>
+		<LineDiagnosis1Ctx>线路诊断测试可以测试您当前的线路连接情况，包括测试到您局域网的连接和测试到服务提供商的连接。如果测试失败，点击页面底部的"测试"以确认测试状态一致。</LineDiagnosis1Ctx>
+		<DiagnosisPINGCtx>PING诊断 </DiagnosisPINGCtx>
+		<DiagnosisPING1Ctx>PING诊断可以测试目的地址（IP 地址或域名）是否可以到达，可以 诊断IPV4和IPV6地址。</DiagnosisPING1Ctx>
+		<TestTracertCtx>Tracert测试 </TestTracertCtx>
+		<TestTracert1Ctx>路由跟踪程序，用于确定IP数据报访问目标所采取的路径，可以跟踪IPv4/v6的IP地址或域名。</TestTracert1Ctx>
+		<InformReportCtx>Inform手动上报 </InformReportCtx>
+		<InformReport1Ctx>点击"测试"，可以测试路由到ACS的上报情况。</InformReport1Ctx>
+		<ethconnectCtx>以太网连接测试</ethconnectCtx>
+		<ethpassCtx>通过</ethpassCtx>
+		<ethpass1Ctx>表明您计算机的以太网口已连接到网关设备的LAN口。设备上LAN指示灯变亮或闪烁也表明以太网已连接，测试成功。</ethpass1Ctx>
+		<ethfailCtx>失败</ethfailCtx>
+		<ethfail1Ctx>表明路由没有检测到计算机的以太网接口。</ethfail1Ctx>
+		<ethResultCtx>如果测试失败，遵循下列的故障解决程序，重新运行诊断测试，点击本页底部的重新运行诊断测试按键。如果所有的测试通过，关闭并重启您的Web浏览器来访问因特网。</ethResultCtx>
+		<TroubleshootingCtx>故障解决</TroubleshootingCtx>
+		<Troubleshooting1Ctx>如果您不能访问本页，请检查计算机或hub的以太网网线已连接到了网关设备U的LAN端口。通过拔掉以太网线然后重新接上。</Troubleshooting1Ctx>
+		<Troubleshooting2Ctx>关闭路由，等待10秒然后打开。</Troubleshooting2Ctx>
+		<Troubleshooting3Ctx>确认你使用的是随路由附带的网线。</Troubleshooting3Ctx>
+		<Troubleshooting4Ctx>路由器上电运行后，按住路由外部的复位按钮后打开路由，保持至少5秒钟再松开。路由器将恢复到它的默认设置。请等待路由器完全重启后，重新打开Web浏览器。要重新配置路由器。</Troubleshooting4Ctx>
+		<wlanconnectCtx>无线连接测试</wlanconnectCtx>
+		<wlanpassCtx>通过</wlanpassCtx>
+		<wlanpass1Ctx>表示您的计算机无线网络接口被连接到您的路由 LAN端口。在路由上LAN灯闪烁或绿色常亮表明无线网络连接存在并且这个测试是成功的。</wlanpass1Ctx>
+		<wlanfailCtx>失败</wlanfailCtx>
+		<wlanfail1Ctx>表示路由没有检查到您的计算机无线网络接口。</wlanfail1Ctx>
+		<wlanResultCtx>如果测试失败，遵循下列的故障解决程序，重新运行诊断测试，点击本页底部的  重新lt运行诊断测试按键。如果所有的测试通过，关闭并重启您的Web浏览器来访问因特网。</wlanResultCtx>
+		<wlanTroubleshooting1Ctx>确保您的计算机无线网络配置和您的路由匹配正确。</wlanTroubleshooting1Ctx>
+		<wlanTroubleshooting2Ctx>关闭路由，等待10秒然后打开。</wlanTroubleshooting2Ctx>
+		<wlanTroubleshooting3Ctx>路由上电运行后，按住路由外部的复位按钮后打开路由，保持至少5秒钟再松开。路由将恢复到它的默认设置。请等待路由完全重启后，重新打开Web浏览器。要重新配置路由。</wlanTroubleshooting3Ctx>
+		<wlanTroubleshooting4Ctx>路由上电运行后，按住路由外部的复位按钮后打开路由，保持至少5秒钟再松开。路由将恢复到它的默认设置。请等待路由完全重启后，重新打开Web浏览器。要重新配置路由。</wlanTroubleshooting4Ctx>
+		<returnapplyBtnCtx>返回线路诊断测试页面</returnapplyBtnCtx>
+		<resultconnCtx>如果您已经尝试了上面所有的方法，仍然失败，请联系ISP技术支持。</resultconnCtx>
+		<oneitme>1 状态</oneitme>
+		<twoitme>2 网络</twoitme>
+		<threeitme>3 安全</threeitme>
+		<fouritme>4 服务</fouritme>
+		<fiveitme>5 系统</fiveitme>
+		<sixitme>6 退出</sixitme>
+	</HelpPage>
+	<urlFilterPage>
+		<urlTitle>URL过滤设置</urlTitle>
+		<urlItem1>请先选择列表类型然后配置列表条目.最多可配置</urlItem1>
+		<urlItem2>条.</urlItem2>
+		<urlFilterChoose>URL过滤使能</urlFilterChoose>
+		<urlTypeChoose>URL列表类型</urlTypeChoose>
+		<urlPortShow>（如果未指定端口号系统将以80为默认端口号）</urlPortShow>
+		<urlAddrCtx>URL地址</urlAddrCtx>
+		<urlWarn>是无效的地址</urlWarn>
+		<portWarn>是无效的端口号</portWarn>
+		<urlAddTitle>URL过滤--添加URL过滤规则</urlAddTitle>
+		<urlAddShow>添加规则时请输入URL地址以及端口号，该规则将在点击"保存/应用" 按钮后生效</urlAddShow>
+		<urlWarn1>请至少选择一个规则!</urlWarn1>
+		<urlEmptyWarn>URL 地址不能为空!</urlEmptyWarn>
+		<urlMaxLenWarn>URL的最大长度为128</urlMaxLenWarn>
+		<urlSameEntryWarn>相同的条目已经存在</urlSameEntryWarn>
+	</urlFilterPage>
+	
+	<diagnosticPage>
+		<linediagtest>线路诊断测试</linediagtest>
+		<linediagtest1>您的网关设备能够测试您的线路连接。单独的测试在下面列出。如果测试失败，点击页面底部的"重新运行诊断测试"以确认测试状态一致。</linediagtest1>
+		<landiagtest>测试到您局域网的连接</landiagtest>
+		<ReDiag>重新运行诊断测试</ReDiag>
+		<pass>通过</pass>
+		<failed>失败</failed>
+		<help>帮助</help>
+		<diagLinkStatus>连接测试</diagLinkStatus>
+		<test>测试</test>
+		<ping>Ping</ping>
+		<TraceRoute>TraceRoute</TraceRoute>
+		<diagInfo>手动上报Inform测试，该功能测试需要等待12秒。</diagInfo>
+		<diagInfoRes>手动上报Inform情况</diagInfoRes>
+		<pingdiagnosis>ping诊断</pingdiagnosis>
+		<pingdiagnosis1>本页用来做ping诊断</pingdiagnosis1>
+		<interface1>接口</interface1>
+		<dstipport>目的IP地址或主机名</dstipport>
+		<generalinfo>结果信息:</generalinfo>
+		<start>开始</start>
+		<traceRoute>trace route诊断</traceRoute>
+		<traceRoute1>本页用来做trace route诊断</traceRoute1>
+		<diagnosticMsg>正在尝试上报，请稍候...</diagnosticMsg>
+		<diagnosticMsg2>正在测试中，请稍候</diagnosticMsg2>
+		<diagInfoTitle>手动上报：</diagInfoTitle>
+		<diagInputHostIpWarn>请输入目的IP地址或者主机名</diagInputHostIpWarn>
+		<diagHostIpValidStrWarn>目的IP地址或者主机名不应包括特殊字符</diagHostIpValidStrWarn>
+		<diagHostIpInvalidWarn>目的IP地址或者主机名不合法</diagHostIpInvalidWarn>
+		<diagHostIpInvalidWarn2>不能输入组播地址</diagHostIpInvalidWarn2>
+		<diagHostIpInvalidWarn3>不能输入本地链路地址、组播地址</diagHostIpInvalidWarn3>
+	</diagnosticPage>
+	
+	<ctlanbindPage>
+		<portBindConfig>用户侧端口绑定方式配置</portBindConfig>
+		<enablePortBind>启用 端口绑定</enablePortBind>
+		<enableVlanBind>启用 VLAN绑定</enableVlanBind>
+	</ctlanbindPage>
+
+	<routeCfgPage>
+		<routeRipCfg>路由 -- RIP 配置</routeRipCfg>
+		<routeRipCfgNote>注: WAN接口在开启NAT后不能配置RIP (比如PPPoE)。</routeRipCfgNote>
+		<routeRipCfgHelp>通过选择RIP版本、操作和勾选[启用]复选框来开启RIP；通过 点击[保存/应用]按钮来启用/停止RIP并保存配置。</routeRipCfgHelp>
+		<version>版本</version>
+		<operate>操作</operate>
+		<rtRouteCfg>路由 -- 静态路由 (最多可以配置32条目)</rtRouteCfg>
+		<rtRouteCfgNote>注意：如果选择"MER"作为WAN接口，将会配置默认网关。</rtRouteCfgNote>
+		<rtRouteCfgHelp>输入目的网络地址、子网掩码、网关、有效地WAN接口（可选），然后点击"保存/应用"按钮来添加该条目到路由表中。</rtRouteCfgHelp>
+		<ipVersion>IP 版本</ipVersion>
+		<dstIp>目的网络地址</dstIp>
+		<gateway>网关</gateway>
+		<gateway1>所用网关地址</gateway1>
+		<interfaceUse>所用接口</interfaceUse>
+		<rtRoute6Cfg>路由--添加IPv6静态路由</rtRoute6Cfg>
+		<rtRoute6CfgHelp>输入目的IPv6地址、prefix长度、网关、有效地WAN接口（可选），然后点击"保存/应用"按钮来添加该条目到路由表中。</rtRoute6CfgHelp>
+		<dstIpAddr6>目的IPv6地址</dstIpAddr6>
+		<Prefix>子网Prefix长度</Prefix>
+		<gateway6>IPv6网关地址</gateway6>
+		<metricnumber>Metric</metricnumber>
+	</routeCfgPage>
+
+	<voipStatusPage>
+		<VOIP_SIPStatusTitle>语音 -- 语音状态</VOIP_SIPStatusTitle>
+		<VOIP_P_SIPStatusComment>以下显示的是本机上所有的语音业务注册状态</VOIP_P_SIPStatusComment>
+		<VOIP_SIPAccount>SIP 账户</VOIP_SIPAccount>
+		<VOIP_SIPStatusTime>通话总时间</VOIP_SIPStatusTime>
+		<VOIP_SIPUserStatus>用户状态</VOIP_SIPUserStatus>
+		<VOIP_SIPRegistrationStatus>注册状态</VOIP_SIPRegistrationStatus>
+		<VOIP_SIPUserNumberTitle>用户号码</VOIP_SIPUserNumberTitle>
+		<VOIP_SIPUserNumberComment>以下显示的是本机上所有的语音用户号码</VOIP_SIPUserNumberComment>
+		<VOIP_SIPUserStatusLine>线路</VOIP_SIPUserStatusLine>
+		<VOIP_SIPUserNumber>用户号码</VOIP_SIPUserNumber>
+		<VOIP_SIPUserStatusIdle>闲</VOIP_SIPUserStatusIdle>
+		<VOIP_SIPUserStatusBusy>忙</VOIP_SIPUserStatusBusy>
+	</voipStatusPage>
+	
+	<voipBasicPage>
+		<VOIP_SIPBasicNotice>由于没有开启sip客户端，故本页内容无法使用。如需开启sip客户端，请前往"调试设置"页面</VOIP_SIPBasicNotice>
+		<VOIP_SIPBasicTitle>语音 -- SIP基本配置</VOIP_SIPBasicTitle>
+		<VOIP_P_SIPBasicComment>输入SIP参数， 点击 应用 来保存参数.</VOIP_P_SIPBasicComment>
+		<VOIP_SIPBasicIf>语音绑定接口名:</VOIP_SIPBasicIf>
+		<VOIP_SIPBasicCountry>国家码设置:</VOIP_SIPBasicCountry>
+		<VOIP_SIPBasicPort>SIP本地端口[范围:0-65535]:</VOIP_SIPBasicPort>
+		<VOIP_SIPFirstProxy>启用主SIP代理</VOIP_SIPFirstProxy>
+		<VOIP_SIPFirstExternalProxy>启用主SIP外部代理</VOIP_SIPFirstExternalProxy>
+		<VOIP_SIPFirstProxyReg>启用主SIP注册</VOIP_SIPFirstProxyReg>
+		<VOIP_SIPSecondProxy>启用备用SIP代理</VOIP_SIPSecondProxy>
+		<VOIP_SIPSecondExternalProxy>启用备用SIP外部代理</VOIP_SIPSecondExternalProxy>
+		<VOIP_SIPSecondProxyReg>启用备用SIP注册</VOIP_SIPSecondProxyReg>
+		<VOIP_SIPEnableAccount>启用账户</VOIP_SIPEnableAccount>
+		<VOIP_SIPUserName>鉴权用户名</VOIP_SIPUserName>
+		<VOIP_SIPPassWord>鉴权密码</VOIP_SIPPassWord>
+		<VOIP_SIPBasicWarn1>IP地址或域名无效</VOIP_SIPBasicWarn1>
+		<VOIP_SIPBasicWarn2>端口无效</VOIP_SIPBasicWarn2>
+		<VOIP_SIPBasicWarn3>不是有效的sip本地端口</VOIP_SIPBasicWarn3>
+		<VOIP_SIPBasicWarn4>您没有选择"LAN"接口作为语音绑定接口，那么所有sip代理，sip外部代理及sip注册地址都不能填写lan侧地址，请更正!</VOIP_SIPBasicWarn4>
+		<VOIP_SIPBasicWarn5>无效</VOIP_SIPBasicWarn5>
+		<VOIP_SIPBasicWarn6>不应该是相同的</VOIP_SIPBasicWarn6>
+	</voipBasicPage>
+	
+	<voipDmapPage>
+		<VOIP_SIPBasicDigitMapTitle>基本数图设置</VOIP_SIPBasicDigitMapTitle>
+		<VOIP_SIPBasicDigitMapEnable>开启基本数图:</VOIP_SIPBasicDigitMapEnable>
+		<VOIP_SIPBasicDigitMapPlan>基本数图(长度4096字符):</VOIP_SIPBasicDigitMapPlan>
+		<VOIP_SIPBasicDigitMapMatchMode>数图匹配模式:</VOIP_SIPBasicDigitMapMatchMode>
+		<VOIP_SIPBasicDigitMapShortTime>位间短定时器时间:</VOIP_SIPBasicDigitMapShortTime>
+		<VOIP_SIPBasicDigitMapShortTimeNotice>[建议设置范围小于位间不拨号的时间,单位:S]</VOIP_SIPBasicDigitMapShortTimeNotice>
+		<VOIP_SIPBasicDigitMapLongTime>位间长定时器时间:</VOIP_SIPBasicDigitMapLongTime>
+		<VOIP_SIPBasicDigitMapLongTimeNotice>[单位:S]</VOIP_SIPBasicDigitMapLongTimeNotice>
+		<VOIP_SIPBasicDigitMapTonedial>摘机不拨号时间:</VOIP_SIPBasicDigitMapTonedial>
+		<VOIP_SIPBasicDigitMapTonedialNotice>[范围:5~20,单位:S]</VOIP_SIPBasicDigitMapTonedialNotice>
+		<VOIP_SIPBasicDigitMapProcessMode>终止符处理模式:</VOIP_SIPBasicDigitMapProcessMode>
+		<VOIP_SIPBasicDigitMapMatchDial>匹配送号</VOIP_SIPBasicDigitMapMatchDial>
+		<VOIP_SIPSpecificDigitMapTitle>特定号码设置</VOIP_SIPSpecificDigitMapTitle>
+		<VOIP_SIPDMapEnableSpNumber>开启特定号码:</VOIP_SIPDMapEnableSpNumber>
+		<VOIP_SIPDmapSpecificNumber>特定号码(长度150字符):</VOIP_SIPDmapSpecificNumber>
+		<VOIP_SIPDmapPBXTitle>PBX设置</VOIP_SIPDmapPBXTitle>
+		<VOIP_SIPDmapEnablePBX>开启PBX:</VOIP_SIPDmapEnablePBX>
+		<VOIP_SIPDmapInsidePrefix>内线前缀(长度20字符):</VOIP_SIPDmapInsidePrefix>
+		<VOIP_SIPDmapInside>内线数图(长度1024字符):</VOIP_SIPDmapInside>
+		<VOIP_SIPDmapInsideLen>内线长度:</VOIP_SIPDmapInsideLen>
+		<VOIP_SIPDmapInsideLenNotice>[范围:0~10]</VOIP_SIPDmapInsideLenNotice>
+		<VOIP_SIPDmapOutsidePrefix>外线前缀(长度20字符):</VOIP_SIPDmapOutsidePrefix>
+		<VOIP_SIPDmapOutsidePrefixRemove>外线前缀去除</VOIP_SIPDmapOutsidePrefixRemove>
+		<VOIP_SIPDmapOutsideImDial>外线立即送号</VOIP_SIPDmapOutsideImDial>
+		<VOIP_SIPDmapOutsidePlayTone>外线放提示音</VOIP_SIPDmapOutsidePlayTone>
+		<VOIP_SIPBasicDigitMapOn>ON</VOIP_SIPBasicDigitMapOn>
+		<VOIP_SIPBasicDigitMapOff>OFF</VOIP_SIPBasicDigitMapOff>
+		<VOIP_SIPBasicDigitMapMatchMin>最小匹配</VOIP_SIPBasicDigitMapMatchMin>
+		<VOIP_SIPBasicDigitMapMatchMax>最大匹配</VOIP_SIPBasicDigitMapMatchMax>
+		<VOIP_SIPBasicDigitMapIntelligentMode>智能模式</VOIP_SIPBasicDigitMapIntelligentMode>
+		<VOIP_SIPBasicDigitMapRuleMode>规则模式</VOIP_SIPBasicDigitMapRuleMode>
+		<VOIP_SIPBasicDigitMapLeft>剩余</VOIP_SIPBasicDigitMapLeft>
+		<VOIP_SIPBasicDigitMapCharacter>字符</VOIP_SIPBasicDigitMapCharacter>
+		<VOIP_SIPBasicDigitMapWarn1>摘机不拨号时间超出规定范围</VOIP_SIPBasicDigitMapWarn1>
+		<VOIP_SIPBasicDigitMapWarn2>内线长度超出规定范围</VOIP_SIPBasicDigitMapWarn2>
+		<VOIP_SIPBasicDigitMapWarn3>基本数图语法错误,错误描述:</VOIP_SIPBasicDigitMapWarn3>
+		<VOIP_SIPBasicDigitMapWarn4>错误列号:</VOIP_SIPBasicDigitMapWarn4>
+		<VOIP_SIPBasicDigitMapWarn5>特定号码语法错误,错误描述:</VOIP_SIPBasicDigitMapWarn5>
+		<VOIP_SIPBasicDigitMapWarn6>内线前缀语法错误,错误列号:</VOIP_SIPBasicDigitMapWarn6>
+		<VOIP_SIPBasicDigitMapWarn7>内线数图语法错误,错误描述:</VOIP_SIPBasicDigitMapWarn7>
+		<VOIP_SIPBasicDigitMapWarn8>外线前缀语法错误,错误列号:</VOIP_SIPBasicDigitMapWarn8>
+	</voipDmapPage>
+	
+	<voipMediaPage>
+		<VOIP_SIPVoiceMediaTitle>语音 -- SIP语音媒体配置</VOIP_SIPVoiceMediaTitle>
+		<VOIP_SIPMediaNegoMode>编解码和打包周期协商模式</VOIP_SIPMediaNegoMode>
+		<VOIP_SIPMediaCodeLine1>语音编解码--线路 1</VOIP_SIPMediaCodeLine1>
+		<VOIP_SIPMediaCodeLine2>语音编解码--线路 2</VOIP_SIPMediaCodeLine2>
+		<VOIP_SIPMediaPackCycle>打包周期[单位:ms]</VOIP_SIPMediaPackCycle>
+		<VOIP_SIPMediaCodePriority>语音编解码优先级</VOIP_SIPMediaCodePriority>
+		<VOIP_SIPMediaEnable>使能开关</VOIP_SIPMediaEnable>
+		<VOIP_SIPMediaEnableT38>启用T38冗余</VOIP_SIPMediaEnableT38>
+		<VOIP_SIPMediaEnableVBD>启用VBD冗余</VOIP_SIPMediaEnableVBD>
+		<VOIP_SIPMediaFaxMode>传真协商模式</VOIP_SIPMediaFaxMode>
+		<VOIP_SIPMediaVbdCodec>传真编解码</VOIP_SIPMediaVbdCodec>
+		<VOIP_SIPMediaEnableT38Vb>启用T38传真</VOIP_SIPMediaEnableT38Vb>
+
+		<VOIP_SIPMediaEnableG711Vb>启用G711传真</VOIP_SIPMediaEnableG711Vb>
+		<VOIP_SIPMediaEnableVAD>启用 VAD</VOIP_SIPMediaEnableVAD>
+		<VOIP_SIPMediaCngMode>cng模式</VOIP_SIPMediaCngMode>
+		<VOIP_SIPMediaEnableReverse>启用极性反转</VOIP_SIPMediaEnableReverse>
+		<VOIP_SIPMediaPayLoad>RFC2198 Payload值[范围:96~127]</VOIP_SIPMediaPayLoad>
+		<VOIP_SIPMediaToneWarnTime>催挂音时间[单位:秒]</VOIP_SIPMediaToneWarnTime>
+		<VOIP_SIPMediaToneBusy>忙音时间[单位:秒]</VOIP_SIPMediaToneBusy>
+		<VOIP_SIPMediaToneRingBack>久叫不应的时间[单位:秒]</VOIP_SIPMediaToneRingBack>
+		<VOIP_SIPMediaDtmfRelay>Dtmf转移配置</VOIP_SIPMediaDtmfRelay>
+		<VOIP_SIPMediaDtmfPayLoad>Dtmf转移有效荷载[范围:96-127]</VOIP_SIPMediaDtmfPayLoad>
+		<VOIP_SIPMediaCallIdMode>来显模式</VOIP_SIPMediaCallIdMode>
+		<VOIP_SIPMediaSipDate>时间同步</VOIP_SIPMediaSipDate>
+		<VOIP_SIPMediaSynType>时间同步方式</VOIP_SIPMediaSynType>
+        <VOIP_SIPMediaSynIntelligent>智能同步</VOIP_SIPMediaSynIntelligent>
+        <VOIP_SIPMediaSynForce>强制同步</VOIP_SIPMediaSynForce>
+        <VOIP_SIPMediaSynDisable>不同步</VOIP_SIPMediaSynDisable>
+		<VOIP_SIPMediaPhoneDate>无date模式</VOIP_SIPMediaPhoneDate>
+		<VOIP_SIPMediaSetTimeByMsg>通过SIP信令同步系统时间</VOIP_SIPMediaSetTimeByMsg>
+		<VOIP_SIPMediaFskMode>FSK模式</VOIP_SIPMediaFskMode>
+		<VOIP_SIPMediaForceUpdate>强制同步时间</VOIP_SIPMediaForceUpdate>
+		<VOIP_SIPMediaSignalDSCP>信令DSCP</VOIP_SIPMediaSignalDSCP>
+		<VOIP_SIPMediaRtpDSCP>媒体DSCP</VOIP_SIPMediaRtpDSCP>
+		<VOIP_SIPMediaJitterBufferMode>语音Jitter buffer模式</VOIP_SIPMediaJitterBufferMode>
+		<VOIP_SIPMediaJitterBufferMin>语音动态Jitter buffer最小值[范围:0-60.单位:ms]</VOIP_SIPMediaJitterBufferMin>
+		<VOIP_SIPMediaJitterBufferMax>语音动态Jitter buffer最大值[范围:60-180.单位:ms]</VOIP_SIPMediaJitterBufferMax>
+		<VOIP_SIPMediaVoiceSJB>语音静态Jitter buffer[范围:0-180.单位:ms]</VOIP_SIPMediaVoiceSJB>
+		<VOIP_SIPMediaVbdSJB>透传静态Jitter buffer[范围:0-180.单位:ms]</VOIP_SIPMediaVbdSJB>
+		<VOIP_SIPMediaFixedLinePayNum>固网支付号码[长度:0~160]</VOIP_SIPMediaFixedLinePayNum>
+		<VOIP_SIPMediaRtpRange>RTP端口范围[1000-65535]</VOIP_SIPMediaRtpRange>
+		<VOIP_SIPMediaMinFlashD>拍叉最小时间[范围:10-200.单位:ms]</VOIP_SIPMediaMinFlashD>
+		<VOIP_SIPMediaMaxFlashD>拍叉最大时间[范围:200-1000.单位:ms]</VOIP_SIPMediaMaxFlashD>
+		<VOIP_SIPMediaLine>线路</VOIP_SIPMediaLine>
+		<VOIP_SIPMediaEchoSuppSet>回声抑制设置</VOIP_SIPMediaEchoSuppSet>
+		<VOIP_SIPMediaRxGain>接收增益</VOIP_SIPMediaRxGain>
+		<VOIP_SIPMediaTxGain>发送增益</VOIP_SIPMediaTxGain>
+		<VOIP_SIPMediaRemotePrecedence>远端优先</VOIP_SIPMediaRemotePrecedence>
+		<VOIP_SIPMediaLocalPrecedence>本地优先</VOIP_SIPMediaLocalPrecedence>
+		<VOIP_SIPMediaRemoteAuto>自动</VOIP_SIPMediaRemoteAuto>
+		<VOIP_SIPMediaRemoteNego>协商</VOIP_SIPMediaRemoteNego>
+		<VOIP_SIPMediaStatic>静态</VOIP_SIPMediaStatic>
+		<VOIP_SIPMediaDynamic>动态</VOIP_SIPMediaDynamic>
+		<VOIP_SIPMediaPriorityRange>(1-6)</VOIP_SIPMediaPriorityRange>
+		<VOIP_SIPMediaWarn1>所填值超出有效取值范围</VOIP_SIPMediaWarn1>
+		<VOIP_SIPMediaWarn2>起始端口不能大于终止端口</VOIP_SIPMediaWarn2>
+		<VOIP_SIPMediaWarn3>不能同时关闭某一条线路的所有使能开关!</VOIP_SIPMediaWarn3>
+		<VOIP_SIPMediaWarn4>Dtmf转移有效荷载与RFC2198 Payload不可以设置为相同值.</VOIP_SIPMediaWarn4>
+	</voipMediaPage>
+		
+	<sntpCfgPage>
+		<sntpTitle>时间设置</sntpTitle>
+		<sntpShow>配置路由器的时间，使之与网络时间服务器同步，该功能需要路由器连接到公网并且时间服务器是有效的</sntpShow>
+		<sntpCurrentTime>当前时间</sntpCurrentTime>
+		<sntpCurrentTimeZone>当前时区</sntpCurrentTimeZone>
+		<sntpSetTime>设置时间</sntpSetTime>
+		<sntpFormat>时间设置格式:年.月.日-时:分:秒 (例如2011.03.29-16:30:00)</sntpFormat>
+		<sntpChange>更改</sntpChange>
+		<sntpEnable>自动同步网络时间服务器</sntpEnable>
+		<sntpType>首选NTP服务器</sntpType>
+		<sntpType1>INTERNET</sntpType1>
+		<sntpType2>VOICE</sntpType2>
+		<sntpType3>TR069</sntpType3>
+		<sntpType4>OTHER</sntpType4>
+		<sntpchangeNTP>手动调整NTP服务器</sntpchangeNTP>
+		<sntpTypestandby>备用NTP服务器</sntpTypestandby>
+		<sntpInterval>NTP服务器同步间隔[单位：秒]</sntpInterval>
+		<sntpServer1>第一NTP时间服务器</sntpServer1>
+		<sntpServer2>第二NTP时间服务器</sntpServer2>
+		<sntpServer3>第三NTP时间服务器</sntpServer3>
+		<sntpServer4>第四NTP时间服务器</sntpServer4>
+		<sntpServer5>第五NTP时间服务器</sntpServer5>
+		<OtherServerWarn1>第一NTP时间服务器是Other,但是Other是空</OtherServerWarn1>
+		<OtherServerWarn2>第二NTP时间服务器是Other,但是Other是空</OtherServerWarn2>
+		<OtherServerWarn3>第三NTP时间服务器是Other,但是Other是空</OtherServerWarn3>
+		<OtherServerWarn4>第四NTP时间服务器是Other,但是Other是空</OtherServerWarn4>
+		<OtherServerWarn5>第五NTP时间服务器是Other,但是Other是空</OtherServerWarn5>
+		<OtherServerWarn6>不能为空</OtherServerWarn6>
+		<OtherServerWarn7>格式错误</OtherServerWarn7>
+		<sntpWarnInvalid>NTP时间服务器OTHER的值是无效的</sntpWarnInvalid>
+		<sntpWarnChinese>NTP时间服务器不能有汉字</sntpWarnChinese>
+		<sntpZom>时区</sntpZom>
+		<sntpServerRepeat>NTP时间服务器不能相同</sntpServerRepeat>
+	</sntpCfgPage>
+	
+	<loidPage>
+		<loidTitle>LOID认证设置</loidTitle>
+		<loidWelcome>欢迎您</loidWelcome>
+		<loidOut>退出</loidOut>
+		<loidShow>"保存/应用"按钮保存配置数据</loidShow>
+		<loidId>逻辑ID</loidId>
+		<loidPwd>逻辑密码</loidPwd>
+		<loidWarn>不能包含无效字符，请重新输入</loidWarn>
+	</loidPage>
+
+
+
+	<tr69CfgPage>
+		<tr69CfgTitle>TR-069客户-配置</tr69CfgTitle>
+		<tr69CfgShow>WAN管理协议（TR-069）允许自动配置服务器（ACS）进行自动配置、供应、汇集和诊断到这个设备。</tr69CfgShow>
+		<tr69CfgShow1>选择期望值，并且点击"保存/应用"配置TR-069客户选项。</tr69CfgShow1>
+		<tr69Inform>通知</tr69Inform>
+		<tr69PeriodicInform>定时上报</tr69PeriodicInform>
+		<tr69HrefCert>CA证书路径</tr69HrefCert>
+		<tr69InformInt>周期通知间隔</tr69InformInt>
+		<tr69IntervalWarn>ACS通知时间间隔不合法</tr69IntervalWarn>
+		<tr69IntervalWarn1>ACS通知时间间隔必须为整数</tr69IntervalWarn1>
+		<tr69IntervalWarn2>ACS 通知间隔时间超出范围(90-2147482)</tr69IntervalWarn2>
+		<AcsAddr>ACS URL</AcsAddr>
+		<AcsAddrWarn>ACS URL不合法</AcsAddrWarn>
+		<AcsUserName>ACS 用户名</AcsUserName>
+		<AcsUserWarn>不合法</AcsUserWarn>
+		<AcsPassWord>ACS 密码</AcsPassWord>
+		<ConnReqAuth>连接请求用户认证</ConnReqAuth>
+		<ConnReqUserName>CPE用户名</ConnReqUserName>
+		<ConnReqPassWord>CPE密码</ConnReqPassWord>
+		<MiddleWare>中国电信中间件</MiddleWare>
+		<EnableMldI>启用中间件（含TR069功能）</EnableMldI>
+		<DisableMld>关闭中间件</DisableMld>
+		<EnableMldE>启用中间件（不含TR069功能）</EnableMldE>
+		<MldServerAddr>中间件服务器地址</MldServerAddr>
+		<MldServerPort>中间件服务器端口</MldServerPort>
+        <WarnMldServerAddr>地址不合法</WarnMldServerAddr>
+		<MldWarn>不允许从混合模式切换到启用模式</MldWarn>
+		<CertImport>证书导入</CertImport>
+	</tr69CfgPage>
+	
+	<voipSipPage>
+		<VOIP_SIPVoiceSipServiceTitle>语音 -- SIP业务配置</VOIP_SIPVoiceSipServiceTitle>
+		<VOIP_SIPURIStarEscape>URI "*"号 转义设置</VOIP_SIPURIStarEscape>
+		<VOIP_SIPURIWellEscape>URI "#"号 转义设置</VOIP_SIPURIWellEscape>
+		<VOIP_SIPRingNoSdp>18x不带SDP 振铃</VOIP_SIPRingNoSdp>
+		<VOIP_SIPEnableInitialLogout>启用初始注销</VOIP_SIPEnableInitialLogout>
+		<VOIP_SIPHeartBeat>启动心跳</VOIP_SIPHeartBeat>
+		<VOIP_SIPUserAgent>用户代理</VOIP_SIPUserAgent>
+		<VOIP_SIPHeartBeatTime>心跳时间[单位:秒]:</VOIP_SIPHeartBeatTime>
+		<VOIP_SIPRegUpdateCycle>注册更新周期[单位:秒]</VOIP_SIPRegUpdateCycle>
+		<VOIP_SIPRegUpdateMode>注册刷新模式</VOIP_SIPRegUpdateMode>
+		<VOIP_SIPRegRetryCycle>注册重试周期[单位:秒]</VOIP_SIPRegRetryCycle>
+		<VOIP_SIPSessionExpireTime>Session Expire时间设置[单位:分钟]</VOIP_SIPSessionExpireTime>
+		<VOIP_SIPSessionExpireTimeMin>Min Session Expire时间[单位:分钟]</VOIP_SIPSessionExpireTimeMin>
+		<VOIP_SIPMsgResendTime>SIP消息重传起始定时器</VOIP_SIPMsgResendTime>
+		<VOIP_SIPHotLine>热线</VOIP_SIPHotLine>
+		<VOIP_SIPHotLineClose>热线关闭</VOIP_SIPHotLineClose>
+		<VOIP_SIPHotLineImme>立即热线</VOIP_SIPHotLineImme>
+		<VOIP_SIPHotLineDelay>延时热线</VOIP_SIPHotLineDelay>
+		<VOIP_SIPHotLineNum>热线号码</VOIP_SIPHotLineNum>
+		<VOIP_SIPHotLineDelayTime>热线延时时间[单位:秒]</VOIP_SIPHotLineDelayTime>
+		<VOIP_SIPINVITEMsgResendTime>INVITE消息总重传时间[单位:秒]</VOIP_SIPINVITEMsgResendTime>
+		<VOIP_SIPOtherMsgResendTime>非INVITE消息总重传时间[单位:秒]</VOIP_SIPOtherMsgResendTime>
+		<VOIP_SIPRegDelayTime>VoIP 延迟注册时间[单位:s]</VOIP_SIPRegDelayTime>
+		<VOIP_SIPAnonymous>匿名方式</VOIP_SIPAnonymous>
+		<VOIP_SIPTransferProtocol>SIP 传输协议</VOIP_SIPTransferProtocol>
+		<VOIP_SIPSupplementaryService>补充业务模式</VOIP_SIPSupplementaryService>
+		<VOIP_SIPHeartBeatMode>心跳模式</VOIP_SIPHeartBeatMode>
+		<VOIP_SIPETSI>SIP ETSI模式恶意呼叫追踪</VOIP_SIPETSI>
+		<VOIP_IMS_SIPETSI>IMS SIP ETSI模式恶意呼叫追踪</VOIP_IMS_SIPETSI>
+		<VOIP_SIPITMS>HW_ITMS下发服务器配置</VOIP_SIPITMS>
+		<VOIP_SIPAnonymousDisplayName>显示名匿名</VOIP_SIPAnonymousDisplayName>
+		<VOIP_SIPAnonymousUserName>用户名匿名</VOIP_SIPAnonymousUserName>
+		<VOIP_SIPLocalSupplementaryService>本地补充业务</VOIP_SIPLocalSupplementaryService>
+		<VOIP_SIPInfoSupplementaryService>INFO方式补充业务</VOIP_SIPInfoSupplementaryService>
+		<VOIP_SIPCTCImsSupplementaryService>CTC_IMS方式补充业务</VOIP_SIPCTCImsSupplementaryService>
+		<VOIP_SIPUndefined>未定义</VOIP_SIPUndefined>
+		<VOIP_SIPLine>线路</VOIP_SIPLine>
+		<VOIP_SIPCallWait>呼叫等待</VOIP_SIPCallWait>
+		<VOIP_SIPCallFwdNum>呼叫前转号码</VOIP_SIPCallFwdNum>
+		<VOIP_SIPFwdUncond>无条件前转</VOIP_SIPFwdUncond>
+		<VOIP_SIPFwdBusy>遇忙前转</VOIP_SIPFwdBusy>
+		<VOIP_SIPFwdNoAns>无应答前转</VOIP_SIPFwdNoAns>
+		<VOIP_SIPMWIVoiceMail>MWI语音留言</VOIP_SIPMWIVoiceMail>
+		<VOIP_SIPAnonBlock>匿名呼叫阻塞</VOIP_SIPAnonBlock>
+		<VOIP_SIPAnonCall>匿名电话</VOIP_SIPAnonCall>
+		<VOIP_SIPDoNotDisturb>免打扰</VOIP_SIPDoNotDisturb>
+		<VOIP_SIPCallTransfer>呼叫转移</VOIP_SIPCallTransfer>
+		<VOIP_SIPConferenceCall>会议呼叫</VOIP_SIPConferenceCall>
+		<VOIP_SIPToneCallWaitTimes>呼叫等待音播放次数</VOIP_SIPToneCallWaitTimes>
+		<VOIP_SIPServiceWarn1>sessExpireTime或minSessExpireTime值输入有误.</VOIP_SIPServiceWarn1>
+		<VOIP_SIPServiceWarn2>SIP消息重传起始定时器与INVITE消息总重传时间配置冲突</VOIP_SIPServiceWarn2>
+	</voipSipPage>
+	
+	<voipImsPage>
+		<VOIP_SIPImsServiceTitle>语音 -- IMS业务配置</VOIP_SIPImsServiceTitle>
+		<VOIP_SIPImsAka>AKA鉴权使能</VOIP_SIPImsAka>
+		<VOIP_SIPImsRport>Rport使能</VOIP_SIPImsRport>
+		<VOIP_SIPImsEnAccessNwif>接入网络信息使能</VOIP_SIPImsEnAccessNwif>
+		<VOIP_SIPImsUrlPort>url携带port</VOIP_SIPImsUrlPort>
+		<VOIP_SIPImsUrlTransport>url携带transport参数</VOIP_SIPImsUrlTransport>
+		<VOIP_SIPImsEnCallerNumProcess>主叫号码处理使能</VOIP_SIPImsEnCallerNumProcess>
+		<VOIP_SIPImsEnSignalComp>信令压缩使能</VOIP_SIPImsEnSignalComp>
+		<VOIP_SIPImsEnImplReg>隐式注册使能</VOIP_SIPImsEnImplReg>
+		<VOIP_SIPImsEnInternalRing>内部区别振铃使能</VOIP_SIPImsEnInternalRing>
+		<VOIP_SIPImsEnExternalRing>外部区别振铃使能</VOIP_SIPImsEnExternalRing>
+		<VOIP_SIPImsOpValue>OP值</VOIP_SIPImsOpValue>
+		<VOIP_SIPImsAccessNwifInfo>接入网络信息</VOIP_SIPImsAccessNwifInfo>
+		<VOIP_SIPImsDistRingList>区别振铃</VOIP_SIPImsDistRingList>
+		<VOIP_SIPImsSecuAlli>安全联盟</VOIP_SIPImsSecuAlli>
+		<VOIP_SIPImsResourceReservation>资源预留</VOIP_SIPImsResourceReservation>
+		<VOIP_SIPImsEarlyMediaProc>早期媒体处理</VOIP_SIPImsEarlyMediaProc>
+		<VOIP_SIPImsRegEventScheduled>注册事件预定使能</VOIP_SIPImsRegEventScheduled>
+		<VOIP_SIPImsServiceInfoSch>业务信息预定使能</VOIP_SIPImsServiceInfoSch>
+		<VOIP_SIPImsTelUrlEnable>telurl格式使能</VOIP_SIPImsTelUrlEnable>
+		<VOIP_SIPImsTelUrlType>telurl格式类型</VOIP_SIPImsTelUrlType>
+		<VOIP_SIPImsConfUri>会议URI</VOIP_SIPImsConfUri>
+	</voipImsPage>
+	
+	<CertPage>
+		<CertTitle>受信任的权威认证（CA）证书</CertTitle>
+		<CertShow1>本页可以添加、查看和删除证书。</CertShow1>
+		<CertShow2>使用CA证书校验接入者的授权</CertShow2>
+		<CertMaxPre>最多</CertMaxPre>
+		<CertMaxEnd>个证书能被存储</CertMaxEnd>
+		<CertName>名称</CertName>
+		<CertType>类型</CertType>
+		<CertSub>类别</CertSub>
+		<CertFun>作用</CertFun>
+		<CertImport1>导入证书</CertImport1>
+		<CertImportShow>输入证书名称并粘贴证书内容</CertImportShow>
+		<CertImportName>证书名</CertImportName>
+		<Cert>证书</Cert>
+		<viewCtx>查看</viewCtx>
+		<CertImportTitle>导入CA证书</CertImportTitle>
+		<CertWarn>不能添加过多证书条目</CertWarn>
+		<CertDetailTitle>证书明细</CertDetailTitle>
+		<PrivateKey>私钥</PrivateKey>
+		<CertSignReq>签名请求</CertSignReq>
+		<back>后退</back>
+	</CertPage>
+	
+	<h248StatusPage>
+		<VOIP_H248StatusTitle>业务注册状态</VOIP_H248StatusTitle>
+		<VOIP_H248StatusTitle2>用户号码</VOIP_H248StatusTitle2>
+		<VOIP_H248StatusTitle3>用户状态</VOIP_H248StatusTitle3>
+		<VOIP_H248StatusLine>线路</VOIP_H248StatusLine>
+		<VOIP_H248StatusBusiness>业务注册状态</VOIP_H248StatusBusiness>
+	</h248StatusPage>
+	
+	<h248BasicPage>
+		<VOIP_H248BasicTitle>Voice -- H248 基本配置</VOIP_H248BasicTitle>
+		<VOIP_H248BasicNotice>由于没有开启语音客户端，故本页内容无法使用。如需开启语音客户端，请前往"调试设置"页面</VOIP_H248BasicNotice>
+		<VOIP_H248BasicIfName>接口名:</VOIP_H248BasicIfName>
+		<VOIP_H248BasicLocalChoose>当地选择:</VOIP_H248BasicLocalChoose>
+		<VOIP_H248BasicProtocol>传输协议:</VOIP_H248BasicProtocol>
+		<VOIP_H248BasicEnctype>协议编码类型:</VOIP_H248BasicEnctype>
+		<VOIP_H248BasicFirstServer>主服务器</VOIP_H248BasicFirstServer>
+		<VOIP_H248BasicServerAddr>服务器地址:</VOIP_H248BasicServerAddr>
+		<VOIP_H248BasicLength>(长度[1,63])</VOIP_H248BasicLength>
+		<VOIP_H248BasicServerPort>服务器端口:</VOIP_H248BasicServerPort>
+		<VOIP_H248BasicRange>(范围[1,65534])</VOIP_H248BasicRange>
+		<VOIP_H248BasicSecondServer>备用服务器</VOIP_H248BasicSecondServer>
+		<VOIP_H248BasicMG>MG注册方式:</VOIP_H248BasicMG>
+		<VOIP_H248BasicMgName>域名:</VOIP_H248BasicMgName>
+		<VOIP_H248BasicMgPort>MG端口:</VOIP_H248BasicMgPort>
+		<VOIP_H248BasicAuthMehtod>授权方式:</VOIP_H248BasicAuthMehtod>
+		<VOIP_H248BasicAuthName>授权MG ID:</VOIP_H248BasicAuthName>
+		<VOIP_H248BasicLengthTwo>(长度[1,16])</VOIP_H248BasicLengthTwo>
+		<VOIP_H248BasicAuthPassword>授权密钥:</VOIP_H248BasicAuthPassword>
+		<VOIP_H248BasicRtpPrefix>临时终结点前辍:</VOIP_H248BasicRtpPrefix>
+		<VOIP_H248BasicRtpBase>临时终结点基数:</VOIP_H248BasicRtpBase>
+		<VOIP_H248BasicRangeTwo>(范围[0,99999])</VOIP_H248BasicRangeTwo>
+		<VOIP_H248BasicEphemeralTermIDUniform>临时终结点基数对齐模式:</VOIP_H248BasicEphemeralTermIDUniform>
+		<VOIP_H248BasicRtpBasicLength>临时终结点基数长度:</VOIP_H248BasicRtpBasicLength>
+		<VOIP_H248BasicLengthThree>(长度[0,10])</VOIP_H248BasicLengthThree>
+		<VOIP_H248BasicRtpNum>临时终结点数目:</VOIP_H248BasicRtpNum>
+		<VOIP_H248BasicRangThree>(范围[2,128])</VOIP_H248BasicRangThree>
+		<VOIP_H248BasicRtpPhyMethod>终结点配置模式:</VOIP_H248BasicRtpPhyMethod>
+		<VOIP_H248BasicText>文本</VOIP_H248BasicText>
+		<VOIP_H248BasicBinary>二进制</VOIP_H248BasicBinary>
+		<VOIP_H248BasicIpAddr>IP地址</VOIP_H248BasicIpAddr>
+		<VOIP_H248BasicMGDomainName>MG域名</VOIP_H248BasicMGDomainName>
+		<VOIP_H248BasicDeviceName>设备名</VOIP_H248BasicDeviceName>
+		<VOIP_H248BasicNone>无</VOIP_H248BasicNone>
+		<VOIP_H248BasicAligned>对齐</VOIP_H248BasicAligned>
+		<VOIP_H248BasicNotAligned>不对齐</VOIP_H248BasicNotAligned>
+		<VOIP_H248BasicWildcard>通配</VOIP_H248BasicWildcard>
+		<VOIP_H248BasicLineCfg>线路配置</VOIP_H248BasicLineCfg>
+		<VOIP_H248BasicLine>线路</VOIP_H248BasicLine>
+		<VOIP_H248BasicEnableAccount>启用账户</VOIP_H248BasicEnableAccount>
+		<VOIP_H248BasicPhyTp>物理终结点</VOIP_H248BasicPhyTp>
+		<VOIP_H248BasicPhyTpPrefix>物理终结点前缀</VOIP_H248BasicPhyTpPrefix>
+		<VOIP_H248BasicPhyTpBase>物理终结点基数</VOIP_H248BasicPhyTpBase>
+		<VOIP_H248BasicPhyTpBaseLen>物理终结点基数长度</VOIP_H248BasicPhyTpBaseLen>
+		<VOIP_H248BasicRangFour>(范围[0,63])</VOIP_H248BasicRangFour>
+		<VOIP_H248BasicWarn>是无效的地址</VOIP_H248BasicWarn>
+		<VOIP_H248BasicWarn2>不是有效的媒体网关端口值.</VOIP_H248BasicWarn2>
+		<VOIP_H248BasicWarn3>不是有效的媒体网关控制器端口值.</VOIP_H248BasicWarn3>
+		<VOIP_H248BasicWarn4>值的长度不符合要求</VOIP_H248BasicWarn4>
+		<VOIP_H248BasicWarn5>不是有效的物理终结点前缀.</VOIP_H248BasicWarn5>
+		<VOIP_H248BasicWarn6>不是有效的物理终结点基数.</VOIP_H248BasicWarn6>
+		<VOIP_H248BasicWarn7>不是有效的物理终结点基数长度.</VOIP_H248BasicWarn7>
+		<VOIP_H248BasicWarn8>不是有效的临时终结点基数.</VOIP_H248BasicWarn8>
+		<VOIP_H248BasicWarn9>不是有效的临时终结点基数长度.</VOIP_H248BasicWarn9>
+		<VOIP_H248BasicWarn10>不是有效的临时终结点数目.</VOIP_H248BasicWarn10>
+		<VOIP_H248BasicWarn11>不是有效的RTP名字，范围[ 0-9 a-z A-Z @ $ * / - _ . ]</VOIP_H248BasicWarn11>
+		<VOIP_H248BasicWarn12>不是有效的TID,范围[ 0-9 a-z A-Z @ $ * / - _ . ]</VOIP_H248BasicWarn12>
+		<VOIP_H248BasicTitle2>资源</VOIP_H248BasicTitle2>
+	</h248BasicPage>
+	
+	<h248MediaPage>
+		<VOIP_H248MediaTitle>Voice -- H248 语音媒体设置</VOIP_H248MediaTitle>
+		<VOIP_H248MediaEnableVad>启用vad支持</VOIP_H248MediaEnableVad>
+		<VOIP_H248MediaCngMode>cng 模式</VOIP_H248MediaCngMode>
+		<VOIP_H248MediaDTMFControl>DTMF协商类型:</VOIP_H248MediaDTMFControl>
+		<VOIP_H248MediaDTMFRelay>DTMF发送方式:</VOIP_H248MediaDTMFRelay>
+		<VOIP_H248MediaLen>(范围[96,127])</VOIP_H248MediaLen>
+		<VOIP_H248MediaT38>启用T38冗余</VOIP_H248MediaT38>
+		<VOIP_H248MediaVBD>启用VBD冗余</VOIP_H248MediaVBD>
+		<VOIP_H248MediaFaxNegoMod>传真协商模式:</VOIP_H248MediaFaxNegoMod>
+		<VOIP_H248MediaVbdCodec>传真编解码:</VOIP_H248MediaVbdCodec>
+		<VOIP_H248MediaPayload>RFC2198 Payload值(范围[96,127]):</VOIP_H248MediaPayload>
+		<VOIP_H248MediaDscpMark>信令优先级:</VOIP_H248MediaDscpMark>
+		<VOIP_H248MediaRtpDscpMark>RTP优先级:</VOIP_H248MediaRtpDscpMark>
+		<VOIP_H248MediaJitterbufferMode>Jitter buffer模式:</VOIP_H248MediaJitterbufferMode>
+		<VOIP_H248MediaSJitterBuffer>静态Jitter buffer设置(范围[0,180], 单位:毫秒):</VOIP_H248MediaSJitterBuffer>
+		<VOIP_H248MediaMinFlashDuration>拍叉最小时间设置(范围[10,200],单位：毫秒):</VOIP_H248MediaMinFlashDuration>
+		<VOIP_H248MediaMaxFlashDuration>拍叉最大时间设置(范围[200,1000],单位：毫秒):</VOIP_H248MediaMaxFlashDuration>
+		<VOIP_H248MediaFskMode>FSK模式:</VOIP_H248MediaFskMode>
+		<VOIP_H248MediaNegotiation>协商</VOIP_H248MediaNegotiation>
+		<VOIP_H248MediaLocalControl>本地控制</VOIP_H248MediaLocalControl>
+		<VOIP_H248MediaAutoSwitch>自切换</VOIP_H248MediaAutoSwitch>
+		<VOIP_H248MediaDynamic>动态</VOIP_H248MediaDynamic>
+		<VOIP_H248MediaStatic>静态</VOIP_H248MediaStatic>
+		<VOIP_H248MediaLine>线路</VOIP_H248MediaLine>
+		<VOIP_H248MediaEcho>回声抑制设置</VOIP_H248MediaEcho>
+		<VOIP_H248MediaRxGain>接收增益</VOIP_H248MediaRxGain>
+		<VOIP_H248MediaTxGain>发送增益</VOIP_H248MediaTxGain>
+		<VOIP_H248MediaWarn>所填值超出有效取值范围</VOIP_H248MediaWarn>
+	</h248MediaPage>
+	
+	<h248BusinessPage>
+		<VOIP_H248BusTitle>Voice -- H248 业务设置</VOIP_H248BusTitle>
+		<VOIP_H248BusAck>启用ACK消息</VOIP_H248BusAck>
+		<VOIP_H248BusMsgForm>消息格式:</VOIP_H248BusMsgForm>
+		<VOIP_H248BusMsgProtocol>协议版本:</VOIP_H248BusMsgProtocol>
+		<VOIP_H248BusRange1>(范围[1,4])</VOIP_H248BusRange1>
+		<VOIP_H248BusRange2>(范围[5,20],单位:秒)</VOIP_H248BusRange2>
+		<VOIP_H248BusRange3>(范围[1,99],单位:秒)</VOIP_H248BusRange3>
+		<VOIP_H248BusRange4>(范围[100,60000],单位:毫秒)</VOIP_H248BusRange4>
+		<VOIP_H248BusRange5>(范围[0,600],单位:秒)</VOIP_H248BusRange5>
+		<VOIP_H248BusRange6>(范围[1,10])</VOIP_H248BusRange6>
+		<VOIP_H248BusRange7>(范围[1000,20000],单位：毫秒)</VOIP_H248BusRange7>
+		<VOIP_H248BusRange8>(范围[0,10],单位：秒)</VOIP_H248BusRange8>
+		<VOIP_H248BusRange9>(范围[0,10])</VOIP_H248BusRange9>
+		<VOIP_H248BusRange10>(范围[1,60],单位：秒)</VOIP_H248BusRange10>
+		<VOIP_H248BusRange11>(范围[0,600000],单位：毫秒)</VOIP_H248BusRange11>
+		<VOIP_H248BusRange12>(范围[0,300],单位：秒)</VOIP_H248BusRange12>
+		<VOIP_H248BusDMapMatchMode>数图匹配模式:</VOIP_H248BusDMapMatchMode>
+		<VOIP_H248BusAI>开启智能</VOIP_H248BusAI>
+		<VOIP_H248BusNumberPool>启用号码池</VOIP_H248BusNumberPool>
+		<VOIP_H248BusNullDmWithSpace>空数图协带空格</VOIP_H248BusNullDmWithSpace>
+		<VOIP_H248BusCutNum>数图匹配失败回滚</VOIP_H248BusCutNum>
+		<VOIP_H248BusDialtone>本端控制上报空号后播放忙音</VOIP_H248BusDialtone>
+		<VOIP_H248BusDmStartTimer>数图开始计时器:</VOIP_H248BusDmStartTimer>
+		<VOIP_H248BusDmLongTimer>数图长计时器:</VOIP_H248BusDmLongTimer>
+		<VOIP_H248BusDmShortTimer>数图短计时器:</VOIP_H248BusDmShortTimer>
+		<VOIP_H248BusNumberPoolTimer>号码池定时器:</VOIP_H248BusNumberPoolTimer>
+		<VOIP_H248BusBeatMode>心跳模式:</VOIP_H248BusBeatMode>
+		<VOIP_H248BusBeatTime>心跳时长:</VOIP_H248BusBeatTime>
+		<VOIP_H248BusBeatCount>心跳次数:</VOIP_H248BusBeatCount>
+		<VOIP_H248BusLongTimer>事务长定时器:</VOIP_H248BusLongTimer>
+		<VOIP_H248BusPendTimer>PENDING定时器:</VOIP_H248BusPendTimer>
+		<VOIP_H248BusRetransCycle>事务重传间隔:</VOIP_H248BusRetransCycle>
+		<VOIP_H248BusRetransTimer>事务重传定时器:</VOIP_H248BusRetransTimer>
+		<VOIP_H248BusRetransCount>事务重传次数:</VOIP_H248BusRetransCount>
+		<VOIP_H248BusRetransTime>事务重传时长:</VOIP_H248BusRetransTime>
+		<VOIP_H248BusTermReg>启用端点注册</VOIP_H248BusTermReg>
+		<VOIP_H248BusRegDelayTimer>注册延迟时长:</VOIP_H248BusRegDelayTimer>
+		<VOIP_H248BusRegCycle>重启注册周期:</VOIP_H248BusRegCycle>
+		<VOIP_H248BusSnowSlide>雪崩:</VOIP_H248BusSnowSlide>
+		<VOIP_H248BusModeNumber>固网支付号码</VOIP_H248BusModeNumber>
+		<VOIP_H248BusMin>最小</VOIP_H248BusMin>
+		<VOIP_H248BusMax>最大</VOIP_H248BusMax>
+		<VOIP_H248BusClose>关闭</VOIP_H248BusClose>
+		<VOIP_H248BusWarn>所填值超出有效取值范围</VOIP_H248BusWarn>
+		<VOIP_H248BusLeft>剩余</VOIP_H248BusLeft>
+		<VOIP_H248BusCharacter>字符</VOIP_H248BusCharacter>
+	</h248BusinessPage>
+	
+	<voipSipDebugPage>
+		<VOIP_SIPVoiceDebugTitle>语音--Sip调试配置</VOIP_SIPVoiceDebugTitle>
+		<VOIP_SIPDebugNoClient>SIP客户端状态为未启用，若要进行更多的配置，请先单击下面的按钮启用SIP客户端:</VOIP_SIPDebugNoClient>
+		<VOIP_SIPLogServerIp>日志服务器Ip</VOIP_SIPLogServerIp>
+		<VOIP_SIPLogServerPort>日志服务器Port</VOIP_SIPLogServerPort>
+		<VOIP_SIPEnableSysLog>启用syslogd</VOIP_SIPEnableSysLog>
+		<VOIP_SIPEnableKlog>启用klogd</VOIP_SIPEnableKlog>
+		<VOIP_SIPEnableGgxxxLog>启用ggxxx串口打印</VOIP_SIPEnableGgxxxLog>
+		<VOIP_SIPVodslConsoleLogLevel>Vodsl Console 日志级别</VOIP_SIPVodslConsoleLogLevel>
+		<VOIP_SIPRingVoltage>振铃电压[范围：40~80,单位V]</VOIP_SIPRingVoltage>
+		<VOIP_SIPRingFrequency>振铃频率[范围：20~28,单位HZ]</VOIP_SIPRingFrequency>
+		<VOIP_SIPRingWave>振铃波形</VOIP_SIPRingWave>
+		<VOIP_SIPStartSipClient>启动SIP客户端</VOIP_SIPStartSipClient>
+		<VOIP_SIPStopSipClient>终止SIP客户端</VOIP_SIPStopSipClient>
+		<VOIP_SIPDebugIpWarn>不是有效的Ip</VOIP_SIPDebugIpWarn>
+		<VOIP_SIPDebugPortWarn>不是有效的端口号</VOIP_SIPDebugPortWarn>
+		<VOIP_SIPDebugVoltageWarn>不是正确的有效电压</VOIP_SIPDebugVoltageWarn>
+		<voipRingFreqWarn>不是正确的振铃频率</voipRingFreqWarn>
+		<VOIP_SIPStartSipWaitMsg>启动约需15s,请稍等</VOIP_SIPStartSipWaitMsg>
+		<VOIP_SIPStopSipWaitMsg>终止约需15s,请稍等</VOIP_SIPStopSipWaitMsg>
+	</voipSipDebugPage>
+	
+	<regPage>
+		<regTitle>请输入申请业务时所提供的逻辑ID与密码。</regTitle>
+        	<regTitle1>终端业务注册提示：</regTitle1>
+		<regTitle2>请插紧光纤，检查并确认光信号灯已处于熄灭状态</regTitle2>
+        	<regTitle3>准确输入“逻辑ID”和“密码”，点击“确定”进行注册</regTitle3>
+        	<regTitle4>在注册及业务下发过程中（10分钟内）请不要断电，不要拨光纤线</regTitle4>
+        	<regTitle5>本注册功能仅用于新设备的认证及业务下发，已正常在用设备请勿重新注册</regTitle5>
+        	<regTitle6>注：请您依次输入逻辑ID和密码。</regTitle6>
+		<regBackToLoginPage>返回登录页面</regBackToLoginPage>
+		<regReregButton1>重新注册</regReregButton1>
+		<regID>用户逻辑ID</regID>
+		<regPassword>密码：</regPassword>
+		<regStartReg>注册</regStartReg>
+		<regStartReg1>设备注册</regStartReg1>
+		<regStartClass>操作类型</regStartClass>
+		<regStartMac>原网关MAC</regStartMac>
+		<regFoot></regFoot>
+		<registerStatusDetail1>注册正常</registerStatusDetail1>
+		<registerStatusDetail2>注册失败</registerStatusDetail2>
+		<registerStatusDetail3>未注册</registerStatusDetail3>
+		<regSuccessMsg1>注册成功，正在下发业务，请等待。</regSuccessMsg1>
+		<regSuccessMsg2>注册成功，下发业务成功。</regSuccessMsg2>
+		<regSuccessMsg3>注册成功，下发业务失败。</regSuccessMsg3>
+		<regSuccessMsg3b>注册成功</regSuccessMsg3b>
+		<regSuccessMsg4>已经注册成功，无需再注册</regSuccessMsg4>
+		<regErrorMsg1>逻辑ID不存在！注册失败。</regErrorMsg1>
+		<regErrorMsg2a>逻辑ID不存在！请</regErrorMsg2a>
+		<regErrorMsg3>密码不存在！注册失败。</regErrorMsg3>
+		<regErrorMsg4a>密码不存在！请</regErrorMsg4a>
+		<regErrorMsg5>逻辑ID与密码不匹配！注册失败。</regErrorMsg5>
+		<regErrorMsg6a>逻辑ID与密码不匹配！请</regErrorMsg6a>
+		<regErrorMsg7>注册超时！请检查线路后重试</regErrorMsg7>
+		<regErrorMsg8>没有可用的连接，请检查线路是否接好，重新</regErrorMsg8>
+	        <regErrorMsg9>在OLT上注册失败，请检查光信号灯是否处于熄灭状态、逻辑ID和密码是否正确。</regErrorMsg9>
+        	<regErrorMsg10>获取管理IP失败，请检查TR069 WAN链接是否建立成功。</regErrorMsg10>
+	        <regErrorMsg11>到ITMS的通道不通，请联系客户经理。</regErrorMsg11>
+        	<regErrorMsg12>ITMS下发业务异常，请联系客户经理。</regErrorMsg12>
+	        <regErrorMsg13>注册次数已经超出限制，请联系客户经理。</regErrorMsg13>
+        	<regErrorMsg14>LOID或Password不正确，请确认后重新输入</regErrorMsg14>
+	        <regErrorMsg15>LOID或Password不正确。</regErrorMsg15>
+        	<regErrorMsg16>注册成功，下发业务失败。</regErrorMsg16>
+	        <regErrorMsg17>网络注册失败。</regErrorMsg17>
+        	<regErrorMsg18>获取管理地址失败。</regErrorMsg18>
+	        <regErrorMsg19>注册ITMS失。</regErrorMsg19>
+		<regRetry>重试</regRetry>
+		<regResidueDegree>剩余尝试次数：</regResidueDegree>
+		<regRegisting>正在注册，请等待。</regRegisting>
+     		<regRegisting1>正在注册OLT</regRegisting1>
+		<regRegisting2>注册OLT成功，正在获取管理IP</regRegisting2>
+		<regRegisting3>已获得管理IP，正在连接ITMS</regRegisting3>
+		<regRegisting4>注册ITMS成功，等待ITMS平台下发业务数据</regRegisting4>
+		<regRegisting5>ITMS平台正在下发业务数据，请勿断电或拔光纤。</regRegisting5>
+		<regRegistingcq1>终端正在向OLT发起注册</regRegistingcq1>
+		<regRegistingcq2>正在获取管理IP，请等待。</regRegistingcq2>
+		<regRegistingcq3>终端在OLT已注册成功，下一步是终端向ITMS平台发起注册</regRegistingcq3>
+		<regRegistingcq4>终端在ITMS平台注册成功，下一步是ITMS平台下发数据</regRegistingcq4>
+		<regRegistingcq5>ITMS平台正在进行数据下发，请勿下电或插拔光纤</regRegistingcq5>
+		<regRegisting6a>ITMS平台正在下发</regRegisting6a>
+		<regRegistingName1>“上网”</regRegistingName1>
+		<regRegistingName2>“ITV”</regRegistingName2>
+		<regRegistingName3>“语音”</regRegistingName3>
+		<regRegistingName4>“其它”</regRegistingName4>
+		<regRegDominName>“其它”</regRegDominName>
+		<regRegSuccName1>上网</regRegSuccName1>
+		<regRegSuccName2>ITV</regRegSuccName2>
+		<regRegSuccName3>语音</regRegSuccName3>
+        	<regRegSuccName4>其它</regRegSuccName4>
+	        <regRegisting6b>业务数据，请勿断电或拔光纤。</regRegisting6b>
+        	<regRegisting7a>ITMS平台业务数据下发成功。</regRegisting7a>
+	        <regRegisting7a4>ITMS平台业务数据下发成功，共下发了</regRegisting7a4>
+        	<regRegisting7a1>ITMS平台数据下发成功。</regRegisting7a1>
+	        <regRegisting7b>一个业务。</regRegisting7b>
+        	<regRegisting7c>两个业务。</regRegisting7c>
+	        <regRegisting7d>三个业务。</regRegisting7d>
+        	<regRegisting7e>四个业务。</regRegisting7e>
+ 	       <regRegisting8>ITMS平台业务下发成功，</regRegisting8>
+		<regMsg1>开始进行宽带数据模拟测试</regMsg1>
+		<regMsg2>模拟测试成功</regMsg2>
+		<regWarn1>逻辑ID不能为空</regWarn1>
+		<regWarn2>逻辑ID包含非法字符</regWarn2>
+		<regWarn3>原网关MAC不能为空</regWarn3>
+		<regWarn5>原网关包含非法字符</regWarn5>
+	</regPage>
+	
+	<loidWrite>
+		<loidFrontStr>录入sn=</loidFrontStr>
+		<loidRearStrIllegal>失败：sn中含有非法字符！</loidRearStrIllegal>
+		<loidRearStrUsrPwdErr>失败：用户名或密码错误！</loidRearStrUsrPwdErr>
+		<loidRearStrLenErr>失败：sn长度不符合要求！</loidRearStrLenErr>
+		<loidRearStrFail>失败。</loidRearStrFail>
+		<loidRearStrSucc>成功。</loidRearStrSucc>
+		<loidRearStrSure>？</loidRearStrSure>
+		<loidMakeSure>确认录入？</loidMakeSure>
+		<loidInputTip>请输入sn：</loidInputTip>
+		<loidInputReturnTip>录入SN成功！</loidInputReturnTip>
+	</loidWrite>
+	
+	<voipH248DebugPage>
+		<VOIP_H248DebugTitle>Voice--H248调试配置</VOIP_H248DebugTitle>
+		<VOIP_H248NoClient>客户端状态为未启用，若要进行更多的配置，请先单击下面的按钮启用客户端:</VOIP_H248NoClient>
+		<VOIP_H248DelayTimer>仿真呼叫DTMF延时定时器(范围[0,5000],单位：毫秒)</VOIP_H248DelayTimer>
+		<VOIP_H248SimCallWarn>不是正确的仿真呼叫DTMF延时定时器</VOIP_H248SimCallWarn>
+		<VOIP_H248StartClient>启动客户端</VOIP_H248StartClient>
+		<VOIP_H248StopClient>终止客户端</VOIP_H248StopClient>
+	</voipH248DebugPage>
+	
+	<qosPage>
+		<qosTitle>Qos 配置</qosTitle>
+		<qosRuleTemplate>模式</qosRuleTemplate>
+		<qosSelfDefTemplate>其他</qosSelfDefTemplate>
+		<qosEnableCtx>启用</qosEnableCtx>
+		<qosUpBandWidth>上行带宽</qosUpBandWidth>
+		<qosSchedule>调度策略</qosSchedule>
+		<qosForcedBandWidthEn>使能强制带宽</qosForcedBandWidthEn>
+		<qosDscpMarkEn>启用DSCP标志</qosDscpMarkEn>
+		<qosTcMarkEn>启用TC标志</qosTcMarkEn>
+		<qos802-1pEn>启用802-1_P标志</qos802-1pEn>
+		<qos802-10Mark>0标记</qos802-10Mark>
+		<Transparent>透传</Transparent>
+		<qos802-1Remark>重标记</qos802-1Remark>
+		<qosQunue>队列</qosQunue>
+		<qosPriorityCtx>优先级</qosPriorityCtx>
+		<qosEnabledCtx>启用</qosEnabledCtx>
+		<qosHighest>最高</qosHighest>
+		<qosHigher>较高</qosHigher>
+		<qosHigh>高</qosHigh>
+		<qosMiddleHigh>中-高</qosMiddleHigh>
+		<qosMiddle>中</qosMiddle>
+		<qosMiddleLow>中-低</qosMiddleLow>
+		<qosLow>低</qosLow>
+		<qosLower>较低</qosLower>
+		<qosLowest>最低</qosLowest>
+		<qosWeightCtx>权重</qosWeightCtx>
+		<qosFlowClassEdit>流分类编辑</qosFlowClassEdit>
+		<qosProfessionEdit>业务分类编辑</qosProfessionEdit>
+		<qosProfessionName>模式</qosProfessionName>
+		<qosGroupId>组ID</qosGroupId>
+		<qosNewCreateIPv4>新建IPv4</qosNewCreateIPv4>
+		<qosNewCreateIPv6>新建IPv6</qosNewCreateIPv6>
+		<qosClassQunue>分类队列</qosClassQunue>
+		<qosClassType>分类类型</qosClassType>
+		<qosMinimum>最小值</qosMinimum>
+		<qosMaximum>最大值</qosMaximum>
+		<qosProtocolType>协议类型</qosProtocolType>
+		<qosDscpValue>DSCP值</qosDscpValue>
+		<qosTcValue>TC值</qosTcValue>
+		<qos802-1Value>802.1值</qos802-1Value>
+		<qosFlowCtrl>流量控制</qosFlowCtrl>
+		<qosProtocol>协议</qosProtocol>
+		<qosIpVer>IP版本</qosIpVer>
+		<qosIntf>接口</qosIntf>
+		<qosSrcIp>源IP地址</qosSrcIp>
+		<qosSrcSubMask>源子网掩码</qosSrcSubMask>
+		<qosDestIp>目的IP</qosDestIp>
+		<qosDestSubMask>目的子网掩码</qosDestSubMask>
+		<qosSrcPort>源端口</qosSrcPort>
+		<qosDestPort>目的端口</qosDestPort>
+		<qosUsRate>上行速率</qosUsRate>
+		<qosCarIpProt>IP协议</qosCarIpProt>
+		<qosCarRate>速率(Kb/s)</qosCarRate>
+
+		<qosAddCls>增加分类</qosAddCls>
+		<qosDelCls>删除分类</qosDelCls>
+		<qosConfirmEnable>是否启用Qos</qosConfirmEnable>
+		<qosConfirmDisable>是否禁用Qos</qosConfirmDisable>
+		<qosconfirmSchedule>是否使用该策略</qosconfirmSchedule>
+		<qosUsBwRangeWarn1>上行带宽范围：0至1024的整型数字</qosUsBwRangeWarn1>
+		<qosUsBwRangeWarn2>上行带宽范围：0至1200000000的整型数字</qosUsBwRangeWarn2>
+		<qosUsBwltSumWarn>总带宽值小于分类上行速率之和，请重新设置</qosUsBwltSumWarn>
+		<qosWeightRangeWarn>权重范围</qosWeightRangeWarn>
+		<qosSubmitWarn>部分参数不合法，请检查</qosSubmitWarn>
+		<qosClsWarn1>同一个组的协议应该相同</qosClsWarn1>
+		<qosAppNameExistWarn>该APP已经存在</qosAppNameExistWarn>
+		<qosAppConflictWarn>App分类存在冲突</qosAppConflictWarn>
+		<qosAppNoChangeWarn>没有任何修改</qosAppNoChangeWarn>
+		<qosClsRtpWarn1>RTP的组不能超过10条</qosClsRtpWarn1>
+		<qosClsRtpWarn2>RTP只支持目的IP方式</qosClsRtpWarn2>
+		<qosUnsuportWarn>不支持</qosUnsuportWarn>
+		<qosSaveDscpWarn>必须先保存启用DSCP 标志信息，然后再添加分类</qosSaveDscpWarn>
+		<qosSave8021pWarn>必须先保存更改的802.1P 标志信息，然后再添加分类</qosSave8021pWarn>
+		<qosSaveTcWarn>必须先保存启用TC 标志信息，然后再添加分类</qosSaveTcWarn>
+		<qosNullWarn>输入参数不能为空</qosNullWarn>
+		<qosUsRateInvalidWarn>上行速率无效</qosUsRateInvalidWarn>
+		<qosAddrInvalidWarn>地址无效</qosAddrInvalidWarn>
+		<qosMaskInvalidWarn>掩码无效</qosMaskInvalidWarn>
+		<qosPortInvalidWarn>端口无效</qosPortInvalidWarn>
+		<qosMinMaxWarn>最小值大于最大值</qosMinMaxWarn>
+		<qosDelClassWarn>没有选中任何分类</qosDelClassWarn>
+		<qosDelClassConfirm>您确认要删除所选中的分类条件吗</qosDelClassConfirm>
+		<qosRang0-7>取值范围0-7</qosRang0-7>
+		<qosRang0-15>取值范围0-15</qosRang0-15>
+		<qosRang0-63>取值范围0-63</qosRang0-63>
+		<qosRang0-255>取值范围0-255</qosRang0-255>
+	</qosPage>
+	<flowCachePage>
+		<fcTitle>FlowCache配置</fcTitle>
+		<fcComment>启用或者禁用Flowcache功能</fcComment>
+		<fcEnableCtx>启用Flowcache</fcEnableCtx>
+	</flowCachePage>
+	
+	<ctInfoPage>
+		<ctInfoTitle>网关注册信息</ctInfoTitle>
+		<manufacturer>生产商</manufacturer>
+		<ProductClass>设备型号</ProductClass>
+		<manufacturerOUI>设备标志号</manufacturerOUI>
+		<hardwareVersion>硬件版本</hardwareVersion>
+		<softwareVersion>软件版本</softwareVersion>
+		<description>描述</description>	
+        <currentLocalTime>本地时间</currentLocalTime>
+        <sysMacAddr>EoC芯片MAC地址</sysMacAddr>
+        <fwVersion>EoC芯片固件版本</fwVersion>
+        <upTime>运行时间</upTime>
+	</ctInfoPage>
+	
+	<enableipv6Page>
+	    <EnableIpv6Title>使能 IPV6</EnableIpv6Title>
+		<ipModeSel>连接模式:</ipModeSel>
+	</enableipv6Page>
+	
+	<scsrvcntrPage>
+		<scsrvcntrInfoTitle>服务访问控制</scsrvcntrInfoTitle>
+		<scsrvcntrInfoComment>服务控制列表("SCL")启用或禁止正在被使用的服务。</scsrvcntrInfoComment>
+		<scsrvcntrInfoName>服务</scsrvcntrInfoName>
+		<scsrvcntrInfoLan>用户侧</scsrvcntrInfoLan>
+		<scsrvcntrInfoWan>网络侧</scsrvcntrInfoWan>
+		<scsrvcntrInfoPort>端口</scsrvcntrInfoPort>
+		<scsrvcntrInfoCtx>启用</scsrvcntrInfoCtx>
+		<scsrvcntrProtError>端口号必须为大于等于0且小于等于65535的数字。</scsrvcntrProtError>
+		<scsrvcntrProtRepeat>不同服务的网络侧端口号不能相同。</scsrvcntrProtRepeat>
+	</scsrvcntrPage>
+	
+	<factoryswitchPage>
+	    <factorySwitchTitle>模式切换</factorySwitchTitle>
+		<FactoryID>工厂模式</FactoryID>
+		<UserID>出厂模式</UserID>
+	</factoryswitchPage>
+    
+	<factorymodePage>
+	    <warValueNull>这个属性值不能为空!</warValueNull>
+	  <warValue8>长度不能小于8</warValue8>
+		<warValue12>MAC长度必须为12</warValue12>
+		<warValue32>长度不能超过32</warValue32>
+		<warValue64>长度不能超过64</warValue64>
+	</factorymodePage>
+	
+	<notifyPage>
+		<!-- for dhcp page -->
+		<noticeMsgTitle></noticeMsgTitle>
+		<noticeMsgLanIpChange>网关设备IP地址发生更改，请重新获取地址并访问新的网关地址！</noticeMsgLanIpChange>
+		<!-- for dhcp page -->
+		<errorPageDefTitle>配置失败</errorPageDefTitle>
+		<errorPageDefContent>配置过程中出错， 请检查并重试</errorPageDefContent>
+		<errorStaticRouteAddTitle>静态路由添加失败</errorStaticRouteAddTitle>
+		<errorStaticRouteAddContent1>添加路由IP地址错误</errorStaticRouteAddContent1>
+		<errorStaticRouteAddContent2>添加路由子网掩码失败</errorStaticRouteAddContent2>
+		<errorStaticRouteAddContent3>添加路由网关地址失败</errorStaticRouteAddContent3>
+		<errorStaticRouteAddContent4>静态路由配置错误，请检查并重试</errorStaticRouteAddContent4>
+
+		<errorStaticroute6addTitle>IPv6静态路由添加失败</errorStaticroute6addTitle>
+		<errorStaticroute6addContent>IPv6静态路由配置错误，请检查并重试</errorStaticroute6addContent>
+
+		<errorUrlfltaddTitle>URL过滤规则添加失败</errorUrlfltaddTitle>
+		<errorUrlfltaddContent>添加的规则已存在，请检查并重试</errorUrlfltaddContent>
+		<errorUrlfltaddTitle1>URL过滤规则添加失败</errorUrlfltaddTitle1>
+		<errorUrlfltaddContent1>添加规则失败，请检查并重试</errorUrlfltaddContent1>
+
+		<errorMacfltaddTitle>MAC地址过滤规则添加失败</errorMacfltaddTitle>
+		<errorMacfltaddContent>添加的规则已存在，请检查并重试</errorMacfltaddContent>
+
+	</notifyPage>
+	
+	<virtualPage>
+		<portValueIllegal>端口值范围非法，范围最大值不能超过65535，请重新输入！</portValueIllegal>
+	</virtualPage>
+	<printServerPage>
+		<printServerTitle>打印服务器设置</printServerTitle>
+		<printServerComment>该页面允许您启用/禁用打印机的支持</printServerComment>
+		<printServerEnable>启用打印服务器</printServerEnable>
+		<printServerNote1>打印机名称长度小于40字节,打印机型号长度小于128字节</printServerNote1>
+		<printServerNote2>提示: 在PC上添加网络打印机路径为：http://192.168.1.1:631/printers/"打印机名称".</printServerNote2>
+		<printServerName>打印机名称：</printServerName>
+		<printServerModle>打印机型号：</printServerModle>
+		<printServerWarn1>打印机名称和打印机型号不能为空</printServerWarn1>
+	</printServerPage>
+
+	<ftpUpdataPage>
+		<ftpUpdataTitle>系统升级</ftpUpdataTitle>
+		<ftpUpdataLoginType>匿名登录</ftpUpdataLoginType>
+		<ftpUpdataUsername>用户名</ftpUpdataUsername>
+		<ftpUpdataPassword>密码</ftpUpdataPassword>
+		<ftpUpdataFtpPort>FTP服务器端口</ftpUpdataFtpPort>
+		<ftpUpdataFtpAddress>FTP服务器IP地址</ftpUpdataFtpAddress>
+		<ftpUpdataImagePath>镜像文件路径</ftpUpdataImagePath>
+		<ftpUpdataUpgrade>升级</ftpUpdataUpgrade>
+		<ftpUpdataRetry>重试</ftpUpdataRetry>
+		<ftpUpdataIpError>IP地址无效</ftpUpdataIpError>
+		<ftpUpdataUserError>用户名不能为空</ftpUpdataUserError>
+		<ftpUpdataPassError>密码不能为空</ftpUpdataPassError>
+		<ftpUpdataPortError>端口号无效</ftpUpdataPortError>
+		<ftpUpdataURLError>镜像文件路径不能为空</ftpUpdataURLError>
+		<ftpUpdataUpgradeSucc>获取文件成功，升级成功，设备正在重启,请耐心等待2分钟</ftpUpdataUpgradeSucc>
+		<ftpUpdataLinkFtpErr>连接FTP服务器失败</ftpUpdataLinkFtpErr>
+		<ftpUpdataUsrPwdErr>用户名或密码错误</ftpUpdataUsrPwdErr>
+		<ftpUpdataNoFileErr>未找到目标文件</ftpUpdataNoFileErr>
+		<ftpUpdataCmdErr>命令执行错误</ftpUpdataCmdErr>
+		<ftpUpdataUnknownErr>FTP升级过程出错</ftpUpdataUnknownErr>
+		<ftpUpdataGetFileErr>获取文件错误</ftpUpdataGetFileErr>
+		<ftpUpdataFileCheckErr>文件校验出错</ftpUpdataFileCheckErr>
+		<ftpUpdataNoHostErr>找不到主机</ftpUpdataNoHostErr>
+		<ftpUpdataUnknownCodeErr>未知错误码</ftpUpdataUnknownCodeErr>
+		<ftpUpdataGettingfile>正在获取文件，请耐心等待大约3分钟</ftpUpdataGettingfile>
+	</ftpUpdataPage>
+	
+	<registerUpgrade>
+		<registerCloseBtnText>关闭</registerCloseBtnText>
+		<registerUpgradeSuccess>设备升级成功，可以正常使用业务，谢谢耐心等待。</registerUpgradeSuccess>
+		<registerUpgradeCRCError>软件校验CRC错误，软件升级失败，请关闭此页面。</registerUpgradeCRCError>
+		<registerUpgradeDownloadError>下载升级软件失败，软件升级失败，请关闭此页面。</registerUpgradeDownloadError>
+		<registerUpgradeReboot>设备重启中，请等待...</registerUpgradeReboot>
+		<registerUpgrading>设备升级中，请勿断电。</registerUpgrading>
+		<registerUpgradeTip>提示</registerUpgradeTip>
+		<registerUpgradeTipText>设备正在远程升级，系统重启后会自动配置业务（10分钟内），请关注下面提示：</registerUpgradeTipText>
+		<registerUpgradeTipContent1>1、升级过程中不要断电</registerUpgradeTipContent1>
+		<registerUpgradeTipContent2>2、升级过程中不要把插光纤</registerUpgradeTipContent2>
+		<registerUpgradeTipContent3>3、升级过程中不要关闭此页面</registerUpgradeTipContent3>
+	</registerUpgrade>
+	
+	<mwbandPage>
+		<mwbandTerminalNumberTip>接入终端限制数</mwbandTerminalNumberTip>
+	</mwbandPage>
+
+	<l2tpPage>
+		<l2tpTitle>L2TP 配置</l2tpTitle>
+		<l2tpEnable>开启L2TP</l2tpEnable>		
+		<l2tpUserCtx>用户名</l2tpUserCtx>
+		<l2tpPasswdCtx>密码</l2tpPasswdCtx>
+		<l2tpServNameCtx>服务器名</l2tpServNameCtx>
+	</l2tpPage>
+
+	<WiFiPage>
+		<wizardWiFiRouteModeLable1>WiFi连接密码即为user账号管理密码</wizardWiFiRouteModeLable1>
+		<wizardWiFiAdvice>为了您的安全，建议选择数字和字母混合的密码</wizardWiFiAdvice>
+		<wizardWiFiStart>开始设置您的WiFi名称和密码</wizardWiFiStart>
+		<wizardWiFiSsidLable>WiFi名称：</wizardWiFiSsidLable>
+		<wizardWiFiPwdLable>WiFi密码：</wizardWiFiPwdLable>
+		<WiFiNameWarn>WiFi名不能为空，请输入WiFi名</WiFiNameWarn>
+		<WiFiManagementWarn1>密码不能为空</WiFiManagementWarn1>
+
+
+	</WiFiPage>
+
+	<wizardPage>
+		<wizardTitleWanMode>请选择您的上网方式</wizardTitleWanMode>
+		<wizardTitleWanMode1>快速设置向导，请选择您的上网方式</wizardTitleWanMode1>
+		<wizardBridgeModeLable>桥接方式，PC自己拨号获取IP上网 </wizardBridgeModeLable>
+		<wizardPppoeRouteModeLable>路由方式，网关自动拨号上网</wizardPppoeRouteModeLable>
+		<wizardDhcpRouteModeLable>路由方式，网关自动获取IP上网</wizardDhcpRouteModeLable>
+		<wizardStaticRouteModeLable>路由方式，网关使用静态IP上网</wizardStaticRouteModeLable>
+		<wizardPppoeRouteModeLable1>PPPoE方式，网关自动拨号上网</wizardPppoeRouteModeLable1>
+		<wizardDhcpRouteModeLable1>DHCP方式，网关自动获取IP上网</wizardDhcpRouteModeLable1>
+		<wizardStaticRouteModeLable1>Static方式，网关使用静态IP上网</wizardStaticRouteModeLable1>
+		<wizardPppoeUsername>上网账号：</wizardPppoeUsername>
+		<wizardPppoePasswd>上网密码：</wizardPppoePasswd>
+		<wizardWanCfgVlanID>Vlan ID：</wizardWanCfgVlanID>
+		<wizardBtnWanModeNext>下一步</wizardBtnWanModeNext>
+		<wizardTitleWlanCfg>请输入无线宽带配置</wizardTitleWlanCfg>
+		<wizardEnableWlanLable>无线网络启用</wizardEnableWlanLable>
+		<wizardWlanSsidLable>无线名称：</wizardWlanSsidLable>
+		<wizardWlanPwdLable>无线密钥：</wizardWlanPwdLable>
+		<wizardBtnWlanCfgPri>上一步</wizardBtnWlanCfgPri>
+		<wizardBtnWlanCfgNext>下一步</wizardBtnWlanCfgNext>
+		<wizardTitleItvCfg>请输入iTV配置</wizardTitleItvCfg>
+		<wizardSelectItvIfName>选择iTV的接口</wizardSelectItvIfName>
+		<wizardIsSmartTV>是否智能电视</wizardIsSmartTV>
+		<wizardBtnItvCfgPri>上一步</wizardBtnItvCfgPri>
+		<wizardBtnItvCfgNext>下一步</wizardBtnItvCfgNext>
+		<wizardTitleChangePwd>终端登陆密码修改</wizardTitleChangePwd>
+		<wizardChangePassword>终端登陆密码修改</wizardChangePassword>
+		<wizardOldPassword>旧密码：</wizardOldPassword>
+		<wizardNewPassword>新密码：</wizardNewPassword>
+		<wizardNewPasswordConfirm>新密码确认：</wizardNewPasswordConfirm>
+		<wizardBtnChangePwdPri>上一步</wizardBtnChangePwdPri>
+		<wizardBtnChangePwdNext>下一步</wizardBtnChangePwdNext>
+		<wizardTitleComplete>配置信息确认</wizardTitleComplete>
+		<wizardInfoListWanMode>上网方式：</wizardInfoListWanMode>
+		<wizardInfoListWanModeBridge>桥接方式，PC自己拨号获取IP上网 </wizardInfoListWanModeBridge>
+		<wizardInfoListWanModeRoute>路由方式，网关自动拨号方式上网</wizardInfoListWanModeRoute>
+		<wizardInfoListWanPppName>上网账号：</wizardInfoListWanPppName>
+		<wizardInfoListWanPppPwd>上网密码：</wizardInfoListWanPppPwd>
+		<wizardInfoListWlanEnable>无线状态：</wizardInfoListWlanEnable>
+		<wizardInfoListWlanOn>开启</wizardInfoListWlanOn>
+		<wizardInfoListWlanOff>关闭</wizardInfoListWlanOff>
+		<wizardInfoListWlanSsid>无线SSID：</wizardInfoListWlanSsid>
+		<wizardInfoListWlanPwd>无线密钥：</wizardInfoListWlanPwd>
+		<wizardInfoListWlanDisable>无线状态：</wizardInfoListWlanDisable>
+		<wizardInfoListChangePwd>修改密码：</wizardInfoListChangePwd>
+		<wizardInfoListNewPwd>新密码：</wizardInfoListNewPwd>
+		<wizardInfoListChangeYes>是</wizardInfoListChangeYes>
+		<wizardInfoListChangeNo>否</wizardInfoListChangeNo>
+		<wizardInfoListNotChangePwd>修改密码：</wizardInfoListNotChangePwd>		
+		<wizardBtnApplyPri>上一步</wizardBtnApplyPri>
+		<wizardBtnApply>完  成</wizardBtnApply>
+		<wizardPppMaxLen64Warn>长度不能超过64</wizardPppMaxLen64Warn>
+		<wizardPppInvalidCharWarn>包含非法字符</wizardPppInvalidCharWarn>
+		<wizardPppMaxLen32Warn>长度不能超过32</wizardPppMaxLen32Warn>
+		<wizardAccessModeWarn>请选择一种上网方式</wizardAccessModeWarn>
+		<wizardWlanSsidWarn1>不能为空</wizardWlanSsidWarn1>
+		<wizardWlanSsidWarn2>不能包含无效字符</wizardWlanSsidWarn2>
+		<wizardWlanSsidWarn3>长度超出范围入</wizardWlanSsidWarn3>
+		<wizardWlanSsidWarn4>不是以"ChinaNet-"开头</wizardWlanSsidWarn4>
+		<wizardWlanSsidWarn5>长度不能大于32</wizardWlanSsidWarn5>
+		<wizardWlanSsidWarn6>长度不能小于4</wizardWlanSsidWarn6>
+		<Wizard_wlanSsid_Comment>SSID可以由中文、数字、大小写字母、下划线、短横杠组成。长度为4到32。（一个中文长度为3，其它长度为1）</Wizard_wlanSsid_Comment>
+		<wizardwlanPwdWarn>WPA预共享的密钥应该在8个和63个ASCII字符或64个十六进制数字之间</wizardwlanPwdWarn>
+		<wizardLanPort1Ctx>网口1</wizardLanPort1Ctx>
+		<wizardLanPort2Ctx>网口2</wizardLanPort2Ctx>
+		<wizardLanPort3Ctx>网口3</wizardLanPort3Ctx>
+		<wizardLanPort4Ctx>网口4</wizardLanPort4Ctx>
+		<wizardLanPort5Ctx>iTV</wizardLanPort5Ctx>
+		<wizardChangePwdWarn1>密码不能为空</wizardChangePwdWarn1>
+		<wizardChangePwdWarn2>密码长度不能超过16个字符</wizardChangePwdWarn2>
+		<wizardChangePwdWarn3>密码中不能含有空格</wizardChangePwdWarn3>
+		<wizardChangePwdWarn4>新密码与确认密码不一致</wizardChangePwdWarn4>
+		<wizardChangePwdWarn5>原密码输入有误，请重新输入</wizardChangePwdWarn5>
+	</wizardPage>	
+	<updateImgPage>
+		<updateImgTitle>升级image文件</updateImgTitle>
+		<upImgStep1>步骤1：从您的ISP获取image文件。</upImgStep1>
+		<upImgStep2>步骤2：选择要升级的image文件。</upImgStep2>
+		<upImgStep3>步骤3：单击”升级image“按钮上传image文件。</upImgStep3>
+		<upImgNote>注意：升级过程大约需要2分钟来完成的，然后设备将重新启动。</upImgNote>
+		<SelImageFile>选择image文件:</SelImageFile>
+		<upInProgress>固件升级...</upInProgress>
+		<upSaveBtn>升级image</upSaveBtn>
+		<noImageFile>请选择文件！</noImageFile>
+		<updateImgNotice>请等待系统升级完成...切勿断电！</updateImgNotice>	
+	</updateImgPage> 
+</s304>

@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-family: "tahoma", "sans-serif", "arial", "helvetica";
+	font-size:63%;
+	/*margin-left:35px;*/
+	display:none;
+}
+
+.normaltext{
+	width:200px;
+}
+
+.pTitile {
+	font-size: 1.45em;
+	font-weight: bold;
+	margin-top:15px;
+	margin-left:20px;
+}
+
+h3 {
+	font-size: 1.45em;
+	font-weight: bold;
+}
+
+h4 {
+        font-size: 1.2em;
+        font-weight: bold;
+} 
+
+.content{
+	font-size:1.2em;
+}
+.content_b{
+	font-weight: bold;
+}
+
+p{
+	font-size: 1.2em;
+}
+
+table {
+	font-size: 1.2em;
+}
+
+.buttonX,.buttonY
+{
+    margin: 2px;
+    FONT-SIZE: 12px;
+    WIDTH: 72px;
+    FONT-FAMILY: "Arial", "Helvetica";
+	height:22px;
+	padding-top:3px;
+	padding-bottom:3px; 
+    TEXT-ALIGN: center;
+    text-decoration : none;
+	border: 1px solid #999;
+	cursor: pointer;
+    event:expression(
+    onmouseover = function(){this.className='buttonX_over';},  
+    onmouseout = function(){this.className='buttonX';}  
+    )
+}
+
+.buttonX_over
+{
+	margin: 2px;
+	FONT-SIZE: 12px;
+	WIDTH: 72px;
+	FONT-FAMILY: "Arial", "Helvetica";
+	height:22px;
+	padding-top:3px;
+	padding-bottom:3px;
+	TEXT-ALIGN: center;
+	text-decoration : none;;
+}
+
+.buttonX:hover,.buttonY:hover
+{
+    TEXT-ALIGN: center;
+    border: 1px solid #777;
+    background-color: #999;
+	margin: 2px;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: "Arial", "Helvetica";
+	WIDTH: 72px;
+	height:22px;
+	COLOR: #ffffff;
+	padding-top:3px;
+	padding-bottom:3px;
+	TEXT-ALIGN: center;
+	text-decoration : none;
+}
+
+/*.buttonX[disabled="disabled"]
+{
+	color:#999;
+	background-color: #CADAF4;
+}*/
+
+.load {
+	float: right;
+}
+
+.dhcpServerDiv{
+	font-size: 0.95em;
+	padding-top:0px;
+	padding-left: 40px;
+}
+li {
+	font-size:1.4em;
+	margin-bottom:10px;
+}
+
+fieldset {
+	width: 520px;
+}
+
+.input_time {
+	border:0px;
+}
+
+#ps {
+	background-color:#FF6600;
+	width:200px;
+	margin: 1px;
+	margin:0px;
+	float:left;
+	text-align:left;
+	font-size:6px;
+}
+
+#bn {
+	width:39px;
+	margin: 1px;
+	margin-left:0px;
+	float:center;
+	text-align:center;
+	color:#000000;
+	font-family:Arial;
+	font-size:12px;
+}
+
+fieldset legend{
+	color:#666;
+}
+
+#timeoutMsgDiv {
+	font-size: 1.2em;
+	width:808px;
+	height:26px;
+	background:#D4D4D4;
+	position:absolute;
+	left:2px;
+	top:0;
+	text-align:center;
+	display:none;
+}
+
+#showBox
+{
+	width:0px;
+	height:0px;
+	display:none;
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:100;
+	border:1px #8FA4F5 solid;
+	padding:1px;
+	background:#fff;
+}
+
+#showBox h2
+{
+	height:25px;
+	font-size:14px;
+	background-color:#3366cc;
+	position:relative;
+	padding-left:10px;
+	line-height:25px;
+	color:#fff;
+}
+
+#hideShowBox
+{
+	position:absolute;
+	right:5px;
+	top:0;
+	font-size:12px;
+	color:#fff;
+}
+
+#showBoxInfo
+{
+	padding:10px;
+}

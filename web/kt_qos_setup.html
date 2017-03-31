@@ -1,0 +1,506 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Qos Setup</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/kt_qos_setup.js"></script>
+</head>
+<body>
+    <img class="load" id="loadPic" src="pic/loading.gif">
+    <div class="main">
+        <div class="mainLeft"></div>
+        <div class="mainShadow"></div>
+        <div class="mainBody">
+            <!-- QOS -->
+            <div class="QOS">
+                <li id="QOS_SetupDesc"></li>
+                <form>
+                    <table border="0" cellSpacing="0" cellPadding="0" width="100%">
+                        <tr>
+                            <td width="220" class="hdNobac"><b id="QOS_RuleTemplate"></b></td>
+                            <td colSpan=6><select id="QOS_SEL_RuleTemplate"></select></td>
+                        </tr>
+                        <tr>
+                            <td class="hdNobac"><label for="QOS_CHX_Enable" id="QOS_Enable"></label></td>
+                            <td ><input id="QOS_CHX_Enable" value="0" type="checkbox"></td>
+                        </tr>
+                    </table>
+                    <div id="QOS_Change" style="display:none">
+                        <table id="QOS_TB_Global" border=0 cellSpacing=0 cellPadding=0 width="100%">
+                            <tr>
+                                <td width="220" class="hdNobac"><B id="QOS_UsBandWidth"></B></td>
+                                <td colspan="6">
+                                    <input id="QOS_TEXT_UsBandwidth" value=0 maxLength=10 size=16>
+                                    <span id="QOS_RateUnit"></span>
+                                    <span id="QOS_TEXT_UsBandwidthwarn" class="warning"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hdNobac"><B id="QOS_Schedule"></B></td>
+                                <td width="20px"><input value="priority" type="radio" name="QOS_RADIO_Policy" id="QOS_RADIO_PolicyPQ"></td>
+                                <td width="100px"><label for="QOS_RADIO_PolicyPQ" id="QOS_LABEL_PolicyPQ"></label></td>
+                                <td width="20px"><input value="weight" type="radio" name="QOS_RADIO_Policy" id="QOS_RADIO_PolicyWRR"></td>
+                                <td width="100px"><label for="QOS_RADIO_PolicyWRR" >WRR</label></td>
+                                <td width="20px"><input value="car" id="QOS_RADIO_PolicyCAR" type="radio" name="QOS_RADIO_Policy"></td>
+                                <td><label for="QOS_RADIO_PolicyCAR" >CAR</label></td>
+                            </tr>
+                        </table>
+                        <table id="QOS_TB_CT" border=0 cellSpacing=0 cellPadding=0 width="100%" >
+                            <tr>
+                                <td width="220"class="content_b" valign="middle"><label for='QOS_CHX_DSCPMark' id="QOS_LB_DSCPMark"></label></td>
+                                <td><input id='QOS_CHX_DSCPMark' value=0 type='checkbox'></td>
+                            </tr>
+                            <tr>
+                                <td width=115 class="content_b"><label for='QOS_SEL_8021PMark' id="QOS_LB_8021PMark"></label></td>    
+                                <td align="left">
+                                    <SELECT id='QOS_SEL_8021PMark' size=1 >
+                                        <OPTION selected value="0" id="QOS_SEL_8021P0Mark"></OPTION>
+                                        <OPTION value="1" id="QOS_SEL_8021Ptransparent">透传</OPTION>
+                                        <OPTION value="2" id="QOS_SEL_8021PRemark"></OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                    
+                </form>
+            </div>
+            <!-- QOS_List -->
+            <div class="QOS_List" style="display:none">
+                <li id="QOS_List_SetupDesc"></li>
+                <form>
+                    <div id="QOS_DIV_QunueEdit">
+                        <table id="QOS_TB_PQEdit" border=1 cellSpacing=0 cellPadding=0 width="100%">
+                            <tbody id="QOS_TBODY_PQEdit" align="center">
+                                <tr>
+                                    <td class='hd' id="QOS_Qunue"></td>
+                                    <td class='hd' id="QOS_Priority"></td>
+                                    <td class='hd' id="QOS_EnabledCtx"></td>
+                                </tr>
+                                <tr>
+                                    <td>Q1</td>
+                                    <td id="QOS_Low"></td>
+                                    <td><input id="QOS_CHX_Q1Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <tr>
+                                    <td>Q2</td>
+                                    <td id="QOS_Middle"></td>
+                                    <td><input id="QOS_CHX_Q2Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <tr>
+                                    <td>Q3</td>
+                                    <td id="QOS_High"></td>
+                                    <td><input id="QOS_CHX_Q3Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <tr>
+                                    <td>Q4</td>
+                                    <td id="QOS_Highest"></td>
+                                    <td><input id="QOS_CHX_Q4Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <!-- for eight quenue support -->
+                                <tr id="QOS_tr_PQQune5" style="display:none">
+                                    <td>Q5</td>
+                                    <td id="QOS_PQq5Pri"></td>
+                                    <td><input id="QOS_CHX_Q5Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <tr id="QOS_tr_PQQune6" style="display:none">
+                                    <td>Q6</td>
+                                    <td id="QOS_PQq6Pri"></td>
+                                    <td><input id="QOS_CHX_Q6Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <tr id="QOS_tr_PQQune7" style="display:none">
+                                    <td>Q7</td>
+                                    <td id="QOS_PQq7Pri"></td>
+                                    <td><input id="QOS_CHX_Q7Enable" value=0 type=checkbox></td>
+                                </tr>
+                                <tr id="QOS_tr_PQQune8" style="display:none">
+                                    <td>Q8</td>
+                                    <td id="QOS_PQq8Pri"></td>
+                                    <td><input id="QOS_CHX_Q8Enable" value=0 type=checkbox></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table id="QOS_TB_WRREdit" border=1 cellSpacing=0 cellPadding=0 width="100%">
+                            <tbody align="center">
+                                <tr>
+                                    <td class=hd id="QOS_Qunue2"></td>
+                                    <td class=hd id="QOS_WeightCtx"></td>
+                                    <td class=hd id="QOS_EnabledCtx2"></td>
+                                </tr>
+                                <tr>
+                                    <td>Q1</td>
+                                    <td><input id="QOS_TEXT_Q1Weight" class="OQS_CLS_Weight" value=0 size="3"></td>
+                                    <td><input id="QOS_CHX_WRRQ1Enable" value=0 class="QOS_CLS_QunueSel" type=checkbox></td>
+                                </tr>
+                                <tr>
+                                    <td>Q2</td>
+                                    <td><input id="QOS_TEXT_Q2Weight" class="OQS_CLS_Weight" value=0 size="3">
+                                    <td><input id="QOS_CHX_WRRQ2Enable" class="QOS_CLS_QunueSel" value=0 type=checkbox></td>
+                                </tr>
+                                <tr>
+                                    <td>Q3</td>
+                                    <td><input id="QOS_TEXT_Q3Weight" class="OQS_CLS_Weight" value=0 size="3">
+                                    <td><input id="QOS_CHX_WRRQ3Enable" class="QOS_CLS_QunueSel" value=0 type=checkbox></td>
+                                </tr>
+                                <tr>
+                                    <td>Q4</td>
+                                    <td><input id="QOS_TEXT_Q4Weight" class="OQS_CLS_Weight" value=0 size="3">
+                                    <td><input id="QOS_CHX_WRRQ4Enable" class="QOS_CLS_QunueSel" value=0 type=checkbox></td>
+                                </tr>
+                                    <!-- for eight quenue support -->
+                                <tr id="QOS_tr_WrrQ5" style="display:none">
+                                    <td>Q5</td>
+                                    <td><input id="QOS_TEXT_Q5Weight" class="OQS_CLS_Weight" value=0 size="3"></td>
+                                    <td><input id="QOS_CHX_WRRQ5Enable" value=0 class="QOS_CLS_QunueSel" type=checkbox></td>
+                                </tr>
+                                <tr id="QOS_tr_WrrQ6" style="display:none">
+                                    <td>Q6</td>
+                                    <td><input id="QOS_TEXT_Q6Weight" class="OQS_CLS_Weight" value=0 size="3"></td>
+                                    <td><input id="QOS_CHX_WRRQ6Enable" value=0 class="QOS_CLS_QunueSel" type=checkbox></td>
+                                </tr>
+                                <tr id="QOS_tr_WrrQ7" style="display:none">
+                                    <td>Q7</td>
+                                    <td><input id="QOS_TEXT_Q7Weight" class="OQS_CLS_Weight" value=0 size="3"></td>
+                                    <td><input id="QOS_CHX_WRRQ7Enable" value=0 class="QOS_CLS_QunueSel" type=checkbox></td>
+                                </tr>
+                                <tr id="QOS_tr_WrrQ8" style="display:none">
+                                    <td>Q8</td>
+                                    <td><input id="QOS_TEXT_Q8Weight" class="OQS_CLS_Weight" value=0 size="3"></td>
+                                    <td><input id="QOS_CHX_WRRQ8Enable" value=0 class="QOS_CLS_QunueSel" type=checkbox></td>
+                                </tr>   
+                          </tbody>
+                        </table>
+                    </div>
+                </form> <!-- style="display:none" -->
+            </div>
+            <!-- QOS_BusinessName -->
+            <div class="QOS_BusinessName" style="display:none">
+                <li id="QOS_Business_SetupDesc"></li>
+                <form>
+                    <table id="QOS_TB_App" border="1" cellSpacing=0 cellPadding=0 width="100%">
+                        <tr align="middle">
+                            <td class="hd" id="QOS_AppName"></td>
+                            <td class="hd" id="QOS_AppQeueu"></td>
+                            <td class="hd" id="QOS_AppDel"></td>
+                            <td class="hd" id="QOS_AppEdit"></td>
+                            <tbody id="QOS_AppListTbody"></tbody>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- QOS_Kind -->
+            <div class="QOS_Kind" style="display:none">
+                <li id="QOS_Kind_Name"></li>
+                <form>
+                    <table id ="QOS_ClsTable" style="display:none" width="100%" border="1" cellpadding='1' cellspacing='0'></table> 
+                    <table id="QOS_TB_ClsBtn" border="0" cellSpacing="0" cellPadding="0" width="100%" style="margin-top:10px">
+                        <tr align="right">
+                            <td align="right"><input id="QOS_BTN_ClsAdd" type="button" class="buttonY"></td>
+                            <td align="right" width="80px"><input id="QOS_BTN_ClsDel" type="button" class="buttonY"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- QOS_Kind_Set -->
+            <div class="QOS_Kind_Set" style="display:none">
+                <li id="QOS_Kind_Set_Name"></li>
+                <form>
+                    <div id="QOS_DIV_Cls" style="display:none">
+                        <table>
+                            <tr>
+                                <td class="hdNobac"><B id="QOS_FlowClassTitle"></B></td>
+                            </tr>
+                        </table>
+                        <table border="0" width="100%" id="QOS_TB_ClsSel">
+                            <tbody>
+                                <tr>                
+                                    <td width="20"><input value="0" id="Qos_RADIO_AppClsEditId" type=radio name="Qos_RADIO_ProfessionEdit"></td>
+                                    <td width="200" ><label for="Qos_RADIO_AppClsEditId" id="QOS_LB_ProfessionEdit"></label> </td>                            
+                                    <td width="20"><input value="1" id="Qos_RADIO_FlowClsEditId" type=radio name="Qos_RADIO_ProfessionEdit"></td>
+                                    <td><label for="Qos_RADIO_FlowClsEditId" id="QOS_LB_FlowClsEdit"></label></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="QOS_DIV_AppEdit" style="display:none">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td width="220" id="QOS_ProfessionName"></td>
+                                <td colSpan=6>
+                                    <SELECT id="QOS_SEL_AppName" size="1">
+                                        <OPTION  value='tr069'>tr069</OPTION>
+                                        <OPTION  value=null selected>&nbsp;</OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" width="100%">
+                            <tr>
+                                <td width="220" id="QOS_ProfessionQunue"></td>
+                                <td colSpan=6>
+                                    <SELECT id="QOS_SEL_AppQueue" size=1>
+                                        <OPTION selected value=1>1</OPTION>
+                                        <OPTION value=2>2</OPTION>
+                                        <OPTION value=3>3</OPTION>
+                                        <OPTION value=4>4</OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="QOS_DIV_ClsEdit" style="display:none">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td width="220" id="QOS_ClassQunue"></td>
+                                <td colSpan=6>
+                                    <SELECT id="QOS_SEL_ClassQuenue" size=1 >
+                                        <OPTION selected value=1>1</OPTION>
+                                        <OPTION value=2>2</OPTION>
+                                        <OPTION value=3>3</OPTION>
+                                        <OPTION value=4>4</OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table width="100%" border="0" id="QOS_TB_ClassificationID">
+                            <tr id="QOS_tr_ClsId">
+                                <td width="220" id="Qos_GroupId"></td>
+                                <td ><select size="1" id="QOS_SEL_ClassificationID" disabled="disabled"></select></td>
+                            </tr>
+                            <tr id="QOS_tr_ClsIpVer">
+                                <td width="220" id="QOS_ClsIpVer"></td>
+                                <td ><select size="1" id="QOS_SEL_ClsIpVer" ></select></td>
+                            </tr>
+                        </table>
+
+                        <table border="0" width="100%" id="QOS_TB_ClsIPv4">
+                            <tr>
+                                <td width="220" class="QOS_CLS_ClassType"></td>
+                                <td colSpan=6>
+                                    <SELECT id="QOS_SEL_IPv4Type" size=1 >
+                                        <OPTION selected value=SMAC>SMAC</OPTION>
+                                        <OPTION value=DMAC>DMAC</OPTION>
+                                        <OPTION value=8021P>8021P</OPTION>
+                                        <OPTION value=SIP>SIP</OPTION>
+                                        <OPTION value=DIP>DIP</OPTION>
+                                        <OPTION value=SPORT>SPORT</OPTION>
+                                        <OPTION value=DPORT>DPORT</OPTION>
+                                        <OPTION value=TOS>TOS</OPTION>
+                                        <OPTION value=DSCP>DSCP</OPTION>
+                                        <OPTION value=WANInterface>WANInterface</OPTION>
+                                        <OPTION value=LANInterface>LANInterface</OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" width="100%" id="QOS_TB_ClsIPv6" style="display:none">
+                            <tr>
+                                <td width="220" class="QOS_CLS_ClassType"></td>
+                                <td align="left">
+                                    <SELECT id="QOS_SEL_IPv6Type" size=1 >
+                                        <OPTION selected value=SMAC>SMAC</OPTION>
+                                        <OPTION value=DMAC>DMAC</OPTION>
+                                        <OPTION value=8021P>8021P</OPTION>
+                                        <OPTION value=SIP>SIP</OPTION>
+                                        <OPTION value=DIP>DIP</OPTION>
+                                        <OPTION value=SPORT>SPORT</OPTION>
+                                        <OPTION value=DPORT>DPORT</OPTION>
+                                        <OPTION value=FLOWLABEL>FlowLabel</OPTION>
+                                        <option value=TCCLASS>TC</OPTION>
+                                        <OPTION value=WANInterface>WANInterface</OPTION>
+                                        <OPTION value=LANInterface>LANInterface</OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+                          
+                        <table width="100%" border="0" id="QOS_TB_CLassWan" style="display:none">
+                            <tr>
+                                <td width="220" id="QOS_WanIntfMin"></td>
+                                <td ><select size="1" id="QOS_SEL_WanIntfMin" class="QOS_CLS_IntfSel" ></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="QOS_WanIntfMax"></td>
+                                <td ><select size="1" id="QOS_SEL_WanIntfMax" class="QOS_CLS_IntfSel"></select>
+                                </td>
+                            </tr>
+                        </table>
+                          
+                        <table width="100%" border="0" id="QOS_TB_CLassLan" style="display:none">
+                            <tr>
+                                <td width="220" id="QOS_LanIntfMin"></td>
+                                <td ><select size="1" id="QOS_SEL_LanIntfMin" class="QOS_CLS_IntfSel" >
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="QOS_LanIntfMax"></td>
+                                <td ><select size="1" id="QOS_SEL_LanIntfMax" class="QOS_CLS_IntfSel" >
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                          
+                        <table id="QOS_TB_TypeCommon" border=0 width="100%">
+                            <tr>
+                                <td width="220" id="QOS_TypeCommonMin"></td>
+                                <td ><input id="QOS_TEXT_TypeCommonMin" value=0 maxLength=40 size=22 ></td>
+                            </tr>
+                            <tr>
+                                <td id="QOS_TypeCommonMax"></td>
+                                <td ><input id="QOS_TEXT_TypeCommonMax" value=0 maxLength=40 size=22 ></td>
+                            </tr>
+                        </table>
+                        <table border="0" width="104%">
+                            <tr>
+                                <td width="220" id="QOS_ProtoType"></td>
+                                <td colSpan=6>
+                                    <SELECT id="QOS_SET_ProtoType" size=1 name=ProtocolList>
+                                        <OPTION selected value=TCP>TCP</OPTION>
+                                        <OPTION value=UDP>UDP</OPTION>
+                                        <OPTION value=TCP,UDP>TCP,UDP</OPTION>
+                                        <OPTION id="ProtocolListICMP" value=ICMP>ICMP</OPTION>
+                                        <OPTION id="ProtocolListICMPV6" value=ICMPV6>ICMPV6</OPTION>
+                                        <OPTION value=RTP>RTP</OPTION>
+                                        <OPTION value=NONE>NONE</OPTION>
+                                    </SELECT>
+                                </td>
+                            </tr>
+                        </table>
+                          
+                        <table border="0" width="100%" id="QOS_TB_DSCPMark">
+                            <tr>
+                                <td width="220" id="QOS_DscpValue"></td>
+                                <td><input id="QOS_TEXT_DSCPMarkValue" value=0 maxLength=8 size=10 /></td>
+                            </tr>
+                        </table>
+                            
+                        <table border="0" width="100%" id="QOS_TB_TCmark">
+                            <tbody id="QOS_TcMarkTbody">
+                            </tbody>
+                        </table>
+                     
+                        <table border="0" width="100%" id="QOS_TB_8021PMark">
+                            <tr>
+                                <td width="220" id="QOS_8021PValue"></td>
+                                <td><input id="QOS_TEXT_8021PValue" value=0 maxLength=8 size=10 ></td>
+                            </tr>
+                        </table>         
+                    </div>  
+                    <input id="BTN_Confirm" type="button" class="buttonY"></td>   
+                    </table>      
+                </form>
+            </div>
+            <!-- QOS_CAR_Set -->
+            <div class="QOS_CAR_Set" style="display:none">
+                <li id="QOS_CAR_Set_Name"></li>
+                <form>     
+                    <div id="QOS_DIV_CARPolicy" style="display:none">
+                        <table width="100%" border="0">
+                            <tr>
+                                <td class="hdNobac" id="QOS_FlowCtrl"></td>
+                            </tr>
+                        </table>
+
+                        <table border=1 cellpadding='1' cellspacing='0' width="100%">
+                            <tr align="center">
+                                <td class="hd">ID</td>
+                                <td class="hd" id="QOS_CarIpProtTh"></td>
+                                <td class="hd" id="QOS_CarProtTh"></td>
+                                <td class="hd" id="QOS_CarIntfTh"></td>
+                                <td class="hd" id="QOS_CarSrcPortTh"></td>
+                                <td class="hd" id="QOS_CarDestPortTh"></td>
+                                <td class="hd" id="QOS_CarSrcIpTh"></td>
+                                <td class="hd" id="QOS_CarSrcSubMaskTh"></td>
+                                <td class="hd" id="QOS_CarDestIpTh"></td>
+                                <td class="hd" id="QOS_CarDestSubMaskTh"></td>
+                                <td class="hd" id="QOS_CarRateTh"></td>
+                                <td class="hd" id="QOS_CarDeleteTh"></td>
+                            </tr>
+                            <tbody id="QOS_CarTbody">
+                            </tbody>
+                        </table>
+                        <br />
+                        <div id="QOS_BTN_CARAdd" style="width:160px;float:right"></div>
+                        <div id="QOS_DIV_CARAdd">
+                            <table border="0" cellpadding='1' cellspacing='0' width="100%" style="margin:20px 0">
+                                <tbody>
+                                    <tr id="QOS_CarIpModeTr">
+                                    </tr>
+                                    <tr>
+                                        <td id="QOS_CarProto"></td>
+                                        <td><select id='QOS_SEL_CarProto'></select></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="QOS_CarLanIntf"></td>
+                                        <td><select id='QOS_SEL_CarLanIntf'></select></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="QOS_CarSrcIp"></td>
+                                        <td ><input type='text' id="QOS_TEXT_CarSrcIp" class="QOS_CLS_CarIpAddr" size='15'></td>
+                                        <td>&nbsp;</td>
+                                        <td id="QOS_CarSrcSubMask"> </td>
+                                        <td><input type='text' id="QOS_TEXT_CarSrcNetmast"  class="QOS_CLS_CarIpMask" size = '15'></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="QOS_CarDestIp"></td>
+                                        <td ><input type='text' id='QOS_TEXT_CarDstIp' class="QOS_CLS_CarIpAddr" size = '15'></td>
+                                        <td>&nbsp;</td>
+                                        <td id="QOS_CarDestSubMask"> </td>
+                                        <td><input type='text' id="QOS_TEXT_CarDstNetmast" class="QOS_CLS_CarIpMask" size = '15'></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="QOS_CarSrcPort"></td>
+                                        <td><input type='text' id='QOS_TEXT_CarPortStart' class="QOS_CLS_Port" size='6'></td>
+                                        <td>&nbsp;</td>
+                                        <td id="QOS_CarDstPort"></td>
+                                        <td><input type='text' id='QOS_TEXT_CarPortEnd' class="QOS_CLS_Port" size = '6'></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="QOS_CarUsRate"></td>
+                                        <td><input type='text' id="QOS_TEXT_CarUsRate" size = '6'>Kb/s<span id="QOS_TEXT_CarUsRatewarn" class="warning"></span></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <!-- <td >接口</td>
+                                        <td colspan='6'>
+                                            <select name='LanInterfaceName' id='LanInterfaceName'>
+                                            <SCRIPT LANGUAGE="JavaScript">
+                                                    for(i=0;i<LanList.length;i++)
+                                                    {
+                                                        if(LanList[i]!=null)
+                                                            getElById('LanInterfaceName').options.add(new Option(LanList[i],LanList[i])); 
+                                                    }
+                                                    getElById('LanInterfaceName').options[0].selected;
+                                            </SCRIPT>
+                                            </select>
+                                        </td>
+                                        <td colspan='6'></td>  -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table width="100%" border="0">
+                                <tr>
+                                    <input type='button' id="BTN_Apply" class="buttonX" style="margin-left:0px">
+                                    <input type='button' id="BTN_Cancel" class="buttonY">
+                                </tr>
+                            </table>
+                        </div>
+                    </div>                   
+                </form>
+            </div>
+
+            <div style="padding-bottom:20px">
+                <input type="button" class="buttonX" id="BTN_Save"style="margin-left:413px"/>
+                <input type="button" class="buttonY" id="BTN_No" />
+            </div>          
+        </div>
+    </div>
+</body>
+</html>

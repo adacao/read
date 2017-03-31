@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DHCP</title>
+<link href="lib/css/layout_style.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/colors.css" type="text/css" rel="stylesheet" />
+<link href="lib/css/content.css" type="text/css" rel="stylesheet" />
+<script language="javascript" src="lib/js/jquery.js"></script>
+<script language="javascript" src="lib/js/common.js"></script>
+<script language="javascript" src="lib/js/util.js"></script>
+<script language="javascript" src="lib/js/kt_lan_dhcp.js"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="mainLeft" style="height:100%;overflow: scroll;"></div>
+    <div class="mainShadow"></div>
+    <div class="mainBody" style="height:100%;overflow: scroll;">
+        <div class="NETCON" id="NETCON">
+           <li id="MENU_STS_NET_CON"></li>
+          <img class="load" id="loadPic" src="pic/loading.gif">
+          <h3 class="titleCtx" id="LAN_DhcpSetUpTitle"></h3>
+          <p id="LAN_DhcpComment"></p>
+          <form style="width: 638px;padding:10px 10px 0px 50px;float: right;">
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="120" id="LAN_TD_dhcpIpAddr"></td>
+                <td><input type='text' id="LAN_TEXT_EthIpAdress"></td>
+              </tr>
+              <tr>
+                <td id="LAN_TD_DhcpSubnetMask"></td>
+                <td><input type='text' id='LAN_TEXT_EthSubnetMask'></td>
+              </tr>
+              <tr id="LAN_DhcpDomainAll">
+                <td id="LAN_TD_DhcpDomain"></td>
+                <td><input type='text' id='LAN_TEXT_EthDomain'></td>
+              </tr>
+          </table>
+          <br />
+         
+        </form>
+      </div>
+      <div class="NET6CO">
+        <li id="MENU_STS_NET6_CO"></li>
+          
+            <form style="width: 638px;padding:0px 10px 0px 50px;float: right;">
+               <table>
+                <tr>
+                  <td id='LAN_TD_DhcpEnable'></td>
+                  <td><input type='checkbox' id='LAN_CHX_DhcpSrvType'></td>
+                </tr>
+              </table>
+              <div id="LAN_DIV_UseDhcpServer" class="LAN_CLS_DhcpServerDiv">
+                <table width="100%" id="LAN_TB_PoolPartOne" border="1" cellpadding="3" cellspacing="0" style="text-align: center;">
+                    <tr align="center">
+                      <td width="25%" class='hd' >网络类型</td>
+                      <td width="25%" class='hd' >起始IP</td>
+                      <td width="25%" class='hd' >终止IP</td>
+                      <td width="25%" class='hd' >租约时间（分钟）</td>
+                  </tr>
+                  <tr height="22">
+                    <td width="25%" >STB</td>
+                    <td><input type='text' id='LAN_TEXT_StbStartAddr' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_TEXT_StbEndAddr' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_SEL_StbDhcpLeasedTime' name="LAN_DhpcLeasedTime" class='LAN_CLS_IpLeasedTime'></td>
+                  </tr>
+                  <tr height="22">
+                    <td width="25%" >Phone</td>
+                    <td><input type='text' id='LAN_TEXT_SipPhoneStartAddr' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_TEXT_SipPhoneEndAddr' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_SEL_SipPhoneDhcpLeasedTime' name="LAN_DhpcLeasedTime" class='LAN_CLS_IpLeasedTime'></td>
+                  </tr>
+                  <tr height="22">
+                    <td width="25%" >Camera</td>
+                    <td><input type='text'  id='LAN_TEXT_CameraStartAddr' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_TEXT_CameraEndAddr' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_SEL_CameraDhcpLeasedTime' name="LAN_DhpcLeasedTime" class='LAN_CLS_IpLeasedTime'></td>
+                  </tr>
+                  <tr height="22">
+                    <td width="25%" >computer</td>
+                    <td><input type='text' id="LAN_TEXT_DhcpPcStart" name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_TEXT_DhcpPcEnd' name="LAN_DhpcOpt60IpAddr" class='LAN_CLS_IpAddr'></td>
+                    <td><input type='text' id='LAN_SEL_DhcpPcLeasedTime' name="LAN_DhpcLeasedTime" class='LAN_CLS_IpLeasedTime'></td>
+                </tr>
+            <!--<tbody id="LAN_NeedAppend3">
+            </tbody>-->
+            </table>
+      
+          </div>
+    </form>
+  </div>
+    <br>
+    <div class="ETHINFO">
+      <li id="MENU_WAN_ETH_INFO"></li>
+      <form style="width: 638px;padding:0px 10px 0px 50px;float: right;">
+      <table>
+        <tr>
+          <td>手动指定DNS服务器使能</td>
+          <td><input type='checkbox' id='LAN_CHX_DNSEnable'></td>
+        </tr>
+      </table>
+      <table id="LAN_TB_DnsRelay" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <td width='120px' id='LAN_TD_DhcpLanDns1Ctx'></td>
+        <td><input type='text' id='LAN_TEXT_DhcpLanDns1' class='LAN_CLS_IpAddr'></td>
+      </tr>
+      <tr>
+        <td id='LAN_TD_DhcpLanDns2Ctx'></td>
+        <td><input type='text' id='LAN_TEXT_DhcpLanDns2' class='LAN_CLS_IpAddr'></td>
+      </tr>
+      </table>
+      <center style="float: left;margin-top: 20px;">
+        <input id='BTN_Apply' class="buttonX" type='button'>
+        <input id='BTN_Cancel' class="buttonX" type='button'>
+      </center>
+      <div style="clear: both;"></div>
+    </form>
+  </div>
+<br>
+</body>
+</html>
